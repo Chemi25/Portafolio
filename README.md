@@ -31,7 +31,7 @@ Luego abre `http://localhost:8000`. (También puedes abrir `index.html` con dobl
 
 | Qué | Dónde | Cómo |
 |---|---|---|
-| **Número de WhatsApp** | `js/main.js` → `WHATSAPP_NUMBER` | Solo dígitos con código de país, ej. `"18095551234"`. Vacío = el botón no aparece. |
+| **Número de WhatsApp** | `js/main.js` → `WHATSAPP_NUMBER` | Ya configurado (`18496074188`). Vacío = el enlace no aparece. |
 | **GitHub y LinkedIn** | `js/main.js` → `GITHUB_URL`, `LINKEDIN_URL` | URLs completas. Vacías = los iconos del footer no aparecen. También añádelas al `sameAs` del JSON-LD en `index.html`. |
 | **Tu foto** | `index.html` (sección Sobre mí) | Guarda `assets/img/foto.jpg` y descomenta la `<figure>` marcada con TODO. |
 | **Captura de Planifesto** | `assets/img/planifesto.jpg` | Ya incluida (captura real del sitio en vivo). Para actualizarla, reemplaza el archivo (1200×750). |

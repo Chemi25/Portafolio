@@ -6,10 +6,9 @@
    ⚙️ CONFIGURACIÓN PERSONAL — edita solo esta sección
    ------------------------------------------------------------ */
 
-// TODO: pon tu número de WhatsApp con código de país, solo dígitos.
-// Ejemplo República Dominicana: "18095551234". Si lo dejas vacío,
-// el enlace de WhatsApp no se muestra (no habrá enlaces rotos).
-const WHATSAPP_NUMBER = "";
+// Número de WhatsApp con código de país, solo dígitos.
+// Si lo dejas vacío, el enlace de WhatsApp no se muestra.
+const WHATSAPP_NUMBER = "18496074188";
 
 // TODO: pon las URLs completas de tus perfiles. Si las dejas vacías,
 // los enlaces del pie de página no se muestran.

@@ -27,7 +27,6 @@ const translations = {
     "hero.cta.contact": "Escríbeme",
     "hero.cta.work": "Ver mi trabajo ↓",
     "hero.availability": "Disponible para nuevos proyectos.",
-    "hero.badge": "DISPONIBLE PARA PROYECTOS · FREELANCE · ",
 
     "services.title": "Qué hago",
     "services.s1.title": "Desarrollo full-stack",
@@ -106,7 +105,6 @@ const translations = {
     "hero.cta.contact": "Write to me",
     "hero.cta.work": "See my work ↓",
     "hero.availability": "Available for new projects.",
-    "hero.badge": "AVAILABLE FOR NEW PROJECTS · FREELANCE · ",
 
     "services.title": "What I do",
     "services.s1.title": "Full-stack development",
