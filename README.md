@@ -34,7 +34,7 @@ Luego abre `http://localhost:8000`. (También puedes abrir `index.html` con dobl
 | **Número de WhatsApp** | `js/main.js` → `WHATSAPP_NUMBER` | Solo dígitos con código de país, ej. `"18095551234"`. Vacío = el botón no aparece. |
 | **GitHub y LinkedIn** | `js/main.js` → `GITHUB_URL`, `LINKEDIN_URL` | URLs completas. Vacías = los iconos del footer no aparecen. También añádelas al `sameAs` del JSON-LD en `index.html`. |
 | **Tu foto** | `index.html` (sección Sobre mí) | Guarda `assets/img/foto.jpg` y descomenta la `<figure>` marcada con TODO. |
-| **Captura de Planifesto** | `index.html` (sección Trabajo) | Guarda `assets/img/planifesto.jpg` y descomenta la `<figure>` marcada con TODO. |
+| **Captura de Planifesto** | `assets/img/planifesto.jpg` | Ya incluida (captura real del sitio en vivo). Para actualizarla, reemplaza el archivo (1200×750). |
 | **Cifras reales de Planifesto** | `js/i18n.js` → claves `projects.featured.p1` / `p2` | Cuando tengas cifras de ventas o tráfico, incorpóralas al texto: los datos concretos dan credibilidad. |
 | **Añadir un proyecto** | `index.html` (filas con TODO "PROYECTO PLANTILLA") | Quita el atributo `hidden`, edita los textos en `js/i18n.js` (claves `projects.p2.*` / `p3.*`) y pon los enlaces reales. Duplica una fila si necesitas más. |
 | **Activar testimonios** | `index.html` (sección `#testimonios`) | Quita `hidden` al `<section>`, rellena textos en `js/i18n.js` (claves `testimonials.*`) y descomenta el enlace del nav. |

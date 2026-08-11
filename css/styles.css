@@ -122,6 +122,17 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
   margin-bottom: 1.2em;
 }
 
+/* Barra terracota que firma cada título (eco de la regla del hero) */
+.title-mark {
+  display: inline-block;
+  width: 0.6em;
+  height: 0.09em;
+  min-height: 3px;
+  background: var(--accent);
+  margin-right: 0.4em;
+  vertical-align: 0.22em;
+}
+
 .section-note { margin: 36px 0 0; color: var(--muted); }
 
 .btn {
@@ -174,7 +185,31 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
   font-size: 1.5rem;
 }
 
-.row-num { color: var(--muted); font-weight: 400; margin-right: 2px; }
+.row-num {
+  font-family: var(--font-serif);
+  color: var(--accent);
+  font-weight: 500;
+  font-size: 1.15em;
+  margin-right: 4px;
+}
+
+/* Filas de servicios con icono dibujado a medida */
+.row-service {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  column-gap: 22px;
+}
+.row-service > :not(.service-icon) { grid-column: 2; }
+.service-icon {
+  grid-column: 1;
+  grid-row: 1 / span 3;
+  width: 44px;
+  color: var(--text);
+  opacity: 0.85;
+}
+.service-icon svg { display: block; width: 100%; height: auto; }
+.ic-accent { stroke: var(--accent); }
+.ic-accent-fill { fill: var(--accent); }
 
 .row-body {
   color: var(--muted);
@@ -192,11 +227,10 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
 .row-links { margin: 0; display: flex; gap: 24px; }
 
 .row-figure {
-  margin: 20px 0;
+  margin: 24px 0;
   border: 1px solid var(--line);
-  border-radius: 4px;
+  border-radius: 6px;
   overflow: hidden;
-  max-width: var(--prose);
 }
 
 /* ---------- 4. Header ---------- */
@@ -323,6 +357,40 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
   margin: 0;
 }
 
+.dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  margin-right: 4px;
+}
+
+/* Sello circular giratorio: el anillo gira, las iniciales no */
+.hero-badge {
+  position: relative;
+  width: 150px;
+  margin-top: 40px;
+}
+.hero-badge svg { display: block; width: 100%; height: auto; }
+.badge-text {
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  font-weight: 500;
+  letter-spacing: 2.3px;
+  fill: var(--muted);
+}
+.badge-center {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: var(--accent);
+}
+
 /* ---------- 6. Testimonios ---------- */
 .testimonial blockquote {
   margin: 0 0 0.6em;
@@ -406,6 +474,14 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
   .hero-sub          { animation: rise-in 600ms var(--ease) 200ms both; }
   .hero-actions      { animation: rise-in 600ms var(--ease) 300ms both; }
   .hero-availability { animation: rise-in 600ms var(--ease) 380ms both; }
+  .hero-badge        { animation: rise-in 600ms var(--ease) 440ms both; }
+
+  /* El anillo del sello gira despacio, sin pausa */
+  @keyframes spin { to { transform: rotate(1turn); } }
+  .hero-badge .badge-ring {
+    transform-origin: 50% 50%;
+    animation: spin 45s linear infinite;
+  }
 
   /* Aparición al hacer scroll (solo con JS activo) */
   html.js :is(.section-title, .row, .section-note) {
@@ -459,6 +535,21 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
   }
 
   .hero { padding-block: 120px 96px; }
+
+  /* El sello acompaña al texto del hero a la derecha */
+  .hero > .container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: 64px;
+    align-items: center;
+  }
+  .hero > .container > * { grid-column: 1; }
+  .hero > .container > .hero-badge {
+    grid-column: 2;
+    grid-row: 1 / span 5;
+    width: 170px;
+    margin: 0 24px 0 0;
+  }
 }
 
 /* ---------- 11. Móvil ---------- */

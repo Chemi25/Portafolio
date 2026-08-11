@@ -101,29 +101,63 @@
           <a class="btn" href="#contacto" data-i18n="hero.cta.contact">Escríbeme</a>
           <a class="inline-link" href="#proyectos" data-i18n="hero.cta.work">Ver mi trabajo ↓</a>
         </div>
-        <p class="hero-availability" data-i18n="hero.availability">Disponible para nuevos proyectos.</p>
+        <p class="hero-availability"><span class="dot" aria-hidden="true"></span> <span data-i18n="hero.availability">Disponible para nuevos proyectos.</span></p>
+
+        <!-- Sello giratorio (decorativo): el anillo gira, las iniciales quedan fijas -->
+        <div class="hero-badge" aria-hidden="true">
+          <svg class="badge-ring" viewBox="0 0 160 160">
+            <defs>
+              <path id="badge-arc" d="M80 80 m -58 0 a 58 58 0 1 1 116 0 a 58 58 0 1 1 -116 0"/>
+            </defs>
+            <text class="badge-text"><textPath href="#badge-arc" data-i18n="hero.badge">DISPONIBLE PARA PROYECTOS · FREELANCE · </textPath></text>
+          </svg>
+          <span class="badge-center">JB</span>
+        </div>
       </div>
     </section>
 
     <!-- ============ QUÉ HAGO ============ -->
     <section class="section" id="servicios" aria-labelledby="servicios-title">
       <div class="container">
-        <h2 class="section-title" id="servicios-title" data-i18n="services.title">Qué hago</h2>
+        <h2 class="section-title" id="servicios-title"><span class="title-mark" aria-hidden="true"></span><span data-i18n="services.title">Qué hago</span></h2>
 
         <div class="rows">
-          <article class="row">
+          <article class="row row-service">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 17 24 9l16 8-16 8-16-8z"/>
+                <path class="ic-accent" d="M8 25l16 8 16-8"/>
+                <path d="M8 32l16 8 16-8"/>
+              </svg>
+            </span>
             <h3 class="row-title" data-i18n="services.s1.title">Desarrollo full-stack</h3>
             <p class="row-body" data-i18n="services.s1.desc">Aplicaciones web completas, del frontend a la base de datos y el despliegue.</p>
             <p class="row-meta">JavaScript · Node.js · Supabase</p>
           </article>
 
-          <article class="row">
+          <article class="row row-service">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="10" width="40" height="28" rx="3"/>
+                <path d="M4 18h40"/>
+                <path d="M9 14h.01M14 14h.01"/>
+                <path class="ic-accent-fill" stroke="none" d="M26 23.5 36.5 27.6l-4.5 1.8-1.8 4.5z"/>
+              </svg>
+            </span>
             <h3 class="row-title" data-i18n="services.s2.title">Webs y tiendas online</h3>
             <p class="row-body" data-i18n="services.s2.desc">Landing pages, webs corporativas y e-commerce, con la velocidad y el SEO como prioridad.</p>
             <p class="row-meta">HTML/CSS · JavaScript · SEO</p>
           </article>
 
-          <article class="row">
+          <article class="row row-service">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="15" y="6" width="18" height="36" rx="4"/>
+                <path d="M21 10h6"/>
+                <path d="M24 37h.01"/>
+                <circle class="ic-accent-fill" stroke="none" cx="34" cy="9" r="4.5"/>
+              </svg>
+            </span>
             <h3 class="row-title" data-i18n="services.s3.title">Apps móviles</h3>
             <p class="row-body" data-i18n="services.s3.desc">Aplicaciones para iOS y Android, del prototipo a la tienda.</p>
             <!-- TODO: ajusta el stack móvil real (React Native, Flutter, Swift, Kotlin...) -->
@@ -136,7 +170,7 @@
     <!-- ============ TRABAJO ============ -->
     <section class="section" id="proyectos" aria-labelledby="proyectos-title">
       <div class="container">
-        <h2 class="section-title" id="proyectos-title" data-i18n="projects.title">Trabajo seleccionado</h2>
+        <h2 class="section-title" id="proyectos-title"><span class="title-mark" aria-hidden="true"></span><span data-i18n="projects.title">Trabajo seleccionado</span></h2>
 
         <div class="rows">
           <article class="row">
@@ -144,10 +178,10 @@
             <h3 class="row-title row-title-lg">Planifesto</h3>
             <p class="row-body" data-i18n="projects.featured.p1">Planifesto es una plataforma de educación financiera para jóvenes hispanohablantes: cursos, plantillas y herramientas digitales. La construí de principio a fin: el catálogo y los pagos, la entrega automatizada de cada compra con Google Apps Script, la analítica y el SEO que la posiciona en una veintena de países.</p>
             <p class="row-body" data-i18n="projects.featured.p2">La parte difícil no fue el código, fue montar un sistema que venda y entregue solo: cada pedido se procesa, se entrega y se registra sin intervención manual.</p>
-            <!-- TODO: cuando tengas una captura real del sitio, añádela aquí:
+            <!-- Captura real del sitio en vivo. Para actualizarla, reemplaza assets/img/planifesto.jpg -->
             <figure class="row-figure">
-              <img src="assets/img/planifesto.jpg" alt="Página principal de Planifesto" loading="lazy" width="1200" height="750">
-            </figure> -->
+              <img src="assets/img/planifesto.jpg" width="1200" height="750" loading="lazy" data-i18n-attr="alt:projects.featured.imgAlt" alt="Captura de la página principal de Planifesto">
+            </figure>
             <p class="row-links"><a class="inline-link" href="https://planifestord.com" target="_blank" rel="noopener"><span data-i18n="projects.featured.visit">Visitar planifestord.com</span> ↗</a></p>
           </article>
 
@@ -184,7 +218,7 @@
     <!-- ============ SOBRE MÍ ============ -->
     <section class="section" id="sobre-mi" aria-labelledby="sobre-title">
       <div class="container">
-        <h2 class="section-title" id="sobre-title" data-i18n="about.title">Sobre mí</h2>
+        <h2 class="section-title" id="sobre-title"><span class="title-mark" aria-hidden="true"></span><span data-i18n="about.title">Sobre mí</span></h2>
         <div class="rows">
           <div class="row">
             <!-- TODO: si quieres foto, añádela aquí:
@@ -202,7 +236,7 @@
     <!-- ============ PROCESO ============ -->
     <section class="section" id="proceso" aria-labelledby="proceso-title">
       <div class="container">
-        <h2 class="section-title" id="proceso-title" data-i18n="process.title">Cómo trabajo</h2>
+        <h2 class="section-title" id="proceso-title"><span class="title-mark" aria-hidden="true"></span><span data-i18n="process.title">Cómo trabajo</span></h2>
 
         <ol class="rows process-list">
           <li class="row">
@@ -232,7 +266,7 @@
          3) Añade el enlace "Testimonios" al nav (está comentado en el header). -->
     <section class="section" id="testimonios" aria-labelledby="testimonios-title" hidden>
       <div class="container">
-        <h2 class="section-title" id="testimonios-title" data-i18n="testimonials.title">Lo que dicen mis clientes</h2>
+        <h2 class="section-title" id="testimonios-title"><span class="title-mark" aria-hidden="true"></span><span data-i18n="testimonials.title">Lo que dicen mis clientes</span></h2>
         <div class="rows">
           <figure class="row testimonial">
             <blockquote data-i18n="testimonials.t1.quote">«Escribe aquí el testimonio de tu cliente: qué problema tenía, cómo lo resolviste y qué resultado obtuvo.»</blockquote>
@@ -249,7 +283,7 @@
     <!-- ============ CONTACTO ============ -->
     <section class="section" id="contacto" aria-labelledby="contacto-title">
       <div class="container">
-        <h2 class="section-title" id="contacto-title" data-i18n="contact.title">¿Tienes un proyecto en mente?</h2>
+        <h2 class="section-title" id="contacto-title"><span class="title-mark" aria-hidden="true"></span><span data-i18n="contact.title">¿Tienes un proyecto en mente?</span></h2>
         <div class="rows">
           <div class="row">
             <p class="row-body" data-i18n="contact.sub">Escríbeme y te respondo en menos de 24 horas.</p>

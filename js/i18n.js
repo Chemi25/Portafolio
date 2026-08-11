@@ -27,6 +27,7 @@ const translations = {
     "hero.cta.contact": "Escríbeme",
     "hero.cta.work": "Ver mi trabajo ↓",
     "hero.availability": "Disponible para nuevos proyectos.",
+    "hero.badge": "DISPONIBLE PARA PROYECTOS · FREELANCE · ",
 
     "services.title": "Qué hago",
     "services.s1.title": "Desarrollo full-stack",
@@ -41,6 +42,7 @@ const translations = {
     "projects.featured.p1": "Planifesto es una plataforma de educación financiera para jóvenes hispanohablantes: cursos, plantillas y herramientas digitales. La construí de principio a fin: el catálogo y los pagos, la entrega automatizada de cada compra con Google Apps Script, la analítica y el SEO que la posiciona en una veintena de países.",
     "projects.featured.p2": "La parte difícil no fue el código, fue montar un sistema que venda y entregue solo: cada pedido se procesa, se entrega y se registra sin intervención manual.",
     "projects.featured.visit": "Visitar planifestord.com",
+    "projects.featured.imgAlt": "Captura de la página principal de Planifesto",
     "projects.p2.meta": "Proyecto de cliente · Año",
     "projects.p2.title": "Nombre del proyecto",
     "projects.p2.desc": "Qué hace el proyecto, para quién y qué resultado tuvo. Dos o tres frases concretas valen más que una lista de tecnologías.",
@@ -104,6 +106,7 @@ const translations = {
     "hero.cta.contact": "Write to me",
     "hero.cta.work": "See my work ↓",
     "hero.availability": "Available for new projects.",
+    "hero.badge": "AVAILABLE FOR NEW PROJECTS · FREELANCE · ",
 
     "services.title": "What I do",
     "services.s1.title": "Full-stack development",
@@ -118,6 +121,7 @@ const translations = {
     "projects.featured.p1": "Planifesto is a financial education platform for young Spanish speakers: courses, templates and digital tools. I built it end to end: the catalog and checkout, automated delivery of every purchase with Google Apps Script, the analytics, and the SEO that ranks it across some twenty countries.",
     "projects.featured.p2": "The hard part wasn't the code. It was building a system that sells and delivers on its own: every order is processed, delivered and logged without manual work.",
     "projects.featured.visit": "Visit planifestord.com",
+    "projects.featured.imgAlt": "Screenshot of the Planifesto homepage",
     "projects.p2.meta": "Client project · Year",
     "projects.p2.title": "Project name",
     "projects.p2.desc": "What the project does, who it's for and what result it had. Two or three concrete sentences beat a list of technologies.",
