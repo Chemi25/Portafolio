@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script>document.documentElement.classList.add('js')</script>
 
-  <title>José Miguel Batista — Desarrollador Web y Móvil Freelance</title>
-  <meta name="description" content="Desarrollador full-stack freelance. Construyo sitios web, e-commerce y apps móviles que convierten. Creador de Planifesto. Disponible para proyectos.">
+  <title>José Miguel Batista · Desarrollador web y móvil freelance</title>
+  <meta name="description" content="Desarrollador freelance full-stack. Webs, tiendas online y apps móviles. Creador de Planifesto. Disponible para proyectos.">
   <meta name="author" content="José Miguel Batista">
   <meta name="robots" content="index, follow">
 
@@ -16,8 +15,8 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://TU-DOMINIO.com/">
-  <meta property="og:title" content="José Miguel Batista — Desarrollador Web y Móvil Freelance">
-  <meta property="og:description" content="Construyo sitios web, e-commerce y apps móviles que convierten. Creador de Planifesto. Disponible para proyectos.">
+  <meta property="og:title" content="José Miguel Batista · Desarrollador web y móvil freelance">
+  <meta property="og:description" content="Webs, tiendas online y apps móviles. Creador de Planifesto.">
   <meta property="og:image" content="https://TU-DOMINIO.com/assets/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -26,16 +25,16 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="José Miguel Batista — Desarrollador Web y Móvil Freelance">
-  <meta name="twitter:description" content="Construyo sitios web, e-commerce y apps móviles que convierten. Creador de Planifesto.">
+  <meta name="twitter:title" content="José Miguel Batista · Desarrollador web y móvil freelance">
+  <meta name="twitter:description" content="Webs, tiendas online y apps móviles. Creador de Planifesto.">
   <meta name="twitter:image" content="https://TU-DOMINIO.com/assets/og-image.png">
 
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 
-  <!-- Fuentes: solo los pesos que se usan -->
+  <!-- Una sola fuente webfont: Fraunces para titulares. El cuerpo usa la fuente del sistema. -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/styles.css">
 
@@ -45,7 +44,7 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "José Miguel Batista",
-    "jobTitle": "Desarrollador Web y Móvil Freelance",
+    "jobTitle": "Desarrollador web y móvil freelance",
     "email": "mailto:josemiguel20186@gmail.com",
     "url": "https://TU-DOMINIO.com/",
     "sameAs": []
@@ -55,20 +54,19 @@
   <script src="js/i18n.js" defer></script>
   <script src="js/main.js" defer></script>
 </head>
-<body>
+<body id="top">
 
   <a class="skip-link" href="#contenido" data-i18n="skip">Saltar al contenido</a>
-  <div class="scroll-progress" aria-hidden="true"></div>
 
   <!-- ============ HEADER ============ -->
-  <header class="site-header" id="top">
+  <header class="site-header">
     <div class="container header-inner">
-      <a class="logo" href="#top" aria-label="José Miguel Batista — inicio">&lt;JB /&gt;</a>
+      <a class="brand" href="#top">José Miguel Batista</a>
 
       <nav class="site-nav" id="site-nav" aria-label="Principal">
         <ul class="nav-list">
-          <li><a class="nav-link" href="#servicios" data-i18n="nav.services">Servicios</a></li>
-          <li><a class="nav-link" href="#proyectos" data-i18n="nav.projects">Proyectos</a></li>
+          <li><a class="nav-link" href="#servicios" data-i18n="nav.services">Qué hago</a></li>
+          <li><a class="nav-link" href="#proyectos" data-i18n="nav.projects">Trabajo</a></li>
           <li><a class="nav-link" href="#sobre-mi" data-i18n="nav.about">Sobre mí</a></li>
           <li><a class="nav-link" href="#proceso" data-i18n="nav.process">Proceso</a></li>
           <!-- TODO: cuando actives la sección de testimonios, añade aquí su enlace:
@@ -80,12 +78,9 @@
       <div class="header-actions">
         <div class="lang-toggle" role="group" aria-label="Idioma / Language">
           <button class="lang-btn" type="button" data-lang="es" aria-pressed="true" lang="es">ES</button>
-          <span class="lang-sep" aria-hidden="true">|</span>
           <button class="lang-btn" type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
         </div>
-        <a class="btn btn-primary btn-sm header-cta" href="#contacto" data-i18n="nav.cta">Hablemos</a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-i18n-attr="aria-label:nav.menuLabel" aria-label="Abrir menú">
-          <span class="menu-bar" aria-hidden="true"></span>
           <span class="menu-bar" aria-hidden="true"></span>
           <span class="menu-bar" aria-hidden="true"></span>
         </button>
@@ -96,302 +91,129 @@
   <main id="contenido">
 
     <!-- ============ HERO ============ -->
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="container hero-inner">
-        <div class="hero-copy">
-          <p class="hero-eyebrow mono" aria-hidden="true">~/josemiguel <span class="accent">$</span> whoami</p>
-
-          <h1 id="hero-title" class="hero-title"><span data-i18n="hero.title.pre">Construyo </span><span class="gradient-text" data-i18n="hero.title.highlight">productos digitales</span><span data-i18n="hero.title.post"> que hacen crecer negocios.</span></h1>
-
-          <p class="hero-typed mono" aria-hidden="true"><span class="accent">&gt;</span>&nbsp;<span id="typed"></span><span class="cursor" aria-hidden="true"></span></p>
-          <p class="visually-hidden" data-i18n="hero.typedFallback">Desarrollo web full-stack, frontend y apps móviles.</p>
-
-          <p class="hero-subtitle" data-i18n="hero.subtitle">Soy José Miguel Batista, desarrollador freelance. Te acompaño de la idea al lanzamiento: webs rápidas, tiendas online y apps que convierten visitantes en clientes.</p>
-
-          <div class="hero-ctas">
-            <a class="btn btn-primary" href="#proyectos" data-i18n="hero.cta.projects">Ver proyectos</a>
-            <a class="btn btn-secondary" href="#contacto"><span data-i18n="hero.cta.talk">Hablemos</span>&nbsp;→</a>
-          </div>
-
-          <p class="hero-badge">
-            <span class="status-dot" aria-hidden="true"></span>
-            <span data-i18n="hero.badge.available">Disponible para proyectos</span>
-            <span class="badge-sep" aria-hidden="true">·</span>
-            <span class="muted" data-i18n="hero.badge.creator">Creador de Planifesto</span>
-          </p>
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero-title" data-i18n="hero.title">Construyo webs, tiendas online y apps móviles.</h1>
+        <p class="hero-sub" data-i18n="hero.subtitle">Hola, soy José Miguel Batista, desarrollador freelance. Me ocupo del ciclo completo: diseño, desarrollo, SEO y automatización. Mi mejor carta de presentación es Planifesto, una plataforma de educación financiera que construí de cero y que hoy vende cursos y plantillas en español.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#contacto" data-i18n="hero.cta.contact">Escríbeme</a>
+          <a class="inline-link" href="#proyectos" data-i18n="hero.cta.work">Ver mi trabajo ↓</a>
         </div>
-
-        <div class="hero-visual" aria-hidden="true">
-          <div class="terminal">
-            <div class="terminal-bar">
-              <span class="t-dot t-red"></span><span class="t-dot t-yellow"></span><span class="t-dot t-green"></span>
-              <span class="terminal-title mono">josemiguel@freelance: ~</span>
-            </div>
-            <div class="terminal-body mono">
-              <p class="t-line"><span class="accent">$</span> whoami</p>
-              <p class="t-line t-out" data-i18n="hero.term.out1">José Miguel Batista — desarrollador full-stack</p>
-              <p class="t-line"><span class="accent">$</span> ls ./servicios</p>
-              <p class="t-line t-out" data-i18n="hero.term.out2">web/&nbsp;&nbsp;e-commerce/&nbsp;&nbsp;apps-moviles/</p>
-              <p class="t-line"><span class="accent">$</span> ./status.sh</p>
-              <p class="t-line t-out t-ok" data-i18n="hero.term.out3">✓ disponible para nuevos proyectos</p>
-              <p class="t-line"><span class="accent">$</span> <span class="cursor"></span></p>
-            </div>
-          </div>
-        </div>
+        <p class="hero-availability" data-i18n="hero.availability">Disponible para nuevos proyectos.</p>
       </div>
     </section>
 
-    <!-- ============ SERVICIOS ============ -->
+    <!-- ============ QUÉ HAGO ============ -->
     <section class="section" id="servicios" aria-labelledby="servicios-title">
       <div class="container">
-        <p class="section-eyebrow mono reveal" data-i18n="services.eyebrow">// servicios</p>
-        <h2 class="section-title reveal" id="servicios-title" data-i18n="services.title">Lo que puedo construir para ti</h2>
-        <p class="section-sub reveal" data-i18n="services.sub">Del concepto al producto en producción, con foco en resultados de negocio.</p>
+        <h2 class="section-title" id="servicios-title" data-i18n="services.title">Qué hago</h2>
 
-        <div class="grid cards-3">
-          <article class="card reveal" style="--delay: 0ms">
-            <div class="card-icon" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-            </div>
-            <h3 class="card-title" data-i18n="services.s1.title">Desarrollo Full-Stack</h3>
-            <p class="card-desc" data-i18n="services.s1.desc">Aplicaciones web completas: frontend, backend, base de datos y despliegue. De cero a producción.</p>
-            <ul class="chips" role="list">
-              <li class="chip mono">JavaScript</li>
-              <li class="chip mono">Node.js</li>
-              <li class="chip mono">Supabase</li>
-              <li class="chip mono">APIs</li>
-            </ul>
+        <div class="rows">
+          <article class="row">
+            <h3 class="row-title" data-i18n="services.s1.title">Desarrollo full-stack</h3>
+            <p class="row-body" data-i18n="services.s1.desc">Aplicaciones web completas, del frontend a la base de datos y el despliegue.</p>
+            <p class="row-meta">JavaScript · Node.js · Supabase</p>
           </article>
 
-          <article class="card reveal" style="--delay: 100ms">
-            <div class="card-icon" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
-            </div>
-            <h3 class="card-title" data-i18n="services.s2.title">Frontend y Diseño Web</h3>
-            <p class="card-desc" data-i18n="services.s2.desc">Sitios rápidos, responsivos y con un diseño que convierte: landing pages, webs corporativas y tiendas online.</p>
-            <ul class="chips" role="list">
-              <li class="chip mono">HTML/CSS</li>
-              <li class="chip mono">JavaScript</li>
-              <li class="chip mono">UI/UX</li>
-              <li class="chip mono">SEO</li>
-            </ul>
+          <article class="row">
+            <h3 class="row-title" data-i18n="services.s2.title">Webs y tiendas online</h3>
+            <p class="row-body" data-i18n="services.s2.desc">Landing pages, webs corporativas y e-commerce, con la velocidad y el SEO como prioridad.</p>
+            <p class="row-meta">HTML/CSS · JavaScript · SEO</p>
           </article>
 
-          <article class="card reveal" style="--delay: 200ms">
-            <div class="card-icon" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-            </div>
-            <h3 class="card-title" data-i18n="services.s3.title">Apps Móviles</h3>
-            <p class="card-desc" data-i18n="services.s3.desc">Aplicaciones para iOS y Android orientadas a resultados, del prototipo a la tienda de apps.</p>
+          <article class="row">
+            <h3 class="row-title" data-i18n="services.s3.title">Apps móviles</h3>
+            <p class="row-body" data-i18n="services.s3.desc">Aplicaciones para iOS y Android, del prototipo a la tienda.</p>
             <!-- TODO: ajusta el stack móvil real (React Native, Flutter, Swift, Kotlin...) -->
-            <ul class="chips" role="list">
-              <li class="chip mono">iOS</li>
-              <li class="chip mono">Android</li>
-            </ul>
+            <p class="row-meta">iOS · Android</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ============ PROYECTOS ============ -->
-    <section class="section section-alt" id="proyectos" aria-labelledby="proyectos-title">
+    <!-- ============ TRABAJO ============ -->
+    <section class="section" id="proyectos" aria-labelledby="proyectos-title">
       <div class="container">
-        <p class="section-eyebrow mono reveal" data-i18n="projects.eyebrow">// proyectos</p>
-        <h2 class="section-title reveal" id="proyectos-title" data-i18n="projects.title">Proyectos</h2>
-        <p class="section-sub reveal" data-i18n="projects.sub">Trabajo real, en producción, con resultados.</p>
+        <h2 class="section-title" id="proyectos-title" data-i18n="projects.title">Trabajo seleccionado</h2>
 
-        <!-- ===== Caso de estudio: Planifesto ===== -->
-        <article class="featured-card reveal">
-          <div class="featured-visual">
-            <div class="browser-mock">
-              <div class="browser-bar">
-                <span class="t-dot t-red"></span><span class="t-dot t-yellow"></span><span class="t-dot t-green"></span>
-                <span class="browser-url mono">planifestord.com</span>
-              </div>
-              <!-- TODO: reemplaza este placeholder por una captura real del sitio:
-                   guarda la imagen como assets/img/planifesto.jpg y usa:
-                   <img src="assets/img/planifesto.jpg" alt="Captura de la página principal de Planifesto" loading="lazy"> -->
-              <div class="browser-screen" role="img" data-i18n-attr="aria-label:projects.featured.previewAlt" aria-label="Vista previa de Planifesto, plataforma de educación financiera">
-                <svg viewBox="0 0 560 340" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
-                  <defs>
-                    <linearGradient id="pf-bg" x1="0" y1="0" x2="1" y2="1">
-                      <stop offset="0" stop-color="#0d1322"/>
-                      <stop offset="1" stop-color="#12233a"/>
-                    </linearGradient>
-                    <linearGradient id="pf-accent" x1="0" y1="0" x2="1" y2="0">
-                      <stop offset="0" stop-color="#00dc82"/>
-                      <stop offset="1" stop-color="#38bdf8"/>
-                    </linearGradient>
-                  </defs>
-                  <rect width="560" height="340" fill="url(#pf-bg)"/>
-                  <text x="48" y="96" font-family="ui-monospace, monospace" font-size="34" font-weight="700" fill="#e6edf3">Planifesto</text>
-                  <rect x="48" y="116" width="150" height="6" rx="3" fill="url(#pf-accent)"/>
-                  <rect x="48" y="150" width="300" height="10" rx="5" fill="#94a3b8" opacity=".45"/>
-                  <rect x="48" y="170" width="240" height="10" rx="5" fill="#94a3b8" opacity=".3"/>
-                  <rect x="48" y="206" width="110" height="34" rx="17" fill="#00dc82"/>
-                  <rect x="48" y="270" width="120" height="46" rx="10" fill="#1a2438"/>
-                  <rect x="184" y="270" width="120" height="46" rx="10" fill="#1a2438"/>
-                  <rect x="320" y="270" width="120" height="46" rx="10" fill="#1a2438"/>
-                  <polyline points="380,180 420,150 450,165 490,110 520,125" fill="none" stroke="url(#pf-accent)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                  <circle cx="520" cy="125" r="6" fill="#00dc82"/>
-                </svg>
-              </div>
-            </div>
-          </div>
-
-          <div class="featured-info">
-            <p class="featured-label mono"><span class="accent">★</span> <span data-i18n="projects.featured.label">Proyecto destacado — En producción</span></p>
-            <h3 class="featured-title">Planifesto</h3>
-            <p class="featured-tagline" data-i18n="projects.featured.tagline">Plataforma de educación financiera para jóvenes hispanohablantes: cursos, plantillas y herramientas digitales.</p>
-
-            <div class="case-block">
-              <h4 class="case-heading mono" data-i18n="projects.featured.problemTitle">El problema</h4>
-              <p class="case-body" data-i18n="projects.featured.problemBody">La educación financiera práctica en español es escasa y está dispersa. Hacía falta una plataforma propia para crear, vender y entregar cursos y plantillas a toda Hispanoamérica sin depender de terceros.</p>
-            </div>
-
-            <div class="case-block">
-              <h4 class="case-heading mono" data-i18n="projects.featured.solutionTitle">La solución</h4>
-              <p class="case-body" data-i18n="projects.featured.solutionBody">Diseñé, desarrollé y lancé un e-commerce completo: catálogo de cursos y plantillas digitales, newsletter, testimonios, integración con WhatsApp y entrega automatizada de productos.</p>
-            </div>
-
-            <ul class="chips" role="list">
-              <li class="chip mono">JavaScript</li>
-              <li class="chip mono">Supabase</li>
-              <li class="chip mono">Google Apps Script</li>
-              <li class="chip mono">Google Analytics</li>
-              <li class="chip mono">SEO internacional</li>
-            </ul>
-
-            <!-- TODO: cuando quieras, añade métricas reales (ventas, tráfico, conversión) en estas tarjetas -->
-            <dl class="stats">
-              <div class="stat">
-                <dt class="stat-label" data-i18n="projects.featured.stat1">entrega de productos automatizada</dt>
-                <dd class="stat-value mono">100%</dd>
-              </div>
-              <div class="stat">
-                <dt class="stat-label" data-i18n="projects.featured.stat2">países alcanzados con SEO internacional</dt>
-                <dd class="stat-value mono">~20</dd>
-              </div>
-              <div class="stat">
-                <dt class="stat-label" data-i18n="projects.featured.stat3">de idea a producto en producción</dt>
-                <dd class="stat-value mono">0 → 1</dd>
-              </div>
-            </dl>
-
-            <a class="btn btn-primary" href="https://planifestord.com" target="_blank" rel="noopener"><span data-i18n="projects.featured.visit">Ver sitio en vivo</span>&nbsp;↗</a>
-          </div>
-        </article>
-
-        <div class="grid cards-3 projects-grid">
-          <!-- ===== Tarjeta CTA: espacio para el proyecto del cliente ===== -->
-          <article class="card card-cta reveal">
-            <h3 class="card-title" data-i18n="projects.cta.title">¿Tu proyecto aquí?</h3>
-            <p class="card-desc" data-i18n="projects.cta.body">Este espacio está reservado para tu idea. Cuéntame qué necesitas y lo construimos juntos.</p>
-            <a class="text-link" href="#contacto"><span data-i18n="projects.cta.link">Empezar un proyecto</span>&nbsp;→</a>
+        <div class="rows">
+          <article class="row">
+            <p class="row-meta" data-i18n="projects.featured.meta">Producto propio · En producción</p>
+            <h3 class="row-title row-title-lg">Planifesto</h3>
+            <p class="row-body" data-i18n="projects.featured.p1">Planifesto es una plataforma de educación financiera para jóvenes hispanohablantes: cursos, plantillas y herramientas digitales. La construí de principio a fin: el catálogo y los pagos, la entrega automatizada de cada compra con Google Apps Script, la analítica y el SEO que la posiciona en una veintena de países.</p>
+            <p class="row-body" data-i18n="projects.featured.p2">La parte difícil no fue el código, fue montar un sistema que venda y entregue solo: cada pedido se procesa, se entrega y se registra sin intervención manual.</p>
+            <!-- TODO: cuando tengas una captura real del sitio, añádela aquí:
+            <figure class="row-figure">
+              <img src="assets/img/planifesto.jpg" alt="Página principal de Planifesto" loading="lazy" width="1200" height="750">
+            </figure> -->
+            <p class="row-links"><a class="inline-link" href="https://planifestord.com" target="_blank" rel="noopener"><span data-i18n="projects.featured.visit">Visitar planifestord.com</span> ↗</a></p>
           </article>
 
-          <!-- TODO: PROYECTO PLACEHOLDER — cuando tengas otro proyecto real:
+          <!-- TODO: PROYECTO PLANTILLA — cuando tengas otro proyecto real:
                1) Borra el atributo `hidden` de la tarjeta.
-               2) Edita título, descripción y chips aquí, y sus textos en js/i18n.js
-                  (claves projects.p2.* — la tarjeta de Planifesto es tu modelo).
-               3) Pon los enlaces reales en href (demo y repositorio).
-               Guía completa en README.md -->
-          <article class="card project-card reveal" hidden>
-            <div class="project-thumb" aria-hidden="true">
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><line x1="2" y1="9" x2="22" y2="9"/></svg>
-            </div>
-            <p class="project-type mono" data-i18n="projects.p2.type">Aplicación web</p>
-            <h3 class="card-title" data-i18n="projects.p2.title">Nombre del proyecto</h3>
-            <p class="card-desc" data-i18n="projects.p2.desc">Describe en 1–2 líneas qué hace el proyecto y qué problema resuelve para el cliente.</p>
-            <ul class="chips" role="list">
-              <li class="chip mono">Stack</li>
-              <li class="chip mono">Stack</li>
-            </ul>
-            <div class="project-links">
-              <a class="text-link" href="#" target="_blank" rel="noopener"><span data-i18n="projects.tpl.demo">Demo</span>&nbsp;↗</a>
-              <a class="text-link" href="#" target="_blank" rel="noopener"><span data-i18n="projects.tpl.code">Código</span>&nbsp;↗</a>
-            </div>
+               2) Edita sus textos en js/i18n.js (claves projects.p2.*).
+               3) Pon los enlaces reales (demo y repositorio); borra el que no uses. -->
+          <article class="row" hidden>
+            <p class="row-meta" data-i18n="projects.p2.meta">Proyecto de cliente · Año</p>
+            <h3 class="row-title row-title-lg" data-i18n="projects.p2.title">Nombre del proyecto</h3>
+            <p class="row-body" data-i18n="projects.p2.desc">Qué hace el proyecto, para quién y qué resultado tuvo. Dos o tres frases concretas valen más que una lista de tecnologías.</p>
+            <p class="row-links">
+              <a class="inline-link" href="#" target="_blank" rel="noopener"><span data-i18n="projects.tpl.demo">Ver en vivo</span> ↗</a>
+              <a class="inline-link" href="#" target="_blank" rel="noopener"><span data-i18n="projects.tpl.code">Código</span> ↗</a>
+            </p>
           </article>
 
-          <!-- TODO: PROYECTO PLACEHOLDER — igual que el anterior (claves projects.p3.* en js/i18n.js) -->
-          <article class="card project-card reveal" hidden>
-            <div class="project-thumb" aria-hidden="true">
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-            </div>
-            <p class="project-type mono" data-i18n="projects.p3.type">App móvil</p>
-            <h3 class="card-title" data-i18n="projects.p3.title">Nombre del proyecto</h3>
-            <p class="card-desc" data-i18n="projects.p3.desc">Describe en 1–2 líneas qué hace el proyecto y qué problema resuelve para el cliente.</p>
-            <ul class="chips" role="list">
-              <li class="chip mono">Stack</li>
-              <li class="chip mono">Stack</li>
-            </ul>
-            <div class="project-links">
-              <a class="text-link" href="#" target="_blank" rel="noopener"><span data-i18n="projects.tpl.demo">Demo</span>&nbsp;↗</a>
-              <a class="text-link" href="#" target="_blank" rel="noopener"><span data-i18n="projects.tpl.code">Código</span>&nbsp;↗</a>
-            </div>
+          <!-- TODO: PROYECTO PLANTILLA — igual que el anterior (claves projects.p3.* en js/i18n.js) -->
+          <article class="row" hidden>
+            <p class="row-meta" data-i18n="projects.p3.meta">Proyecto de cliente · Año</p>
+            <h3 class="row-title row-title-lg" data-i18n="projects.p3.title">Nombre del proyecto</h3>
+            <p class="row-body" data-i18n="projects.p3.desc">Qué hace el proyecto, para quién y qué resultado tuvo. Dos o tres frases concretas valen más que una lista de tecnologías.</p>
+            <p class="row-links">
+              <a class="inline-link" href="#" target="_blank" rel="noopener"><span data-i18n="projects.tpl.demo">Ver en vivo</span> ↗</a>
+              <a class="inline-link" href="#" target="_blank" rel="noopener"><span data-i18n="projects.tpl.code">Código</span> ↗</a>
+            </p>
           </article>
         </div>
+
+        <p class="section-note"><span data-i18n="projects.more.text">Ahora mismo tengo espacio para nuevos proyectos.</span> <a class="inline-link" href="#contacto" data-i18n="projects.more.link">Escríbeme</a></p>
       </div>
     </section>
 
     <!-- ============ SOBRE MÍ ============ -->
     <section class="section" id="sobre-mi" aria-labelledby="sobre-title">
-      <div class="container about-inner">
-        <div class="about-visual reveal">
-          <!-- TODO: reemplaza el avatar por tu foto:
-               guarda assets/img/foto.jpg y usa:
-               <img class="avatar-img" src="assets/img/foto.jpg" alt="Foto de José Miguel Batista"> -->
-          <div class="avatar" aria-hidden="true"><span class="mono">JMB</span></div>
-        </div>
-        <div class="about-copy">
-          <p class="section-eyebrow mono reveal" data-i18n="about.eyebrow">// sobre mí</p>
-          <h2 class="section-title reveal" id="sobre-title" data-i18n="about.title">Sobre mí</h2>
-          <p class="about-p reveal" data-i18n="about.p1">Soy desarrollador full-stack con un enfoque claro: la tecnología es un medio, el objetivo es que tu negocio crezca. Por eso hablo de conversión, velocidad y resultados antes que de frameworks.</p>
-          <p class="about-p reveal" data-i18n="about.p2">No solo escribo código: he construido y lanzado mi propio producto. Planifesto pasó de idea a plataforma en producción — diseño, desarrollo, SEO internacional, automatización y ventas. Esa experiencia end-to-end es la que aplico en cada proyecto de mis clientes.</p>
-          <h3 class="about-tech-title mono reveal" data-i18n="about.techTitle">$ tecnologías --list</h3>
-          <ul class="chips reveal" role="list">
-            <li class="chip mono">HTML/CSS</li>
-            <li class="chip mono">JavaScript</li>
-            <li class="chip mono">Node.js</li>
-            <li class="chip mono">Supabase</li>
-            <li class="chip mono">SQL</li>
-            <li class="chip mono">Git</li>
-            <li class="chip mono">Google Apps Script</li>
-            <li class="chip mono">SEO</li>
-            <li class="chip mono">Analytics</li>
-            <li class="chip mono">iOS/Android</li>
-          </ul>
-        </div>
+      <div class="container">
+        <h2 class="section-title" id="sobre-title" data-i18n="about.title">Sobre mí</h2>
+        <!-- TODO: si quieres foto, añádela aquí:
+        <figure class="about-figure">
+          <img src="assets/img/foto.jpg" alt="José Miguel Batista" width="480" height="480" loading="lazy">
+        </figure> -->
+        <p class="row-body" data-i18n="about.p1">Soy desarrollador full-stack y me importa más el resultado que la herramienta: un sitio que carga rápido, se entiende a la primera y le hace ganar dinero a su dueño.</p>
+        <p class="row-body" data-i18n="about.p2">Lanzar mi propio producto me cambió la forma de trabajar. Sé lo que cuesta conseguir cada visita y lo que vale cada venta, así que trato cada proyecto de cliente como si fuera mío.</p>
+        <p class="row-meta" data-i18n="about.tech">Trabajo con HTML y CSS, JavaScript, Node.js, Supabase, SQL, Git, Google Apps Script, SEO y Analytics.</p>
       </div>
     </section>
 
     <!-- ============ PROCESO ============ -->
-    <section class="section section-alt" id="proceso" aria-labelledby="proceso-title">
+    <section class="section" id="proceso" aria-labelledby="proceso-title">
       <div class="container">
-        <p class="section-eyebrow mono reveal" data-i18n="process.eyebrow">// proceso</p>
-        <h2 class="section-title reveal" id="proceso-title" data-i18n="process.title">Cómo trabajo</h2>
-        <p class="section-sub reveal" data-i18n="process.sub">Un proceso claro, sin sorpresas.</p>
+        <h2 class="section-title" id="proceso-title" data-i18n="process.title">Cómo trabajo</h2>
 
-        <ol class="process-list" role="list">
-          <li class="process-step reveal" style="--delay: 0ms">
-            <span class="step-num mono" aria-hidden="true">01</span>
-            <h3 class="step-title" data-i18n="process.s1.title">Descubrimiento</h3>
-            <p class="step-desc" data-i18n="process.s1.desc">Hablamos de tus objetivos, alcance y presupuesto. Entiendo tu negocio antes de proponer nada.</p>
+        <ol class="rows process-list">
+          <li class="row">
+            <h3 class="row-title"><span class="row-num" aria-hidden="true">1.</span> <span data-i18n="process.s1.title">Descubrimiento</span></h3>
+            <p class="row-body" data-i18n="process.s1.desc">Hablamos de tu negocio, objetivos y presupuesto antes de proponer nada.</p>
           </li>
-          <li class="process-step reveal" style="--delay: 100ms">
-            <span class="step-num mono" aria-hidden="true">02</span>
-            <h3 class="step-title" data-i18n="process.s2.title">Propuesta</h3>
-            <p class="step-desc" data-i18n="process.s2.desc">Recibes un plan concreto: qué se construye, en cuánto tiempo y a qué precio. Cerrado, sin letra pequeña.</p>
+          <li class="row">
+            <h3 class="row-title"><span class="row-num" aria-hidden="true">2.</span> <span data-i18n="process.s2.title">Propuesta</span></h3>
+            <p class="row-body" data-i18n="process.s2.desc">Un plan por escrito: alcance, plazos y precio cerrado.</p>
           </li>
-          <li class="process-step reveal" style="--delay: 200ms">
-            <span class="step-num mono" aria-hidden="true">03</span>
-            <h3 class="step-title" data-i18n="process.s3.title">Desarrollo</h3>
-            <p class="step-desc" data-i18n="process.s3.desc">Construyo en iteraciones cortas con avances visibles. Siempre sabes en qué punto está tu proyecto.</p>
+          <li class="row">
+            <h3 class="row-title"><span class="row-num" aria-hidden="true">3.</span> <span data-i18n="process.s3.title">Desarrollo</span></h3>
+            <p class="row-body" data-i18n="process.s3.desc">Iteraciones cortas, con avances que puedes ver y probar.</p>
           </li>
-          <li class="process-step reveal" style="--delay: 300ms">
-            <span class="step-num mono" aria-hidden="true">04</span>
-            <h3 class="step-title" data-i18n="process.s4.title">Lanzamiento y soporte</h3>
-            <p class="step-desc" data-i18n="process.s4.desc">Desplegamos, medimos y ajustamos. Y no desaparezco: quedo disponible para soporte y mejoras.</p>
+          <li class="row">
+            <h3 class="row-title"><span class="row-num" aria-hidden="true">4.</span> <span data-i18n="process.s4.title">Lanzamiento y soporte</span></h3>
+            <p class="row-body" data-i18n="process.s4.desc">Publicamos, medimos y quedo disponible para mejoras.</p>
           </li>
         </ol>
       </div>
@@ -404,44 +226,34 @@
          3) Añade el enlace "Testimonios" al nav (está comentado en el header). -->
     <section class="section" id="testimonios" aria-labelledby="testimonios-title" hidden>
       <div class="container">
-        <p class="section-eyebrow mono reveal" data-i18n="testimonials.eyebrow">// testimonios</p>
-        <h2 class="section-title reveal" id="testimonios-title" data-i18n="testimonials.title">Lo que dicen mis clientes</h2>
-
-        <div class="grid cards-2">
-          <figure class="card testimonial reveal">
-            <blockquote class="testimonial-quote" data-i18n="testimonials.t1.quote">«Escribe aquí el testimonio de tu cliente: qué problema tenía, cómo lo resolviste y qué resultado obtuvo.»</blockquote>
-            <figcaption>
-              <span class="testimonial-name" data-i18n="testimonials.t1.name">Nombre del cliente</span>
-              <span class="testimonial-role muted" data-i18n="testimonials.t1.role">Cargo, Empresa</span>
-            </figcaption>
+        <h2 class="section-title" id="testimonios-title" data-i18n="testimonials.title">Lo que dicen mis clientes</h2>
+        <div class="rows">
+          <figure class="row testimonial">
+            <blockquote data-i18n="testimonials.t1.quote">«Escribe aquí el testimonio de tu cliente: qué problema tenía, cómo lo resolviste y qué resultado obtuvo.»</blockquote>
+            <figcaption class="row-meta"><span data-i18n="testimonials.t1.name">Nombre del cliente</span>, <span data-i18n="testimonials.t1.role">cargo, empresa</span></figcaption>
           </figure>
-          <figure class="card testimonial reveal">
-            <blockquote class="testimonial-quote" data-i18n="testimonials.t2.quote">«Escribe aquí el testimonio de tu cliente: qué problema tenía, cómo lo resolviste y qué resultado obtuvo.»</blockquote>
-            <figcaption>
-              <span class="testimonial-name" data-i18n="testimonials.t2.name">Nombre del cliente</span>
-              <span class="testimonial-role muted" data-i18n="testimonials.t2.role">Cargo, Empresa</span>
-            </figcaption>
+          <figure class="row testimonial">
+            <blockquote data-i18n="testimonials.t2.quote">«Escribe aquí el testimonio de tu cliente: qué problema tenía, cómo lo resolviste y qué resultado obtuvo.»</blockquote>
+            <figcaption class="row-meta"><span data-i18n="testimonials.t2.name">Nombre del cliente</span>, <span data-i18n="testimonials.t2.role">cargo, empresa</span></figcaption>
           </figure>
         </div>
       </div>
     </section>
 
     <!-- ============ CONTACTO ============ -->
-    <section class="section section-contact" id="contacto" aria-labelledby="contacto-title">
-      <div class="container contact-inner">
-        <p class="section-eyebrow mono reveal" data-i18n="contact.eyebrow">// contacto</p>
-        <h2 class="section-title reveal" id="contacto-title" data-i18n="contact.title">¿Tienes un proyecto en mente?</h2>
-        <p class="section-sub reveal" data-i18n="contact.sub">Cuéntame qué necesitas y te respondo en menos de 24 horas.</p>
+    <section class="section" id="contacto" aria-labelledby="contacto-title">
+      <div class="container">
+        <h2 class="section-title" id="contacto-title" data-i18n="contact.title">¿Tienes un proyecto en mente?</h2>
+        <p class="row-body" data-i18n="contact.sub">Escríbeme y te respondo en menos de 24 horas.</p>
 
-        <div class="contact-actions reveal">
-          <a class="btn btn-primary btn-lg" href="mailto:josemiguel20186@gmail.com" data-i18n="contact.email">Escríbeme un email</a>
-          <!-- El botón de WhatsApp se muestra solo cuando pones tu número en js/main.js (WHATSAPP_NUMBER) -->
-          <a class="btn btn-secondary btn-lg" id="whatsapp-btn" href="#" target="_blank" rel="noopener" hidden data-i18n="contact.whatsapp">Escríbeme por WhatsApp</a>
-        </div>
+        <p class="contact-email-line">
+          <a class="contact-email" href="mailto:josemiguel20186@gmail.com">josemiguel20186@gmail.com</a>
+          <button class="copy-btn" id="copy-email" type="button" data-email="josemiguel20186@gmail.com" data-i18n="contact.copy">Copiar</button>
+        </p>
 
-        <p class="contact-email-line reveal">
-          <span class="mono contact-email">josemiguel20186@gmail.com</span>
-          <button class="copy-btn mono" id="copy-email" type="button" data-email="josemiguel20186@gmail.com" data-i18n="contact.copy">Copiar</button>
+        <!-- La línea de WhatsApp se muestra solo cuando pones tu número en js/main.js (WHATSAPP_NUMBER) -->
+        <p class="contact-whatsapp" id="whatsapp-line" hidden>
+          <a class="inline-link" id="whatsapp-btn" href="#" target="_blank" rel="noopener"><span data-i18n="contact.whatsapp">También puedes escribirme por WhatsApp</span> ↗</a>
         </p>
       </div>
     </section>
@@ -450,31 +262,16 @@
   <!-- ============ FOOTER ============ -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div class="footer-brand">
-        <a class="logo" href="#top" aria-label="José Miguel Batista — inicio">&lt;JB /&gt;</a>
-        <p class="muted" data-i18n="footer.tagline">Desarrollador web y móvil freelance.</p>
-      </div>
-
+      <p>© <span id="year">2026</span> José Miguel Batista</p>
       <nav class="footer-nav" aria-label="Pie de página">
-        <a href="#servicios" data-i18n="nav.services">Servicios</a>
-        <a href="#proyectos" data-i18n="nav.projects">Proyectos</a>
-        <a href="#sobre-mi" data-i18n="nav.about">Sobre mí</a>
+        <a href="#servicios" data-i18n="nav.services">Qué hago</a>
+        <a href="#proyectos" data-i18n="nav.projects">Trabajo</a>
         <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+        <!-- Los enlaces sociales se muestran solo cuando pones tus URLs en js/main.js (GITHUB_URL, LINKEDIN_URL) -->
+        <a id="github-link" href="#" target="_blank" rel="noopener" hidden>GitHub ↗</a>
+        <a id="linkedin-link" href="#" target="_blank" rel="noopener" hidden>LinkedIn ↗</a>
       </nav>
-
-      <!-- Los enlaces sociales se muestran solo cuando pones tus URLs en js/main.js (GITHUB_URL, LINKEDIN_URL) -->
-      <div class="footer-social">
-        <a id="github-link" href="#" target="_blank" rel="noopener" hidden aria-label="GitHub">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.34.96.1-.75.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.73.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.05.77 2.12 0 1.53-.01 2.76-.01 3.14 0 .3.2.66.8.55A11.52 11.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
-        </a>
-        <a id="linkedin-link" href="#" target="_blank" rel="noopener" hidden aria-label="LinkedIn">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
-        </a>
-      </div>
-    </div>
-    <div class="container footer-bottom">
-      <p class="muted">© <span id="year">2026</span> José Miguel Batista</p>
-      <p class="muted mono footer-handmade" data-i18n="footer.handmade">Hecho a mano con HTML, CSS y JS — sin frameworks.</p>
+      <p class="footer-handmade" data-i18n="footer.handmade">Hecho a mano con HTML, CSS y JavaScript.</p>
     </div>
   </footer>
 

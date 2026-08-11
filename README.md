@@ -33,14 +33,14 @@ Luego abre `http://localhost:8000`. (También puedes abrir `index.html` con dobl
 |---|---|---|
 | **Número de WhatsApp** | `js/main.js` → `WHATSAPP_NUMBER` | Solo dígitos con código de país, ej. `"18095551234"`. Vacío = el botón no aparece. |
 | **GitHub y LinkedIn** | `js/main.js` → `GITHUB_URL`, `LINKEDIN_URL` | URLs completas. Vacías = los iconos del footer no aparecen. También añádelas al `sameAs` del JSON-LD en `index.html`. |
-| **Tu foto** | `assets/img/foto.jpg` + `index.html` (sección Sobre mí) | Busca el TODO del avatar y sigue la instrucción del comentario. |
-| **Captura de Planifesto** | `assets/img/planifesto.jpg` + `index.html` (sección Proyectos) | Busca el TODO del `browser-screen`: reemplaza el SVG por la etiqueta `<img>` indicada. |
-| **Métricas reales de Planifesto** | `js/i18n.js` → claves `projects.featured.stat*` y valores en `index.html` | Cuando tengas cifras de ventas/tráfico, cámbialas para dar más credibilidad. |
-| **Añadir un proyecto** | `index.html` (tarjetas con TODO "PROYECTO PLACEHOLDER") | Quita el atributo `hidden`, edita los textos en `js/i18n.js` (claves `projects.p2.*` / `p3.*`) y pon los enlaces reales. Duplica una tarjeta si necesitas más. |
+| **Tu foto** | `index.html` (sección Sobre mí) | Guarda `assets/img/foto.jpg` y descomenta la `<figure>` marcada con TODO. |
+| **Captura de Planifesto** | `index.html` (sección Trabajo) | Guarda `assets/img/planifesto.jpg` y descomenta la `<figure>` marcada con TODO. |
+| **Cifras reales de Planifesto** | `js/i18n.js` → claves `projects.featured.p1` / `p2` | Cuando tengas cifras de ventas o tráfico, incorpóralas al texto: los datos concretos dan credibilidad. |
+| **Añadir un proyecto** | `index.html` (filas con TODO "PROYECTO PLANTILLA") | Quita el atributo `hidden`, edita los textos en `js/i18n.js` (claves `projects.p2.*` / `p3.*`) y pon los enlaces reales. Duplica una fila si necesitas más. |
 | **Activar testimonios** | `index.html` (sección `#testimonios`) | Quita `hidden` al `<section>`, rellena textos en `js/i18n.js` (claves `testimonials.*`) y descomenta el enlace del nav. |
-| **Stack de apps móviles** | `index.html` (tercera tarjeta de Servicios) | Cambia los chips iOS/Android por tu stack real (React Native, Flutter, Swift…). |
+| **Stack de apps móviles** | `index.html` (tercera fila de Qué hago) | Cambia la línea iOS · Android por tu stack real (React Native, Flutter, Swift…). |
 | **Cualquier texto** | `js/i18n.js` | Todos los textos viven ahí, en español e inglés. Edita ambos idiomas. |
-| **Colores** | `css/styles.css` → variables `:root` al inicio | `--accent` cambia el color principal de todo el sitio. |
+| **Colores y tipografía** | `css/styles.css` → variables `:root` al inicio | `--accent` cambia el color de acento; los titulares usan la fuente Fraunces (Google Fonts). |
 | **Dominio propio** | `index.html`, `robots.txt`, `sitemap.xml` | Busca `TU-DOMINIO.com` (canonical, og:url, og:image, JSON-LD, sitemap, robots) y reemplázalo. |
 
 > Truco: busca `TODO` en todo el proyecto para ver los puntos pendientes de personalizar.

@@ -5,83 +5,39 @@
 <title>Plantilla OG 1200×630 — captura esta página para regenerar og-image.png</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; box-sizing: border-box; }
   body {
     width: 1200px;
     height: 630px;
     overflow: hidden;
-    position: relative;
-    background: #0a0e1a;
-    color: #e6edf3;
-    font-family: "Space Grotesk", system-ui, sans-serif;
+    background: #171512;
+    color: #ece7de;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 90px;
+    padding: 0 96px;
   }
-  body::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image:
-      linear-gradient(rgba(148,163,184,.06) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(148,163,184,.06) 1px, transparent 1px);
-    background-size: 56px 56px;
-    -webkit-mask-image: radial-gradient(ellipse 90% 80% at 40% 50%, #000 30%, transparent 100%);
-    mask-image: radial-gradient(ellipse 90% 80% at 40% 50%, #000 30%, transparent 100%);
+  .rule { width: 72px; height: 5px; background: #e08b5e; margin-bottom: 44px; }
+  h1 {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 500;
+    font-size: 92px;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    margin-bottom: 26px;
   }
-  body::after {
-    content: "";
-    position: absolute;
-    inset: -15%;
-    background:
-      radial-gradient(500px 360px at 15% 25%, rgba(0,220,130,.18), transparent 70%),
-      radial-gradient(560px 400px at 88% 80%, rgba(56,189,248,.15), transparent 70%);
-    filter: blur(40px);
-  }
-  .content { position: relative; z-index: 1; }
-  .mono { font-family: "JetBrains Mono", ui-monospace, monospace; }
-  .eyebrow { color: #94a3b8; font-size: 26px; margin-bottom: 28px; }
-  .accent { color: #00dc82; }
-  h1 { font-size: 88px; font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; margin-bottom: 18px; }
-  .role {
-    font-size: 40px;
-    font-weight: 700;
-    background: linear-gradient(90deg, #00dc82, #38bdf8);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 48px;
-  }
-  .bottom { display: flex; align-items: center; gap: 28px; font-size: 24px; color: #94a3b8; }
-  .chips { display: flex; gap: 14px; }
-  .chip {
-    font-family: "JetBrains Mono", ui-monospace, monospace;
-    font-size: 20px;
-    padding: 8px 22px;
-    border: 1.5px solid rgba(148,163,184,.25);
-    border-radius: 999px;
-    background: rgba(18,26,43,.7);
-  }
-  .status { display: flex; align-items: center; gap: 12px; }
-  .dot { width: 14px; height: 14px; border-radius: 50%; background: #00dc82; box-shadow: 0 0 18px rgba(0,220,130,.9); }
+  .role { font-size: 34px; color: #a49e92; margin-bottom: 56px; }
+  .foot { font-size: 26px; color: #a49e92; }
+  .foot strong { color: #ece7de; font-weight: 600; }
 </style>
 </head>
 <body>
-  <div class="content">
-    <p class="eyebrow mono">~/josemiguel <span class="accent">$</span> whoami</p>
-    <h1>José Miguel Batista</h1>
-    <p class="role">Desarrollador Web y Móvil Freelance</p>
-    <div class="bottom">
-      <div class="chips">
-        <span class="chip">full-stack</span>
-        <span class="chip">frontend</span>
-        <span class="chip">apps móviles</span>
-      </div>
-      <div class="status"><span class="dot"></span> Disponible para proyectos</div>
-    </div>
-  </div>
+  <div class="rule"></div>
+  <h1>José Miguel Batista</h1>
+  <p class="role">Desarrollador web y móvil · Freelance</p>
+  <p class="foot">Creador de <strong>Planifesto</strong> · Disponible para proyectos</p>
 </body>
 </html>
