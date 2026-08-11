@@ -104,6 +104,30 @@ const LINKEDIN_URL = "";
     if (hero) navObserver.observe(hero);
   }
 
+  /* ----- Aparición al hacer scroll (títulos y filas) ----- */
+  const revealEls = document.querySelectorAll(".section-title, .row, .section-note");
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+  if (reducedMotion.matches || !("IntersectionObserver" in window)) {
+    revealEls.forEach((el) => el.classList.add("visible"));
+  } else {
+    // Escalonado suave dentro de cada grupo de filas
+    document.querySelectorAll(".rows").forEach((group) => {
+      Array.from(group.children).forEach((el, i) => {
+        el.style.setProperty("--d", Math.min(i * 70, 280) + "ms");
+      });
+    });
+    const revealObserver = new IntersectionObserver((entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: "0px 0px -30px 0px" });
+    revealEls.forEach((el) => revealObserver.observe(el));
+  }
+
   /* ----- Botón "Copiar email" ----- */
   const copyBtn = document.getElementById("copy-email");
 

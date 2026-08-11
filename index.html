@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.add('js')</script>
 
   <title>José Miguel Batista · Desarrollador web y móvil freelance</title>
   <meta name="description" content="Desarrollador freelance full-stack. Webs, tiendas online y apps móviles. Creador de Planifesto. Disponible para proyectos.">
@@ -93,6 +94,7 @@
     <!-- ============ HERO ============ -->
     <section class="hero">
       <div class="container">
+        <div class="hero-rule" aria-hidden="true"></div>
         <h1 class="hero-title" data-i18n="hero.title">Construyo webs, tiendas online y apps móviles.</h1>
         <p class="hero-sub" data-i18n="hero.subtitle">Hola, soy José Miguel Batista, desarrollador freelance. Me ocupo del ciclo completo: diseño, desarrollo, SEO y automatización. Mi mejor carta de presentación es Planifesto, una plataforma de educación financiera que construí de cero y que hoy vende cursos y plantillas en español.</p>
         <div class="hero-actions">
@@ -183,13 +185,17 @@
     <section class="section" id="sobre-mi" aria-labelledby="sobre-title">
       <div class="container">
         <h2 class="section-title" id="sobre-title" data-i18n="about.title">Sobre mí</h2>
-        <!-- TODO: si quieres foto, añádela aquí:
-        <figure class="about-figure">
-          <img src="assets/img/foto.jpg" alt="José Miguel Batista" width="480" height="480" loading="lazy">
-        </figure> -->
-        <p class="row-body" data-i18n="about.p1">Soy desarrollador full-stack y me importa más el resultado que la herramienta: un sitio que carga rápido, se entiende a la primera y le hace ganar dinero a su dueño.</p>
-        <p class="row-body" data-i18n="about.p2">Lanzar mi propio producto me cambió la forma de trabajar. Sé lo que cuesta conseguir cada visita y lo que vale cada venta, así que trato cada proyecto de cliente como si fuera mío.</p>
-        <p class="row-meta" data-i18n="about.tech">Trabajo con HTML y CSS, JavaScript, Node.js, Supabase, SQL, Git, Google Apps Script, SEO y Analytics.</p>
+        <div class="rows">
+          <div class="row">
+            <!-- TODO: si quieres foto, añádela aquí:
+            <figure class="row-figure">
+              <img src="assets/img/foto.jpg" alt="José Miguel Batista" width="480" height="480" loading="lazy">
+            </figure> -->
+            <p class="row-body" data-i18n="about.p1">Soy desarrollador full-stack y me importa más el resultado que la herramienta: un sitio que carga rápido, se entiende a la primera y le hace ganar dinero a su dueño.</p>
+            <p class="row-body" data-i18n="about.p2">Lanzar mi propio producto me cambió la forma de trabajar. Sé lo que cuesta conseguir cada visita y lo que vale cada venta, así que trato cada proyecto de cliente como si fuera mío.</p>
+            <p class="row-meta" data-i18n="about.tech">Trabajo con HTML y CSS, JavaScript, Node.js, Supabase, SQL, Git, Google Apps Script, SEO y Analytics.</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -244,17 +250,21 @@
     <section class="section" id="contacto" aria-labelledby="contacto-title">
       <div class="container">
         <h2 class="section-title" id="contacto-title" data-i18n="contact.title">¿Tienes un proyecto en mente?</h2>
-        <p class="row-body" data-i18n="contact.sub">Escríbeme y te respondo en menos de 24 horas.</p>
+        <div class="rows">
+          <div class="row">
+            <p class="row-body" data-i18n="contact.sub">Escríbeme y te respondo en menos de 24 horas.</p>
 
-        <p class="contact-email-line">
-          <a class="contact-email" href="mailto:josemiguel20186@gmail.com">josemiguel20186@gmail.com</a>
-          <button class="copy-btn" id="copy-email" type="button" data-email="josemiguel20186@gmail.com" data-i18n="contact.copy">Copiar</button>
-        </p>
+            <p class="contact-email-line">
+              <a class="contact-email" href="mailto:josemiguel20186@gmail.com">josemiguel20186@gmail.com</a>
+              <button class="copy-btn" id="copy-email" type="button" data-email="josemiguel20186@gmail.com" data-i18n="contact.copy">Copiar</button>
+            </p>
 
-        <!-- La línea de WhatsApp se muestra solo cuando pones tu número en js/main.js (WHATSAPP_NUMBER) -->
-        <p class="contact-whatsapp" id="whatsapp-line" hidden>
-          <a class="inline-link" id="whatsapp-btn" href="#" target="_blank" rel="noopener"><span data-i18n="contact.whatsapp">También puedes escribirme por WhatsApp</span> ↗</a>
-        </p>
+            <!-- La línea de WhatsApp se muestra solo cuando pones tu número en js/main.js (WHATSAPP_NUMBER) -->
+            <p class="contact-whatsapp" id="whatsapp-line" hidden>
+              <a class="inline-link" id="whatsapp-btn" href="#" target="_blank" rel="noopener"><span data-i18n="contact.whatsapp">También puedes escribirme por WhatsApp</span> ↗</a>
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   </main>

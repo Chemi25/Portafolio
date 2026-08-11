@@ -1,8 +1,9 @@
 /* ============================================================
    Portafolio — José Miguel Batista
-   Diseño editorial: una columna de texto, una serif con carácter,
+   Diseño editorial: columna de lectura, una serif con carácter,
    un acento cálido y un solo primitivo de layout (filas con
-   separador fino). Sin gradientes, glows ni animación decorativa.
+   separador fino). La animación es escasa y deliberada: la regla
+   del hero se dibuja, las filas aparecen y su línea se traza.
    ============================================================ */
 
 /* ---------- 1. Tokens ---------- */
@@ -14,8 +15,10 @@
   --accent: #e08b5e;        /* terracota */
   --font-serif: "Fraunces", Georgia, "Times New Roman", serif;
   --font-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --measure: 46rem;         /* ancho de columna de lectura */
+  --measure: 66rem;         /* ancho máximo de página */
+  --prose: 40rem;           /* ancho máximo de un párrafo */
   --header-h: 64px;
+  --ease: cubic-bezier(0.25, 0.6, 0.3, 1);
 }
 
 /* ---------- 2. Base ---------- */
@@ -34,6 +37,17 @@ body {
   font-family: var(--font-body);
   font-size: 1.0625rem;   /* 17px */
   line-height: 1.75;
+}
+
+/* Grano sutil sobre toda la página */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.04;
 }
 
 h1, h2, h3 { margin: 0 0 0.5em; }
@@ -89,7 +103,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
 .skip-link {
   position: absolute;
   top: 0; left: 16px;
-  z-index: 100;
+  z-index: 300;
   padding: 10px 16px;
   background: var(--text);
   color: var(--bg);
@@ -101,14 +115,14 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
 }
 .skip-link:focus-visible { transform: translateY(0); }
 
-.section { padding-block: 72px; }
+.section { padding-block: 84px; }
 
 .section-title {
   font-size: clamp(1.6rem, 4vw, 2.1rem);
   margin-bottom: 1.2em;
 }
 
-.section-note { margin: 40px 0 0; color: var(--muted); }
+.section-note { margin: 36px 0 0; color: var(--muted); }
 
 .btn {
   display: inline-block;
@@ -124,14 +138,27 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
 
 .inline-link { white-space: nowrap; }
 
-/* El primitivo de layout: filas separadas por una línea fina */
+/* El primitivo de layout: filas con una línea fina arriba */
 .rows { list-style: none; }
 
 .row {
-  border-top: 1px solid var(--line);
-  padding-block: 28px;
+  position: relative;
+  padding-block: 30px;
 }
-.rows .row:last-child { border-bottom: 1px solid var(--line); }
+.row::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: var(--line);
+}
+.rows > .row:last-child::after {
+  content: "";
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 1px;
+  background: var(--line);
+}
 
 .row-title {
   font-family: var(--font-body);
@@ -151,7 +178,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
 
 .row-body {
   color: var(--muted);
-  max-width: 40rem;
+  max-width: var(--prose);
 }
 .row-body:last-child { margin-bottom: 0; }
 
@@ -160,7 +187,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
   font-size: 0.85rem;
   margin: 0 0 0.4em;
 }
-.row > .row-meta:last-child, .row-meta:last-child { margin-bottom: 0; }
+.row-meta:last-child { margin-bottom: 0; }
 
 .row-links { margin: 0; display: flex; gap: 24px; }
 
@@ -169,6 +196,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
   border: 1px solid var(--line);
   border-radius: 4px;
   overflow: hidden;
+  max-width: var(--prose);
 }
 
 /* ---------- 4. Header ---------- */
@@ -203,7 +231,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
 .nav-list {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 22px;
 }
 
 .nav-link {
@@ -260,18 +288,25 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
 .menu-toggle[aria-expanded="true"] .menu-bar:nth-child(2) { transform: translateY(-3.75px) rotate(-45deg); }
 
 /* ---------- 5. Hero ---------- */
-.hero { padding-block: 88px 64px; }
+.hero { padding-block: 96px 72px; }
+
+.hero-rule {
+  width: 56px;
+  height: 4px;
+  background: var(--accent);
+  margin-bottom: 32px;
+}
 
 .hero-title {
-  font-size: clamp(2.3rem, 6vw, 3.6rem);
-  max-width: 15em;
+  font-size: clamp(2.4rem, 5.5vw, 4.1rem);
+  max-width: 14em;
   margin-bottom: 24px;
 }
 
 .hero-sub {
   color: var(--muted);
-  max-width: 38rem;
-  margin-bottom: 28px;
+  max-width: 37rem;
+  margin-bottom: 30px;
 }
 
 .hero-actions {
@@ -294,6 +329,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
   font-family: var(--font-serif);
   font-size: 1.15rem;
   line-height: 1.55;
+  max-width: var(--prose);
 }
 
 /* ---------- 7. Contacto ---------- */
@@ -302,12 +338,12 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
   align-items: baseline;
   flex-wrap: wrap;
   gap: 16px;
-  margin: 28px 0 10px;
+  margin: 24px 0 10px;
 }
 
 .contact-email {
   font-family: var(--font-serif);
-  font-size: clamp(1.25rem, 3.5vw, 1.7rem);
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
   font-weight: 500;
   overflow-wrap: anywhere;
 }
@@ -349,7 +385,53 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
 }
 .footer-nav a:hover { color: var(--text); text-decoration: underline; }
 
-/* ---------- 9. Reduced motion ---------- */
+/* ---------- 9. Animación ----------
+   Deliberadamente escasa: entrada del hero al cargar, y filas
+   que aparecen mientras su línea superior se traza. Todo se
+   desactiva con prefers-reduced-motion. */
+
+@media (prefers-reduced-motion: no-preference) {
+  /* Entrada del hero (una sola vez, al cargar) */
+  @keyframes draw-in {
+    from { transform: scaleX(0); }
+    to   { transform: scaleX(1); }
+  }
+  @keyframes rise-in {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: none; }
+  }
+
+  .hero-rule         { transform-origin: 0 50%; animation: draw-in 600ms var(--ease) both; }
+  .hero-title        { animation: rise-in 600ms var(--ease) 100ms both; }
+  .hero-sub          { animation: rise-in 600ms var(--ease) 200ms both; }
+  .hero-actions      { animation: rise-in 600ms var(--ease) 300ms both; }
+  .hero-availability { animation: rise-in 600ms var(--ease) 380ms both; }
+
+  /* Aparición al hacer scroll (solo con JS activo) */
+  html.js :is(.section-title, .row, .section-note) {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 550ms var(--ease) var(--d, 0ms),
+                transform 550ms var(--ease) var(--d, 0ms);
+  }
+  html.js :is(.section-title, .row, .section-note).visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* La línea de cada fila se traza de izquierda a derecha */
+  html.js .row::before,
+  html.js .rows > .row:last-child::after {
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition: transform 900ms var(--ease) var(--d, 0ms);
+  }
+  html.js .row.visible::before,
+  html.js .rows > .row.visible:last-child::after {
+    transform: scaleX(1);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     transition-duration: 0.01ms !important;
@@ -357,7 +439,29 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
   }
 }
 
-/* ---------- 10. Responsive ---------- */
+/* ---------- 10. Layout de dos columnas en pantallas anchas ---------- */
+@media (min-width: 900px) {
+  .section { padding-block: 96px; }
+
+  .section > .container {
+    display: grid;
+    grid-template-columns: 200px minmax(0, 1fr);
+    column-gap: 72px;
+    align-items: start;
+  }
+  .section > .container > * { grid-column: 2; }
+  .section > .container > .section-title {
+    grid-column: 1;
+    position: sticky;
+    top: calc(var(--header-h) + 28px);
+    margin-bottom: 0;
+    font-size: 1.5rem;
+  }
+
+  .hero { padding-block: 120px 96px; }
+}
+
+/* ---------- 11. Móvil ---------- */
 @media (max-width: 720px) {
   .menu-toggle { display: flex; }
 
@@ -383,6 +487,8 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
   .nav-link { display: block; padding: 12px 0; font-size: 1rem; }
   .nav-link.active { text-underline-offset: 4px; }
 
-  .hero { padding-block: 56px 48px; }
+  .hero { padding-block: 64px 52px; }
+  .hero-rule { margin-bottom: 24px; }
   .section { padding-block: 56px; }
+  .row { padding-block: 24px; }
 }
