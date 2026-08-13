@@ -114,6 +114,7 @@ const translations = {
     "ctaband.eyebrow": "Siguiente paso",
     "ctaband.title": "Si llegaste hasta aquí, es porque tienes algo en mente.",
     "ctaband.cta": "Cuéntame qué necesitas",
+    "ctaband.mailto": "mailto:josemiguel20186@gmail.com?subject=Tengo%20un%20proyecto%20en%20mente",
 
     "process.topper": "Proceso",
     "process.lead": "Cuatro pasos, sin sorpresas y con algo que ver en cada uno.",
@@ -253,6 +254,7 @@ const translations = {
     "ctaband.eyebrow": "Next step",
     "ctaband.title": "If you made it this far, it's because you have something in mind.",
     "ctaband.cta": "Tell me what you need",
+    "ctaband.mailto": "mailto:josemiguel20186@gmail.com?subject=I%20have%20a%20project%20in%20mind",
 
     "process.topper": "Process",
     "process.lead": "Four steps, no surprises, with something to see at each one.",
