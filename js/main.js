@@ -10,11 +10,10 @@
 // Si lo dejas vacío, el enlace de WhatsApp no se muestra.
 const WHATSAPP_NUMBER = "18496074188";
 
-// TODO: pon las URLs completas de tus perfiles. Si las dejas vacías,
-// los enlaces del pie de página no se muestran.
-// Ejemplo: "https://github.com/tu-usuario"
-const GITHUB_URL = "";
-// Ejemplo: "https://www.linkedin.com/in/tu-usuario"
+// Perfiles públicos. Si dejas una URL vacía, ese enlace del pie no se muestra.
+const GITHUB_URL = "https://github.com/Chemi25";
+// TODO: pon la URL completa de tu perfil. Ejemplo: "https://www.linkedin.com/in/tu-usuario"
+// Al ponerla, añádela también al "sameAs" del JSON-LD en index.html.
 const LINKEDIN_URL = "";
 
 /* ------------------------------------------------------------
@@ -103,19 +102,22 @@ const LINKEDIN_URL = "";
     if (hero) navObserver.observe(hero);
   }
 
-  /* ----- Aparición al hacer scroll (títulos y filas) ----- */
-  const revealEls = document.querySelectorAll(".section-title, .row, .section-note");
+  /* ----- Aparición al hacer scroll ----- */
+  const revealEls = document.querySelectorAll("[data-reveal]");
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
   if (reducedMotion.matches || !("IntersectionObserver" in window)) {
     revealEls.forEach((el) => el.classList.add("visible"));
   } else {
-    // Escalonado suave dentro de cada grupo de filas
-    document.querySelectorAll(".rows").forEach((group) => {
-      Array.from(group.children).forEach((el, i) => {
-        el.style.setProperty("--d", Math.min(i * 70, 280) + "ms");
-      });
+    // Escalonado: cada hermano con data-reveal entra un poco después que el anterior
+    const seen = new Map();
+    revealEls.forEach((el) => {
+      const parent = el.parentElement;
+      const i = seen.get(parent) || 0;
+      seen.set(parent, i + 1);
+      el.style.setProperty("--d", Math.min(i * 110, 440) + "ms");
     });
+
     const revealObserver = new IntersectionObserver((entries, obs) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -123,8 +125,20 @@ const LINKEDIN_URL = "";
           obs.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.1, rootMargin: "0px 0px -30px 0px" });
+    }, { threshold: 0.08, rootMargin: "0px 0px -40px 0px" });
     revealEls.forEach((el) => revealObserver.observe(el));
+
+    // Red de seguridad: el contenido nunca puede quedarse invisible. Si el
+    // observador no ha llegado a algo que ya está en pantalla (navegadores que
+    // suspenden el renderizado, pestañas en segundo plano), se muestra igual.
+    const failSafe = () => {
+      revealEls.forEach((el) => {
+        const box = el.getBoundingClientRect();
+        if (box.top < window.innerHeight + 200) el.classList.add("visible");
+      });
+    };
+    setTimeout(failSafe, 1200);
+    window.addEventListener("load", () => setTimeout(failSafe, 400));
   }
 
   /* ----- Botón "Copiar email" ----- */

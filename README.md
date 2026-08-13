@@ -32,15 +32,20 @@ Luego abre `http://localhost:8000`. (También puedes abrir `index.html` con dobl
 | Qué | Dónde | Cómo |
 |---|---|---|
 | **Número de WhatsApp** | `js/main.js` → `WHATSAPP_NUMBER` | Ya configurado (`18496074188`). Vacío = el enlace no aparece. |
-| **GitHub y LinkedIn** | `js/main.js` → `GITHUB_URL`, `LINKEDIN_URL` | URLs completas. Vacías = los iconos del footer no aparecen. También añádelas al `sameAs` del JSON-LD en `index.html`. |
-| **Tu foto** | `index.html` (sección Sobre mí) | Guarda `assets/img/foto.jpg` y descomenta la `<figure>` marcada con TODO. |
-| **Captura de Planifesto** | `assets/img/planifesto.jpg` | Ya incluida (captura real del sitio en vivo). Para actualizarla, reemplaza el archivo (1200×750). |
+| **GitHub y LinkedIn** | `js/main.js` → `GITHUB_URL`, `LINKEDIN_URL` | GitHub ya puesto (`https://github.com/Chemi25`), también en el `sameAs` del JSON-LD. Falta LinkedIn: pon la URL completa y añádela al `sameAs` de `index.html`. Vacía = ese enlace del pie no aparece. |
+| **Tu foto** | `assets/img/foto.jpg` | Ya incluida (retrato 600×750, proporción 4:5). Para cambiarla, reemplaza el archivo respetando esa proporción; el texto alternativo está en `js/i18n.js` (`about.imgAlt`). |
+| **Capturas de Planifesto** | `assets/img/planifesto.jpg`, `planifesto-curso.jpg`, `planifesto-club.jpg` | Capturas reales del sitio en vivo: la portada (1200×750) y las páginas del curso y del Club (1200×857). Para actualizarlas, reemplaza el archivo respetando su tamaño. |
+| **Maqueta del hero** | `assets/img/planifesto.jpg` + `planifesto-movil.jpg` | El portátil y el móvil están dibujados con CSS (`.mockup`); lo único que se cambia son esas dos capturas: escritorio 1200×750 y móvil 440×952. |
+| **Compromisos** | `js/i18n.js` → claves `promises.*` | Los seis compromisos de la sección "Trabajar conmigo". Ajústalos a lo que de verdad puedas sostener: son una promesa pública. |
+| **Banda de cierre** | `js/i18n.js` → claves `ctaband.*` | El titular y el botón de la banda clara que va antes de Contacto. |
+| **Piezas de Planifesto** | `js/i18n.js` → claves `projects.featured.pc1…pc4` | Las cuatro piezas del ecosistema (plataforma, curso, Club y app). Para añadir otra, duplica un `.piece` en `index.html` y crea sus claves en ambos idiomas. |
 | **Cifras reales de Planifesto** | `js/i18n.js` → claves `projects.featured.p1` / `p2` | Cuando tengas cifras de ventas o tráfico, incorpóralas al texto: los datos concretos dan credibilidad. |
 | **Añadir un proyecto** | `index.html` (filas con TODO "PROYECTO PLANTILLA") | Quita el atributo `hidden`, edita los textos en `js/i18n.js` (claves `projects.p2.*` / `p3.*`) y pon los enlaces reales. Duplica una fila si necesitas más. |
 | **Activar testimonios** | `index.html` (sección `#testimonios`) | Quita `hidden` al `<section>`, rellena textos en `js/i18n.js` (claves `testimonials.*`) y descomenta el enlace del nav. |
 | **Stack de apps móviles** | `index.html` (tercera fila de Qué hago) | Cambia la línea iOS · Android por tu stack real (React Native, Flutter, Swift…). |
 | **Cualquier texto** | `js/i18n.js` | Todos los textos viven ahí, en español e inglés. Edita ambos idiomas. |
-| **Colores y tipografía** | `css/styles.css` → variables `:root` al inicio | `--accent` cambia el color de acento; los titulares usan la fuente Fraunces (Google Fonts). |
+| **Colores y tipografía** | `css/styles.css` → variables `:root` al inicio | Fondo `--bg: #030f18`, acento `--accent: #43b7ff` y los resplandores (`--glow`). Titulares en Oswald y cuerpo en Source Sans 3 (Google Fonts). |
+| **Animaciones** | `css/styles.css` (bloque 16) y `js/main.js` | Los bloques con el atributo `data-reveal` entran al hacer scroll, escalonados entre hermanos. Todo se desactiva con `prefers-reduced-motion` y hay una red de seguridad que los muestra igual si el observador no llega a ejecutarse. |
 | **Dominio propio** | `index.html`, `robots.txt`, `sitemap.xml` | Busca `TU-DOMINIO.com` (canonical, og:url, og:image, JSON-LD, sitemap, robots) y reemplázalo. |
 
 > Truco: busca `TODO` en todo el proyecto para ver los puntos pendientes de personalizar.
@@ -84,9 +89,9 @@ Si cambias textos/colores de marca: abre `assets/og-template.html` en el navegad
 
 ## ✅ Checklist antes de publicar
 
-- [ ] Número de WhatsApp puesto (o decidido dejarlo fuera)
-- [ ] Foto personal y captura de Planifesto
-- [ ] Enlaces GitHub/LinkedIn
+- [x] Número de WhatsApp puesto (o decidido dejarlo fuera)
+- [x] Foto personal y captura de Planifesto
+- [ ] Enlaces GitHub/LinkedIn (GitHub listo; falta LinkedIn)
 - [ ] Probado en móvil y escritorio
 - [ ] Toggle ES/EN revisado en ambos idiomas
 - [ ] `TU-DOMINIO.com` reemplazado (si ya hay dominio)
