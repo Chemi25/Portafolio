@@ -341,14 +341,6 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 16px); }
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.62), transparent 70%);
 }
 
-.hero-rule {
-  width: 4.5rem;
-  height: 3px;
-  margin-bottom: 1.5rem;
-  background: var(--accent);
-  box-shadow: var(--glow-sm);
-}
-
 .hero-topper {
   display: block;
   margin: 0 0 0.75rem;
@@ -544,7 +536,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 16px); }
 
 .row-links { display: flex; flex-wrap: wrap; gap: 1.5rem; margin: 0; }
 
-.pieces-label {
+.pieces-label, .shots-label {
   margin: 2.25rem 0 1.25rem;
   font-family: var(--font-header);
   font-size: 0.8rem;
@@ -601,6 +593,39 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 16px); }
   font-size: 0.78rem;
   font-weight: 500;
   letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+/* Capturas de la app: tres pantallas de teléfono en fila */
+.app-shots {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  max-width: 38rem;
+}
+
+.app-shot { margin: 0; text-align: center; }
+
+.app-shot img {
+  width: 100%;
+  border-radius: 1.35rem;
+  border: 2px solid rgba(250, 251, 252, 0.16);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55);
+  transition: transform 0.4s var(--ease), box-shadow 0.4s, border-color 0.3s;
+}
+.app-shot:hover img {
+  transform: translateY(-6px);
+  border-color: var(--accent-line);
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.55), var(--glow-sm);
+}
+
+.app-shot figcaption {
+  margin-top: 0.8rem;
+  color: var(--muted);
+  font-family: var(--font-header);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 
@@ -816,10 +841,6 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 16px); }
     from { opacity: 0; transform: translateY(26px); }
     to   { opacity: 1; transform: none; }
   }
-  @keyframes draw-in {
-    from { transform: scaleX(0); }
-    to   { transform: scaleX(1); }
-  }
   @keyframes float-y {
     0%, 100% { transform: translateY(0); }
     50%      { transform: translateY(-14px); }
@@ -830,7 +851,6 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 16px); }
   }
 
   /* Entrada del hero */
-  .hero-rule       { transform-origin: 0 50%; animation: draw-in 600ms var(--ease) both; }
   .hero-topper     { animation: rise-in 600ms var(--ease) 80ms both; }
   .hero-title      { animation: rise-in 700ms var(--ease) 160ms both; }
   .hero-sub        { animation: rise-in 700ms var(--ease) 260ms both; }
