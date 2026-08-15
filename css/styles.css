@@ -828,7 +828,6 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 16px); }
   transition: color 0.3s;
 }
 .footer-nav a:hover { color: var(--accent); text-decoration: none; }
-.footer-handmade { width: 100%; text-align: center; opacity: 0.7; }
 
 /* ---------- 16. Animación ---------- */
 @keyframes pulse-dot {

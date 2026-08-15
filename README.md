@@ -32,7 +32,7 @@ Luego abre `http://localhost:8000`. (También puedes abrir `index.html` con dobl
 | Qué | Dónde | Cómo |
 |---|---|---|
 | **Número de WhatsApp** | `js/main.js` → `WHATSAPP_NUMBER` | Ya configurado (`18496074188`). Vacío = el enlace no aparece. |
-| **GitHub y LinkedIn** | `js/main.js` → `GITHUB_URL`, `LINKEDIN_URL` | GitHub ya puesto (`https://github.com/Chemi25`), también en el `sameAs` del JSON-LD. Falta LinkedIn: pon la URL completa y añádela al `sameAs` de `index.html`. Vacía = ese enlace del pie no aparece. |
+| **LinkedIn** | `js/main.js` → `LINKEDIN_URL` | Pon la URL completa y añádela también al `sameAs` del JSON-LD en `index.html`. Vacía = ese enlace del pie no aparece. |
 | **Tu foto** | `assets/img/foto.jpg` | Ya incluida (retrato 600×750, proporción 4:5). Para cambiarla, reemplaza el archivo respetando esa proporción; el texto alternativo está en `js/i18n.js` (`about.imgAlt`). |
 | **Capturas de Planifesto** | `assets/img/planifesto.jpg`, `planifesto-curso.jpg`, `planifesto-club.jpg` | Capturas reales del sitio en vivo: la portada (1200×750) y las páginas del curso y del Club (1200×857). Para actualizarlas, reemplaza el archivo respetando su tamaño. |
 | **Maqueta del hero** | `assets/img/planifesto.jpg` + `planifesto-movil.jpg` | El portátil y el móvil están dibujados con CSS (`.mockup`); lo único que se cambia son esas dos capturas: escritorio 1200×750 y móvil 440×952. |

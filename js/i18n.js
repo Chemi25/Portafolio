@@ -142,9 +142,7 @@ const translations = {
     "contact.sub": "Escríbeme y te respondo en menos de 24 horas.",
     "contact.copy": "Copiar",
     "contact.copied": "Copiado",
-    "contact.whatsapp": "También puedes escribirme por WhatsApp",
-
-    "footer.handmade": "Hecho a mano con HTML, CSS y JavaScript."
+    "contact.whatsapp": "También puedes escribirme por WhatsApp"
   },
 
   /* ---------------- ENGLISH ---------------- */
@@ -282,9 +280,7 @@ const translations = {
     "contact.sub": "Write to me and I'll reply within 24 hours.",
     "contact.copy": "Copy",
     "contact.copied": "Copied",
-    "contact.whatsapp": "You can also message me on WhatsApp",
-
-    "footer.handmade": "Handmade with HTML, CSS and JavaScript."
+    "contact.whatsapp": "You can also message me on WhatsApp"
   }
 };
 

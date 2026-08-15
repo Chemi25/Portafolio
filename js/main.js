@@ -10,9 +10,8 @@
 // Si lo dejas vacío, el enlace de WhatsApp no se muestra.
 const WHATSAPP_NUMBER = "18496074188";
 
-// Perfiles públicos. Si dejas una URL vacía, ese enlace del pie no se muestra.
-const GITHUB_URL = "https://github.com/Chemi25";
-// TODO: pon la URL completa de tu perfil. Ejemplo: "https://www.linkedin.com/in/tu-usuario"
+// TODO: pon la URL completa de tu perfil de LinkedIn. Si la dejas vacía, ese
+// enlace del pie no se muestra. Ejemplo: "https://www.linkedin.com/in/tu-usuario"
 // Al ponerla, añádela también al "sameAs" del JSON-LD en index.html.
 const LINKEDIN_URL = "";
 
@@ -31,7 +30,7 @@ const LINKEDIN_URL = "";
       line.hidden = false;
     }
   }
-  [["github-link", GITHUB_URL], ["linkedin-link", LINKEDIN_URL]].forEach(([id, url]) => {
+  [["linkedin-link", LINKEDIN_URL]].forEach(([id, url]) => {
     if (!url) return;
     const link = document.getElementById(id);
     if (link) { link.href = url; link.hidden = false; }
