@@ -1,43 +1,89 @@
 <!DOCTYPE html>
+<!-- Plantilla del og-image (1200×630). Para regenerarla: abre este archivo en el
+     navegador, haz una captura del <div class="og"> a 1200×630 y guárdala como
+     assets/og-image.png. -->
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Plantilla OG 1200×630 — captura esta página para regenerar og-image.png</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=JetBrains+Mono:ital,wght@0,100..800&display=swap" rel="stylesheet">
 <style>
+  :root {
+    --background: #141414;
+    --foreground: #ffffff;
+    --muted-foreground: #939291;
+    --muted-strong: #bebdbc;
+    --brand: #e0a458;
+    --rule: #3a3a3a;
+    --font-serif: "Source Serif 4", Georgia, serif;
+    --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  }
   * { margin: 0; box-sizing: border-box; }
-  body {
+  body { background: #222; display: grid; place-items: center; min-height: 100vh; }
+  .og {
+    position: relative;
     width: 1200px;
     height: 630px;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-serif);
     overflow: hidden;
-    background: #171512;
-    color: #ece7de;
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  .og::before, .og::after {
+    content: "";
+    position: absolute;
+    top: 0; bottom: 0;
+    width: 1px;
+    background: var(--rule);
+  }
+  .og::before { left: 64px; }
+  .og::after { right: 64px; }
+  .inner { position: absolute; inset: 0; padding: 72px 120px; display: flex; flex-direction: column; }
+  .mark { display: flex; align-items: baseline; gap: 4px; }
+  .mark-text { font-family: var(--font-serif); font-style: italic; font-weight: 600; font-size: 44px; color: var(--muted-strong); }
+  .mark-dot { width: 9px; height: 9px; border-radius: 2px; background: var(--brand); }
+  .name { margin-top: 84px; font-size: 84px; font-weight: 600; letter-spacing: -.025em; line-height: 1.02; }
+  .role { margin-top: 22px; font-size: 34px; color: var(--muted-strong); }
+  .chips { margin-top: 44px; display: flex; gap: 12px; }
+  .chip {
+    font-family: var(--font-mono);
+    font-size: 17px;
+    color: var(--foreground);
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 8px 18px;
+    background: rgba(32, 31, 30, .7);
+  }
+  .foot {
+    margin-top: auto;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 96px;
+    justify-content: space-between;
+    font-family: var(--font-mono);
+    font-size: 19px;
+    color: var(--muted-foreground);
   }
-  .rule { width: 72px; height: 5px; background: #e08b5e; margin-bottom: 44px; }
-  h1 {
-    font-family: "Fraunces", Georgia, serif;
-    font-weight: 500;
-    font-size: 92px;
-    line-height: 1.05;
-    letter-spacing: -0.01em;
-    margin-bottom: 26px;
-  }
-  .role { font-size: 34px; color: #a49e92; margin-bottom: 56px; }
-  .foot { font-size: 26px; color: #a49e92; }
-  .foot strong { color: #ece7de; font-weight: 600; }
+  .rule-top { position: absolute; left: 64px; right: 64px; top: 178px; height: 1px; background: var(--rule); }
 </style>
 </head>
 <body>
-  <div class="rule"></div>
-  <h1>José Miguel Batista</h1>
-  <p class="role">Desarrollador web y móvil · Freelance</p>
-  <p class="foot">Creador de <strong>Planifesto</strong> · Disponible para proyectos</p>
+  <div class="og">
+    <div class="rule-top"></div>
+    <div class="inner">
+      <div class="mark"><span class="mark-text">jm</span><span class="mark-dot"></span></div>
+      <h1 class="name">José Miguel Batista</h1>
+      <p class="role">Desarrollador web y móvil freelance</p>
+      <div class="chips">
+        <span class="chip">Webs</span>
+        <span class="chip">Tiendas online</span>
+        <span class="chip">Apps móviles</span>
+        <span class="chip">SEO</span>
+      </div>
+      <div class="foot">
+        <span>josemiguelbatista.site</span>
+        <span>Creador de planifestord.com</span>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

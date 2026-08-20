@@ -1,342 +1,168 @@
 /* ============================================================
-   i18n — Textos del sitio en español e inglés
-   ------------------------------------------------------------
-   ✏️ PARA EDITAR TEXTOS: cambia los valores aquí (en ambos
-   idiomas). Cada clave corresponde a un atributo data-i18n
-   en index.html. No toques la lógica del final del archivo.
+   i18n.js — traducciones
+   El HTML es la fuente del español; al cargar, main.js guarda
+   esos textos y aquí solo vive el diccionario en inglés.
+   Cada clave corresponde a un atributo data-i18n del HTML.
    ============================================================ */
 
-const translations = {
-  /* ---------------- ESPAÑOL ---------------- */
-  es: {
-    "meta.title": "José Miguel Batista · Desarrollador web y móvil freelance",
-    "meta.description": "Desarrollador freelance full-stack. Webs, tiendas online y apps móviles. Creador de Planifesto. Disponible para proyectos.",
+window.I18N_EN = {
+  skip: "Skip to content",
 
-    "skip": "Saltar al contenido",
+  "mark.home": "Home",
+  "mark.note": "jm — my initials, lowercase, the way you name a variable.",
+  "mark.title": "The mark",
 
-    "nav.services": "Qué hago",
-    "nav.projects": "Trabajo",
-    "nav.about": "Sobre mí",
-    "nav.process": "Proceso",
-    "nav.promises": "Compromisos",
-    "nav.testimonials": "Testimonios",
-    "nav.contact": "Contacto",
-    "nav.menuLabel": "Abrir menú",
-    "nav.cta": "Escríbeme",
+  "hero.role": "Freelance web & mobile developer",
+  "hero.intro": "I handle the whole cycle: design, development, SEO and automation. My best calling card is Planifesto, the platform I built from scratch that now sells courses, templates and a Spanish-language membership.",
+  "hero.cta": "Email me",
+  "hero.building": "Creator of planifestord.com",
+  "hero.note": "I built that platform",
+  "hero.based": "Based in",
+  "hero.location": "Santo Domingo, DO — UTC−4",
+  "hero.stack": "Current stack",
+  "hero.askAi": "Ask an AI about me",
 
-    "hero.topper": "Código escrito a mano, sin plantillas",
-    "hero.title": "Construyo webs, tiendas online y",
-    "hero.titleAccent": "apps móviles",
-    "hero.mockupAlt": "La tienda de Planifesto, en pantalla de escritorio y en móvil",
-    "hero.subtitle": "Soy José Miguel Batista, desarrollador freelance. Me ocupo del ciclo completo: diseño, desarrollo, SEO y automatización. Mi mejor carta de presentación es Planifesto, la plataforma que construí de cero y que hoy vende cursos, plantillas y una membresía en español.",
-    "hero.cta.contact": "Escríbeme",
-    "hero.cta.work": "Ver mi trabajo",
-    "hero.availability": "Disponible para nuevos proyectos.",
+  "ai.title": "Ask an AI",
+  "ai.text": "Don't take my word for it. This site publishes everything about me as plain text at /llms.txt — hand it to any assistant and ask whatever you want.",
+  "ai.chatgptHref": "https://chatgpt.com/?q=Read%20https%3A%2F%2Fjosemiguelbatista.site%2Fllms.txt%20and%20tell%20me%20about%20Jos%C3%A9%20Miguel%20Batista",
+  "ai.claudeHref": "https://claude.ai/new?q=Read%20https%3A%2F%2Fjosemiguelbatista.site%2Fllms.txt%20and%20tell%20me%20about%20Jos%C3%A9%20Miguel%20Batista",
+  "ai.perplexityHref": "https://www.perplexity.ai/search?q=Read%20https%3A%2F%2Fjosemiguelbatista.site%2Fllms.txt%20and%20tell%20me%20about%20Jos%C3%A9%20Miguel%20Batista",
 
-    "services.topper": "Servicios",
-    "services.lead": "Del primer boceto al servidor. Me ocupo del ciclo completo para que tú solo tengas que decidir.",
-    "services.title": "Qué hago",
-    "services.s1.title": "Desarrollo full-stack",
-    "services.s1.desc": "Aplicaciones web completas, del frontend a la base de datos y el despliegue.",
-    "services.s2.title": "Webs y tiendas online",
-    "services.s2.desc": "Landing pages, webs corporativas y e-commerce, con la velocidad y el SEO como prioridad.",
-    "services.s3.title": "Apps móviles",
-    "services.s3.desc": "Aplicaciones para iOS y Android, del prototipo a la tienda.",
+  "services.title": "Services",
+  "services.s1.title": "Full-stack development",
+  "services.s1.desc": "Complete web applications, from the frontend to the database and deployment.",
+  "services.s2.title": "Websites & online stores",
+  "services.s2.desc": "Landing pages, corporate sites and e-commerce, with speed and SEO as the priority.",
+  "services.s3.title": "Mobile apps",
+  "services.s3.desc": "Apps for iOS and Android, from prototype to the store.",
+  "services.s4.title": "SEO & automation",
+  "services.s4.desc": "Sites that rank, and systems that sell and deliver on their own, with no manual steps.",
 
-    "projects.topper": "Portafolio",
-    "projects.lead": "No es una maqueta: es un producto en producción, con su tienda, su curso, su comunidad y su app en las dos tiendas.",
-    "projects.title": "Trabajo seleccionado",
-    "projects.featured.meta": "Producto propio · En producción",
-    "projects.featured.p1": "Planifesto es una plataforma de educación financiera para jóvenes hispanohablantes: cursos, plantillas y herramientas digitales. La construí de principio a fin: el catálogo y los pagos, la entrega automatizada de cada compra con Google Apps Script, la analítica y el SEO que la posiciona en una veintena de países.",
-    "projects.featured.p2": "La parte difícil no fue el código, fue montar un sistema que venda y entregue solo: cada pedido se procesa, se entrega y se registra sin intervención manual.",
-    "projects.featured.visit": "Visitar planifestord.com",
-    "projects.featured.imgAlt": "Captura de la página principal de Planifesto",
-    "projects.featured.piecesLabel": "Cuatro piezas del mismo producto",
-    "projects.featured.pc1.t": "La plataforma y la tienda",
-    "projects.featured.pc1.d": "El sitio, el catálogo y el cobro corren sobre Astro y Supabase. Detrás hay un panel interno donde el equipo publica productos, artículos, talleres y webinars sin tocar código.",
-    "projects.featured.pc2.t": "El curso",
-    "projects.featured.pc2.d": "«Financieramente Responsable de 0 a 100» tiene su propia área de alumno: acceso con cuenta, módulos y lecciones en video, progreso guardado y cupones de descuento. Se paga con tarjeta o PayPal y el acceso es inmediato.",
-    "projects.featured.pc2.link": "Ver el curso",
-    "projects.featured.pc3.t": "Planifesto Club",
-    "projects.featured.pc3.d": "La membresía: foro privado de la comunidad, clases en vivo cada semana con su calendario y su recordatorio, mini cursos a ritmo propio y un perfil con puntos y niveles.",
-    "projects.featured.pc3.link": "Ver el Club",
-    "projects.featured.pc4.t": "PlaniClub, la app",
-    "projects.featured.pc4.d": "La app del Club para iOS y Android, hecha con Capacitor sobre la misma plataforma: abre el área de miembros con la sesión ya iniciada, con notificaciones push, arranque nativo y pantalla de sin conexión. Publicada en las dos tiendas.",
-    "projects.featured.shotCurso": "La página del curso",
-    "projects.featured.shotCursoAlt": "Captura de la página del curso Financieramente Responsable de 0 a 100",
-    "projects.featured.shotClub": "La página del Club",
-    "projects.featured.shotClubAlt": "Captura de la página de Planifesto Club",
-    "projects.featured.shotAula": "El aula, por dentro",
-    "projects.featured.shotAulaAlt": "Área de alumno del curso: lista de módulos, barra de progreso y lección en video",
-    "projects.featured.shotMuro": "El Club, por dentro",
-    "projects.featured.shotMuroAlt": "Muro de la comunidad del Club: editor de publicaciones, perfil con puntos y tabla de líderes",
-    "projects.featured.appLabel": "La app por dentro",
-    "projects.featured.app1": "Presupuesto del mes",
-    "projects.featured.app1Alt": "Pantalla de planificación mensual de PlaniClub, con el presupuesto del mes",
-    "projects.featured.app2": "Comunidad",
-    "projects.featured.app2Alt": "Foro de la comunidad de PlaniClub, con publicaciones y filtros",
-    "projects.featured.app3": "Clases en vivo",
-    "projects.featured.app3Alt": "Pantalla de la próxima clase en vivo de PlaniClub, con cuenta atrás y confirmación de asistencia",
-    "projects.p2.meta": "Proyecto de cliente · Año",
-    "projects.p2.title": "Nombre del proyecto",
-    "projects.p2.desc": "Qué hace el proyecto, para quién y qué resultado tuvo. Dos o tres frases concretas valen más que una lista de tecnologías.",
-    "projects.p3.meta": "Proyecto de cliente · Año",
-    "projects.p3.title": "Nombre del proyecto",
-    "projects.p3.desc": "Qué hace el proyecto, para quién y qué resultado tuvo. Dos o tres frases concretas valen más que una lista de tecnologías.",
-    "projects.tpl.demo": "Ver en vivo",
-    "projects.tpl.code": "Código",
-    "projects.more.text": "Ahora mismo tengo espacio para nuevos proyectos.",
-    "projects.more.link": "Escríbeme",
+  "focus.title": "Areas of focus",
+  "focus.f1": "Web development",
+  "focus.f2": "E-commerce",
+  "focus.f3": "Mobile apps",
+  "focus.f4": "SEO",
+  "focus.f5": "Automation",
+  "focus.f6": "Analytics",
 
-    "about.topper": "Sobre mí",
-    "about.title": "Trato cada proyecto como si fuera mío",
-    "about.imgAlt": "Retrato de José Miguel Batista",
-    "about.p1": "Soy desarrollador full-stack y me importa más el resultado que la herramienta: un sitio que carga rápido, se entiende a la primera y le hace ganar dinero a su dueño.",
-    "about.p2": "Lanzar mi propio producto me cambió la forma de trabajar. Sé lo que cuesta conseguir cada visita y lo que vale cada venta, así que trato cada proyecto de cliente como si fuera mío.",
-    "about.tech": "Trabajo con HTML y CSS, JavaScript, Node.js, Supabase, SQL, Git, Google Apps Script, SEO y Analytics.",
+  "about.title": "About me",
+  "about.imgAlt": "Portrait of José Miguel Batista",
+  "about.p1": "I'm a full-stack developer and I care more about the result than the tool: a site that loads fast, makes sense at first glance, and earns money for its owner.",
+  "about.p2": "Launching my own product changed how I work. I know what each visit costs and what each sale is worth, so I treat every client project as if it were my own.",
+  "about.focusLabel": "Focus",
 
-    "promises.topper": "Trabajar conmigo",
-    "promises.title": "Lo que te llevas siempre",
-    "promises.lead": "Esto es lo que puedes esperar de mí, esté escrito en el contrato o no.",
-    "promises.p1.t": "Código escrito a mano",
-    "promises.p1.d": "Sin plantillas ni constructores. Tu sitio se escribe línea por línea: pesa poco, carga rápido y no depende de plugins que se rompan solos.",
-    "promises.p2.t": "Precio cerrado por escrito",
-    "promises.p2.d": "Antes de empezar tienes el alcance, los plazos y el precio en un documento. Si algo cambia por el camino, lo hablamos antes; no aparece en la factura.",
-    "promises.p3.t": "Hablas conmigo, no con una agencia",
-    "promises.p3.d": "Quien te contesta el mensaje es el mismo que escribe el código. Sin intermediarios, sin gestores de cuenta y sin teléfonos que rebotan.",
-    "promises.p4.t": "Respuesta en menos de 24 horas",
-    "promises.p4.d": "Te contesto el mismo día o al siguiente. Durante el proyecto sabes en qué punto va sin tener que perseguirme.",
-    "promises.p5.t": "Velocidad y SEO desde el primer día",
-    "promises.p5.d": "No son un extra que se cobra aparte. El sitio nace ligero, con sus metadatos, su sitemap y sus imágenes optimizadas.",
-    "promises.p6.t": "El código es tuyo",
-    "promises.p6.d": "Al publicar te entrego todo: el repositorio, los accesos y cómo se actualiza. Me quedo para las mejoras porque quieras, no porque no puedas irte.",
+  "exp.title": "Experience",
+  "exp.e1.meta": "Own product — in production",
+  "exp.e1.role": "Creator and developer of",
+  "exp.e1.b1": "Financial education platform for young Spanish speakers: catalog, card and PayPal payments, and an internal panel where the team publishes products, articles, workshops and webinars without touching code.",
+  "exp.e1.b2": "Automated delivery of every purchase with Google Apps Script: each order is processed, delivered and logged with no manual intervention.",
+  "exp.e1.b3": "The “Financially Responsible from 0 to 100” course with its own student area: account access, video lessons, saved progress and discount coupons.",
+  "exp.e1.b4": "Planifesto Club, the membership: private forum, weekly live classes with calendar and reminders, self-paced mini courses and a profile with points and levels.",
+  "exp.e1.b5": "PlaniClub, the Club's iOS and Android app built with Capacitor: signed-in session, push notifications and an offline screen. Published on both stores.",
+  "exp.e1.b6": "SEO and analytics that rank the platform in some twenty countries.",
+  "exp.e2.meta": "Freelance — available",
+  "exp.e2.role": "Freelance web & mobile developer",
+  "exp.e2.b1": "From first sketch to server: design, development, deployment and maintenance from a single point of contact.",
+  "exp.e2.b2": "Corporate sites, landing pages and online stores written by hand: they weigh little, load fast and don't depend on plugins that break on their own.",
+  "exp.e2.b3": "Mobile apps for iOS and Android, from prototype to store release.",
+  "exp.e2.b4": "Speed and SEO from day one: metadata, sitemap and optimized images included.",
 
-    "ctaband.eyebrow": "Siguiente paso",
-    "ctaband.title": "Si llegaste hasta aquí, es porque tienes algo en mente.",
-    "ctaband.cta": "Cuéntame qué necesitas",
-    "ctaband.mailto": "mailto:josemiguel20186@gmail.com?subject=Tengo%20un%20proyecto%20en%20mente",
+  "projects.title": "Projects",
+  "projects.tabsLabel": "Project categories",
+  "projects.linkWebsite": "Website",
+  "projects.chipPayments": "Payments",
+  "projects.chipCommunity": "Community",
+  "projects.chipLive": "Live classes",
+  "projects.chipGamification": "Points & levels",
+  "projects.p1.desc": "The platform and the store: the catalog and checkout run on Astro and Supabase, with an internal panel to publish without touching code.",
+  "projects.p1.imgAlt": "The Planifesto store on a desktop screen",
+  "projects.p2.name": "The course",
+  "projects.p2.desc": "“Financially Responsible from 0 to 100”, with a student area: modules and video lessons, saved progress, coupons, and card or PayPal payment with instant access.",
+  "projects.p2.imgAlt": "Student area of the course: modules, progress and a video lesson",
+  "projects.p3.desc": "The membership: a private community forum, weekly live classes with their calendar and reminders, self-paced mini courses and a profile with points and levels.",
+  "projects.p3.imgAlt": "The Club community wall: post editor and leaderboard",
+  "projects.p4.desc": "The Club's app for iOS and Android, built with Capacitor on the same platform: it opens the members area already signed in, with push notifications, native launch and an offline screen. Published on both stores.",
+  "projects.p4.img1Alt": "PlaniClub monthly planning screen",
+  "projects.p4.img2Alt": "Community forum in PlaniClub",
+  "projects.p4.img3Alt": "Next live class with countdown in PlaniClub",
+  "projects.p4.cap1": "Monthly budget",
+  "projects.p4.cap2": "Community",
+  "projects.p4.cap3": "Live classes",
 
-    "process.topper": "Proceso",
-    "process.lead": "Cuatro pasos, sin sorpresas y con algo que ver en cada uno.",
-    "process.title": "Cómo trabajo",
-    "process.s1.title": "Descubrimiento",
-    "process.s1.desc": "Hablamos de tu negocio, objetivos y presupuesto antes de proponer nada.",
-    "process.s2.title": "Propuesta",
-    "process.s2.desc": "Un plan por escrito: alcance, plazos y precio cerrado.",
-    "process.s3.title": "Desarrollo",
-    "process.s3.desc": "Iteraciones cortas, con avances que puedes ver y probar.",
-    "process.s4.title": "Lanzamiento y soporte",
-    "process.s4.desc": "Publicamos, medimos y quedo disponible para mejoras.",
+  "promises.title": "What you always get",
+  "promises.p1.t": "Code written by hand",
+  "promises.p1.d": "No templates or builders. Your site is written line by line: it weighs little, loads fast and doesn't depend on plugins that break on their own.",
+  "promises.p2.t": "A fixed price, in writing",
+  "promises.p2.d": "Before we start you have the scope, the timeline and the price in a document. If something changes along the way, we talk first; it doesn't show up on the invoice.",
+  "promises.p3.t": "You talk to me, not an agency",
+  "promises.p3.d": "The person answering your message is the same one writing the code. No middlemen, no account managers, no phones that bounce.",
+  "promises.p4.t": "Replies within 24 hours",
+  "promises.p4.d": "I answer the same day or the next. During the project you know where things stand without having to chase me.",
+  "promises.p5.t": "Speed and SEO from day one",
+  "promises.p5.d": "They're not an extra that's billed separately. The site is born light, with its metadata, its sitemap and its optimized images.",
+  "promises.p6.t": "The code is yours",
+  "promises.p6.d": "At launch I hand over everything: the repository, the credentials and how to update it. I stay for improvements because you want me to, not because you can't leave.",
 
-    "testimonials.topper": "Testimonios",
-    "testimonials.title": "Lo que dicen mis clientes",
-    "testimonials.t1.quote": "«Escribe aquí el testimonio de tu cliente: qué problema tenía, cómo lo resolviste y qué resultado obtuvo.»",
-    "testimonials.t1.name": "Nombre del cliente",
-    "testimonials.t1.role": "cargo, empresa",
-    "testimonials.t2.quote": "«Escribe aquí el testimonio de tu cliente: qué problema tenía, cómo lo resolviste y qué resultado obtuvo.»",
-    "testimonials.t2.name": "Nombre del cliente",
-    "testimonials.t2.role": "cargo, empresa",
+  "process.title": "How I work",
+  "process.s1.meta": "Step 01",
+  "process.s1.title": "Discovery",
+  "process.s1.desc": "We talk about your business, goals and budget before proposing anything.",
+  "process.s2.meta": "Step 02",
+  "process.s2.title": "Proposal",
+  "process.s2.desc": "A written plan: scope, timeline and a fixed price.",
+  "process.s3.meta": "Step 03",
+  "process.s3.title": "Development",
+  "process.s3.desc": "Short iterations, with progress you can see and try.",
+  "process.s4.meta": "Step 04",
+  "process.s4.title": "Launch & support",
+  "process.s4.desc": "We publish, we measure, and I stay available for improvements.",
 
-    "contact.topper": "Contacto",
-    "contact.title": "¿Tienes un proyecto en mente?",
-    "contact.sub": "Escríbeme y te respondo en menos de 24 horas.",
-    "contact.copy": "Copiar",
-    "contact.copied": "Copiado",
-    "contact.whatsapp": "También puedes escribirme por WhatsApp"
-  },
+  "avail.title": "Available for projects",
+  "avail.text": "Websites, online stores and mobile apps. I reply within 24 hours.",
+  "avail.cta": "email me",
+  "avail.mailto": "mailto:josemiguel20186@gmail.com?subject=I%20have%20a%20project%20in%20mind",
 
-  /* ---------------- ENGLISH ---------------- */
-  en: {
-    "meta.title": "José Miguel Batista · Freelance web & mobile developer",
-    "meta.description": "Freelance full-stack developer. Websites, online stores and mobile apps. Creator of Planifesto. Available for projects.",
+  "gh.title": "GitHub stats & activity",
+  "gh.lead": "Real-time statistics and contributions fetched directly from my GitHub profile.",
+  "gh.langs": "Top languages",
+  "gh.fallback": "Couldn't load the activity.",
 
-    "skip": "Skip to content",
+  "contact.title": "Get in touch.",
+  "contact.name": "Name",
+  "contact.namePh": "Your name",
+  "contact.email": "Email",
+  "contact.emailPh": "you@email.com",
+  "contact.message": "Message",
+  "contact.messagePh": "Tell me what you have in mind…",
+  "contact.hint": "The button opens your mail app with the message already written.",
+  "contact.send": "Send",
+  "contact.findMe": "Find me on",
+  "contact.emailDesc": "The most direct way to reach me.",
+  "contact.waDesc": "If you prefer something more immediate.",
+  "contact.ghDesc": "My code and my projects.",
+  "contact.plDesc": "The product I built from scratch.",
 
-    "nav.services": "What I do",
-    "nav.projects": "Work",
-    "nav.about": "About",
-    "nav.process": "Process",
-    "nav.promises": "Promises",
-    "nav.testimonials": "Testimonials",
-    "nav.contact": "Contact",
-    "nav.menuLabel": "Open menu",
-    "nav.cta": "Write to me",
+  "footer.location": "dominican republic",
+  "footer.themeLabel": "Toggle theme",
 
-    "hero.topper": "Hand-written code, no templates",
-    "hero.title": "I build websites, online stores and",
-    "hero.titleAccent": "mobile apps",
-    "hero.mockupAlt": "The Planifesto store, on desktop and on mobile",
-    "hero.subtitle": "I'm José Miguel Batista, a freelance developer. I handle the full cycle: design, development, SEO and automation. My best calling card is Planifesto, the platform I built from scratch that today sells courses, templates and a membership in Spanish.",
-    "hero.cta.contact": "Write to me",
-    "hero.cta.work": "See my work",
-    "hero.availability": "Available for new projects.",
+  "dock.label": "Main navigation",
+  "dock.home": "Home",
+  "dock.work": "Work",
+  "dock.about": "About",
+  "dock.contact": "Contact",
 
-    "services.topper": "Services",
-    "services.lead": "From the first sketch to the server. I handle the whole cycle so all you have to do is decide.",
-    "services.title": "What I do",
-    "services.s1.title": "Full-stack development",
-    "services.s1.desc": "Complete web applications, from the frontend to the database and deployment.",
-    "services.s2.title": "Websites and online stores",
-    "services.s2.desc": "Landing pages, business sites and e-commerce, with speed and SEO as the priority.",
-    "services.s3.title": "Mobile apps",
-    "services.s3.desc": "iOS and Android apps, from prototype to the store.",
-
-    "projects.topper": "Portfolio",
-    "projects.lead": "It's not a mockup: it's a product in production, with its store, its course, its community and its app on both stores.",
-    "projects.title": "Selected work",
-    "projects.featured.meta": "Own product · In production",
-    "projects.featured.p1": "Planifesto is a financial education platform for young Spanish speakers: courses, templates and digital tools. I built it end to end: the catalog and checkout, automated delivery of every purchase with Google Apps Script, the analytics, and the SEO that ranks it across some twenty countries.",
-    "projects.featured.p2": "The hard part wasn't the code. It was building a system that sells and delivers on its own: every order is processed, delivered and logged without manual work.",
-    "projects.featured.visit": "Visit planifestord.com",
-    "projects.featured.imgAlt": "Screenshot of the Planifesto homepage",
-    "projects.featured.piecesLabel": "Four pieces of the same product",
-    "projects.featured.pc1.t": "The platform and the store",
-    "projects.featured.pc1.d": "The site, the catalogue and the checkout run on Astro and Supabase. Behind them there's an internal panel where the team publishes products, articles, workshops and webinars without touching code.",
-    "projects.featured.pc2.t": "The course",
-    "projects.featured.pc2.d": "“Financieramente Responsable de 0 a 100” has its own student area: account access, modules and video lessons, saved progress and discount coupons. Paid by card or PayPal, with access granted immediately.",
-    "projects.featured.pc2.link": "See the course",
-    "projects.featured.pc3.t": "Planifesto Club",
-    "projects.featured.pc3.d": "The membership: a private community forum, live classes every week with their calendar and reminder, self-paced mini courses and a profile with points and levels.",
-    "projects.featured.pc3.link": "See the Club",
-    "projects.featured.pc4.t": "PlaniClub, the app",
-    "projects.featured.pc4.d": "The Club's app for iOS and Android, built with Capacitor on top of the same platform: it opens the members' area already signed in, with push notifications, a native splash screen and an offline screen. Published on both stores.",
-    "projects.featured.shotCurso": "The course page",
-    "projects.featured.shotCursoAlt": "Screenshot of the Financieramente Responsable de 0 a 100 course page",
-    "projects.featured.shotClub": "The Club page",
-    "projects.featured.shotClubAlt": "Screenshot of the Planifesto Club page",
-    "projects.featured.shotAula": "Inside the classroom",
-    "projects.featured.shotAulaAlt": "Course student area: module list, progress bar and video lesson",
-    "projects.featured.shotMuro": "Inside the Club",
-    "projects.featured.shotMuroAlt": "Club community feed: post editor, profile with points and leaderboard",
-    "projects.featured.appLabel": "Inside the app",
-    "projects.featured.app1": "Monthly budget",
-    "projects.featured.app1Alt": "PlaniClub monthly planning screen showing the month's budget",
-    "projects.featured.app2": "Community",
-    "projects.featured.app2Alt": "PlaniClub community feed with posts and filters",
-    "projects.featured.app3": "Live classes",
-    "projects.featured.app3Alt": "PlaniClub next live class screen with countdown and attendance confirmation",
-    "projects.p2.meta": "Client project · Year",
-    "projects.p2.title": "Project name",
-    "projects.p2.desc": "What the project does, who it's for and what result it had. Two or three concrete sentences beat a list of technologies.",
-    "projects.p3.meta": "Client project · Year",
-    "projects.p3.title": "Project name",
-    "projects.p3.desc": "What the project does, who it's for and what result it had. Two or three concrete sentences beat a list of technologies.",
-    "projects.tpl.demo": "View live",
-    "projects.tpl.code": "Code",
-    "projects.more.text": "Right now I have room for new projects.",
-    "projects.more.link": "Write to me",
-
-    "about.topper": "About me",
-    "about.title": "I treat every project as if it were mine",
-    "about.imgAlt": "Portrait of José Miguel Batista",
-    "about.p1": "I'm a full-stack developer and I care more about the result than the tool: a site that loads fast, makes sense at first glance and earns money for its owner.",
-    "about.p2": "Launching my own product changed how I work. I know what it costs to earn a visit and what a sale is worth, so I treat every client project like my own.",
-    "about.tech": "I work with HTML and CSS, JavaScript, Node.js, Supabase, SQL, Git, Google Apps Script, SEO and Analytics.",
-
-    "promises.topper": "Working with me",
-    "promises.title": "What you always get",
-    "promises.lead": "This is what you can expect from me, whether it's in the contract or not.",
-    "promises.p1.t": "Code written by hand",
-    "promises.p1.d": "No templates, no page builders. Your site is written line by line: it weighs little, loads fast and doesn't depend on plugins that break on their own.",
-    "promises.p2.t": "A fixed price, in writing",
-    "promises.p2.d": "Before we start you have the scope, the timeline and the price in a document. If something changes along the way we talk about it first; it doesn't show up on the invoice.",
-    "promises.p3.t": "You talk to me, not to an agency",
-    "promises.p3.d": "Whoever answers your message is the same person writing the code. No middlemen, no account managers, no phone trees.",
-    "promises.p4.t": "A reply within 24 hours",
-    "promises.p4.d": "I answer the same day or the next one. During the project you know where it stands without having to chase me.",
-    "promises.p5.t": "Speed and SEO from day one",
-    "promises.p5.d": "They're not an add-on you pay for separately. The site is born light, with its metadata, its sitemap and its images optimised.",
-    "promises.p6.t": "The code is yours",
-    "promises.p6.d": "When we launch I hand over everything: the repository, the accounts and how to update it. I stay on for improvements because you want me to, not because you can't leave.",
-
-    "ctaband.eyebrow": "Next step",
-    "ctaband.title": "If you made it this far, it's because you have something in mind.",
-    "ctaband.cta": "Tell me what you need",
-    "ctaband.mailto": "mailto:josemiguel20186@gmail.com?subject=I%20have%20a%20project%20in%20mind",
-
-    "process.topper": "Process",
-    "process.lead": "Four steps, no surprises, with something to see at each one.",
-    "process.title": "How I work",
-    "process.s1.title": "Discovery",
-    "process.s1.desc": "We talk about your business, goals and budget before I propose anything.",
-    "process.s2.title": "Proposal",
-    "process.s2.desc": "A written plan: scope, timeline and a fixed price.",
-    "process.s3.title": "Development",
-    "process.s3.desc": "Short iterations, with progress you can see and try.",
-    "process.s4.title": "Launch and support",
-    "process.s4.desc": "We ship, measure, and I stay available for improvements.",
-
-    "testimonials.topper": "Testimonials",
-    "testimonials.title": "What clients say",
-    "testimonials.t1.quote": "\"Write your client's testimonial here: what problem they had, how you solved it and the result they got.\"",
-    "testimonials.t1.name": "Client name",
-    "testimonials.t1.role": "role, company",
-    "testimonials.t2.quote": "\"Write your client's testimonial here: what problem they had, how you solved it and the result they got.\"",
-    "testimonials.t2.name": "Client name",
-    "testimonials.t2.role": "role, company",
-
-    "contact.topper": "Contact",
-    "contact.title": "Got a project in mind?",
-    "contact.sub": "Write to me and I'll reply within 24 hours.",
-    "contact.copy": "Copy",
-    "contact.copied": "Copied",
-    "contact.whatsapp": "You can also message me on WhatsApp"
-  }
+  /* Textos que usa main.js directamente */
+  "js.ghTotal": "{n} contributions in {y}",
+  "js.mailSubject": "Message from {name}",
+  "js.docTitle": "Web & mobile developer in the Dominican Republic · José Miguel Batista",
+  "js.docDesc": "José Miguel Batista is a freelance full-stack developer in the Dominican Republic. Creator of Planifesto: platform, course, community and an app on the App Store and Google Play."
 };
 
-/* ============================================================
-   Motor de traducción — no hace falta editar nada de aquí
-   ============================================================ */
-(function () {
-  const STORAGE_KEY = "lang";
-  const getLang = () => document.documentElement.lang || "es";
-
-  function t(key, lang) {
-    const l = lang || getLang();
-    const val = (translations[l] && translations[l][key]) ?? translations.es[key];
-    return val ?? "";
-  }
-
-  function apply(lang) {
-    document.querySelectorAll("[data-i18n]").forEach((el) => {
-      const val = t(el.getAttribute("data-i18n"), lang);
-      if (val) el.textContent = val;
-    });
-    // data-i18n-attr="atributo:clave" (admite varios pares separados por coma)
-    document.querySelectorAll("[data-i18n-attr]").forEach((el) => {
-      el.getAttribute("data-i18n-attr").split(",").forEach((pair) => {
-        const [attr, key] = pair.split(":").map((s) => s.trim());
-        const val = t(key, lang);
-        if (attr && val) el.setAttribute(attr, val);
-      });
-    });
-  }
-
-  function setLanguage(lang) {
-    if (!translations[lang]) lang = "es";
-    document.documentElement.lang = lang;
-    apply(lang);
-    document.title = t("meta.title", lang);
-    const desc = document.querySelector('meta[name="description"]');
-    if (desc) desc.setAttribute("content", t("meta.description", lang));
-    document.querySelectorAll(".lang-btn").forEach((btn) => {
-      btn.setAttribute("aria-pressed", String(btn.dataset.lang === lang));
-    });
-    try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) { /* modo privado */ }
-    document.dispatchEvent(new CustomEvent("langchange", { detail: { lang } }));
-  }
-
-  // API global para main.js
-  window.I18N = { t, setLanguage, getLang };
-
-  // Toggle de idioma del header
-  document.querySelectorAll(".lang-btn").forEach((btn) => {
-    btn.addEventListener("click", () => setLanguage(btn.dataset.lang));
-  });
-
-  // Idioma inicial: el guardado, o español por defecto.
-  // El HTML ya está escrito en español, así que solo se traduce si hay EN guardado.
-  let saved = null;
-  try { saved = localStorage.getItem(STORAGE_KEY); } catch (e) { /* modo privado */ }
-  if (saved && saved !== "es") setLanguage(saved);
-})();
+/* Textos españoles que main.js usa directamente (el resto del español vive en el HTML) */
+window.I18N_ES_JS = {
+  "js.ghTotal": "{n} contribuciones en {y}",
+  "js.mailSubject": "Mensaje de {name}",
+  "js.docTitle": "Desarrollador web y móvil en República Dominicana · José Miguel Batista",
+  "js.docDesc": "José Miguel Batista es un desarrollador full-stack freelance en República Dominicana. Creador de Planifesto: plataforma, curso, comunidad y app publicada en App Store y Google Play."
+};

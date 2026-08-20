@@ -4,41 +4,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>José Miguel Batista · Desarrollador web y móvil freelance</title>
-  <meta name="description" content="Desarrollador freelance full-stack. Webs, tiendas online y apps móviles. Creador de Planifesto. Disponible para proyectos.">
+  <title>Desarrollador web y móvil en República Dominicana · José Miguel Batista</title>
+  <meta name="description" content="José Miguel Batista es un desarrollador full-stack freelance en República Dominicana. Creador de Planifesto: plataforma, curso, comunidad y app publicada en App Store y Google Play.">
   <meta name="author" content="José Miguel Batista">
 
-  <!-- TODO: cuando tengas dominio, reemplaza TU-DOMINIO.com en canonical, og:url y og:image (deben ser URLs absolutas) -->
-  <link rel="canonical" href="https://TU-DOMINIO.com/">
+  <link rel="canonical" href="https://josemiguelbatista.site/">
 
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://TU-DOMINIO.com/">
+  <meta property="og:url" content="https://josemiguelbatista.site/">
   <meta property="og:title" content="José Miguel Batista · Desarrollador web y móvil freelance">
-  <meta property="og:description" content="Webs, tiendas online y apps móviles escritas a mano. Creador de Planifesto.">
-  <meta property="og:image" content="https://TU-DOMINIO.com/assets/og-image.png">
+  <meta property="og:description" content="Desarrollador full-stack freelance. Creador de Planifesto: plataforma, curso, comunidad y app en las dos tiendas.">
+  <meta property="og:image" content="https://josemiguelbatista.site/assets/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:locale" content="es_ES">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="José Miguel Batista · Desarrollador web y móvil freelance">
-  <meta name="twitter:description" content="Webs, tiendas online y apps móviles escritas a mano. Creador de Planifesto.">
-  <meta name="twitter:image" content="https://TU-DOMINIO.com/assets/og-image.png">
+  <meta name="twitter:description" content="Desarrollador full-stack freelance. Creador de Planifesto: plataforma, curso, comunidad y app en las dos tiendas.">
+  <meta name="twitter:image" content="https://josemiguelbatista.site/assets/og-image.png">
 
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <meta name="theme-color" content="#030f18">
+  <meta name="theme-color" content="#fcfaf7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#141414" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="dark light">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/styles.css">
 
-  <!-- Marca que hay JS antes de pintar: así los bloques con data-reveal
-       arrancan ocultos y no parpadean antes de entrar. -->
-  <script>document.documentElement.classList.add("js");</script>
+  <!-- Aplica el tema guardado (o el del sistema) antes de pintar, para que no parpadee -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (t === "dark" || (!t && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+          document.documentElement.classList.add("dark");
+        }
+      } catch (e) {}
+      document.documentElement.classList.add("js");
+    })();
+  </script>
 
-  <!-- TODO: cuando tengas dominio, completa "url"; añade LinkedIn a "sameAs" cuando lo tengas -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -46,10 +55,11 @@
     "name": "José Miguel Batista",
     "jobTitle": "Desarrollador web y móvil freelance",
     "email": "mailto:josemiguel20186@gmail.com",
-    "url": "https://TU-DOMINIO.com/",
-    "image": "https://TU-DOMINIO.com/assets/img/foto.jpg",
+    "url": "https://josemiguelbatista.site/",
+    "image": "https://josemiguelbatista.site/assets/img/foto.jpg",
     "sameAs": [
-      "https://github.com/Chemi25"
+      "https://github.com/Chemi25",
+      "https://planifestord.com"
     ]
   }
   </script>
@@ -59,435 +69,648 @@
 </head>
 <body id="top">
 
-  <a class="skip-link" href="#contenido" data-i18n="skip">Saltar al contenido</a>
+  <a class="skip-link btn btn-primary" href="#contenido" data-i18n="skip">Saltar al contenido</a>
 
-  <!-- ============ HEADER ============ -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#top">José Miguel Batista</a>
+  <!-- Marca fija en la esquina: jm + nota que se despliega al pasar el cursor -->
+  <a class="corner-mark" href="#top" aria-label="Inicio" data-i18n-attr="aria-label:mark.home">
+    <svg class="logo-mark" viewBox="0 0 46 30" aria-hidden="true" focusable="false">
+      <text class="logo-text" x="1" y="23">jm</text>
+      <rect class="logo-dot" x="38" y="18.5" width="4.5" height="4.5" rx="1"></rect>
+    </svg>
+    <span class="corner-note" data-i18n="mark.note">jm — mis iniciales, en minúsculas, como se nombran las variables.</span>
+  </a>
 
-      <nav class="site-nav" id="site-nav" aria-label="Principal">
-        <ul class="nav-list">
-          <li><a class="nav-link" href="#servicios" data-i18n="nav.services">Qué hago</a></li>
-          <li><a class="nav-link" href="#proyectos" data-i18n="nav.projects">Trabajo</a></li>
-          <li><a class="nav-link" href="#sobre-mi" data-i18n="nav.about">Sobre mí</a></li>
-          <li><a class="nav-link" href="#compromisos" data-i18n="nav.promises">Compromisos</a></li>
-          <li><a class="nav-link" href="#proceso" data-i18n="nav.process">Proceso</a></li>
-          <!-- TODO: cuando actives la sección de testimonios, añade aquí su enlace:
-          <li><a class="nav-link" href="#testimonios" data-i18n="nav.testimonials">Testimonios</a></li> -->
-          <li><a class="nav-link" href="#contacto" data-i18n="nav.contact">Contacto</a></li>
-        </ul>
-      </nav>
+  <div class="page-frame-outer">
+    <div class="page-frame">
+      <main id="contenido">
 
-      <div class="header-actions">
-        <a class="btn btn-sm header-cta" href="#contacto" data-i18n="nav.cta">Escríbeme</a>
-        <div class="lang-toggle" role="group" aria-label="Idioma / Language">
-          <button class="lang-btn" type="button" data-lang="es" aria-pressed="true" lang="es">ES</button>
-          <button class="lang-btn" type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
-        </div>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-i18n-attr="aria-label:nav.menuLabel" aria-label="Abrir menú">
-          <span class="menu-bar" aria-hidden="true"></span>
-          <span class="menu-bar" aria-hidden="true"></span>
-        </button>
-      </div>
+        <!-- ============ HERO ============ -->
+        <header class="frame-column hero scroll-blur-out">
+          <div class="hero-grid">
+            <div class="hero-main">
+              <h1 class="type-display">José Miguel Batista</h1>
+              <p class="hero-role" data-i18n="hero.role">Desarrollador web y móvil freelance</p>
+              <div class="prose-reading hero-intro">
+                <p data-i18n="hero.intro">Me ocupo del ciclo completo: diseño, desarrollo, SEO y automatización. Mi mejor carta de presentación es Planifesto, la plataforma que construí de cero y que hoy vende cursos, plantillas y una membresía en español.</p>
+              </div>
+              <div class="hero-actions">
+                <a class="btn btn-outline" href="https://github.com/Chemi25" target="_blank" rel="noopener">GitHub</a>
+                <a class="btn btn-outline" href="https://wa.me/18496074188" target="_blank" rel="noopener">WhatsApp</a>
+                <a class="btn btn-accent" href="#contacto" data-i18n="hero.cta">Escríbeme</a>
+              </div>
+            </div>
+
+            <aside class="hero-aside">
+              <div class="hero-work">
+                <span class="hero-work-dot" aria-hidden="true"></span>
+                <div class="hero-work-body">
+                  <a class="hero-work-link" href="https://planifestord.com" target="_blank" rel="noopener" data-i18n="hero.building">Creador de planifestord.com</a>
+                  <div class="hero-brace-wrap" aria-hidden="true">
+                    <div class="hero-brace"></div>
+                    <div class="hero-brace-stem"></div>
+                  </div>
+                  <p class="hero-note" data-i18n="hero.note">Yo construí esa plataforma</p>
+                </div>
+              </div>
+
+              <div>
+                <p class="type-label muted" data-i18n="hero.based">Con base en</p>
+                <p class="hero-location">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M17 2h4v2h-4Zm-2 2h2v2h-2Zm-2 2h2v2h-2Z"></path><path d="M8 8h8v2H8Z"></path><path d="M6 10h12v8H6Z"></path><path d="M8 18h8v2H8Z"></path><path d="M9 20h6v2H9Z"></path></svg>
+                  <span data-i18n="hero.location">Santo Domingo, RD — UTC−4</span>
+                </p>
+              </div>
+            </aside>
+          </div>
+
+          <div class="hero-block">
+            <p class="type-label muted" data-i18n="hero.stack">Stack actual</p>
+            <div class="chip-row">
+              <span class="chip">JavaScript</span>
+              <span class="chip">Node.js</span>
+              <span class="chip">Astro</span>
+              <span class="chip">Supabase</span>
+              <span class="chip">SQL</span>
+              <span class="chip">Apps Script</span>
+              <span class="chip">Capacitor</span>
+              <span class="chip">SEO</span>
+            </div>
+          </div>
+
+          <div class="hero-block">
+            <p class="type-label muted" data-i18n="hero.askAi">Pregúntale a una IA sobre mí</p>
+            <div class="ai-links ai-links-column">
+              <a class="ai-link" href="https://chatgpt.com/?q=Lee%20https%3A%2F%2Fjosemiguelbatista.site%2Fllms.txt%20y%20cu%C3%A9ntame%20sobre%20Jos%C3%A9%20Miguel%20Batista" target="_blank" rel="noopener" data-i18n-attr="href:ai.chatgptHref">
+                <svg viewBox="0 0 24 24" fill="currentColor" fill-rule="evenodd" aria-hidden="true" focusable="false"><path d="M9.205 8.658v-2.26c0-.19.072-.333.238-.428l4.543-2.616c.619-.357 1.356-.523 2.117-.523 2.854 0 4.662 2.212 4.662 4.566 0 .167 0 .357-.024.547l-4.71-2.759a.797.797 0 00-.856 0l-5.97 3.473zm10.609 8.8V12.06c0-.333-.143-.57-.429-.737l-5.97-3.473 1.95-1.118a.433.433 0 01.476 0l4.543 2.617c1.309.76 2.189 2.378 2.189 3.948 0 1.808-1.07 3.473-2.76 4.163zM7.802 12.703l-1.95-1.142c-.167-.095-.239-.238-.239-.428V5.899c0-2.545 1.95-4.472 4.591-4.472 1 0 1.927.333 2.712.928L8.23 5.067c-.285.166-.428.404-.428.737v6.898zM12 15.128l-2.795-1.57v-3.33L12 8.658l2.795 1.57v3.33L12 15.128zm1.796 7.23c-1 0-1.927-.332-2.712-.927l4.686-2.712c.285-.166.428-.404.428-.737v-6.898l1.974 1.142c.167.095.238.238.238.428v5.233c0 2.545-1.974 4.472-4.614 4.472zm-5.637-5.303l-4.544-2.617c-1.308-.761-2.188-2.378-2.188-3.948A4.482 4.482 0 014.21 6.327v5.423c0 .333.143.571.428.738l5.947 3.449-1.95 1.118a.432.432 0 01-.476 0zm-.262 3.9c-2.688 0-4.662-2.021-4.662-4.519 0-.19.024-.38.047-.57l4.686 2.71c.286.167.571.167.856 0l5.97-3.448v2.26c0 .19-.07.333-.237.428l-4.543 2.616c-.619.357-1.356.523-2.117.523zm5.899 2.83a5.947 5.947 0 005.827-4.756C22.287 18.339 24 15.84 24 13.296c0-1.665-.713-3.282-1.998-4.448.119-.5.19-.999.19-1.498 0-3.401-2.759-5.947-5.946-5.947-.642 0-1.26.095-1.88.31A5.962 5.962 0 0010.205 0a5.947 5.947 0 00-5.827 4.757C1.713 5.447 0 7.945 0 10.49c0 1.666.713 3.283 1.998 4.448-.119.5-.19 1-.19 1.499 0 3.401 2.759 5.946 5.946 5.946.642 0 1.26-.095 1.88-.309a5.96 5.96 0 004.162 1.713z"></path></svg>
+                ChatGPT
+              </a>
+              <a class="ai-link" href="https://claude.ai/new?q=Lee%20https%3A%2F%2Fjosemiguelbatista.site%2Fllms.txt%20y%20cu%C3%A9ntame%20sobre%20Jos%C3%A9%20Miguel%20Batista" target="_blank" rel="noopener" data-i18n-attr="href:ai.claudeHref">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.709 15.955l4.72-2.647.08-.23-.08-.128H9.2l-.79-.048-2.698-.073-2.339-.097-2.266-.122-.571-.121L0 11.784l.055-.352.48-.321.686.06 1.52.103 2.278.158 1.652.097 2.449.255h.389l.055-.157-.134-.098-.103-.097-2.358-1.596-2.552-1.688-1.336-.972-.724-.491-.364-.462-.158-1.008.656-.722.881.06.225.061.893.686 1.908 1.476 2.491 1.833.365.304.145-.103.019-.073-.164-.274-1.355-2.446-1.446-2.49-.644-1.032-.17-.619a2.97 2.97 0 01-.104-.729L6.283.134 6.696 0l.996.134.42.364.62 1.414 1.002 2.229 1.555 3.03.456.898.243.832.091.255h.158V9.01l.128-1.706.237-2.095.23-2.695.08-.76.376-.91.747-.492.584.28.48.685-.067.444-.286 1.851-.559 2.903-.364 1.942h.212l.243-.242.985-1.306 1.652-2.064.73-.82.85-.904.547-.431h1.033l.76 1.129-.34 1.166-1.064 1.347-.881 1.142-1.264 1.7-.79 1.36.073.11.188-.02 2.856-.606 1.543-.28 1.841-.315.833.388.091.395-.328.807-1.969.486-2.309.462-3.439.813-.042.03.049.061 1.549.146.662.036h1.622l3.02.225.79.522.474.638-.079.485-1.215.62-1.64-.389-3.829-.91-1.312-.329h-.182v.11l1.093 1.068 2.006 1.81 2.509 2.33.127.578-.322.455-.34-.049-2.205-1.657-.851-.747-1.926-1.62h-.128v.17l.444.649 2.345 3.521.122 1.08-.17.353-.608.213-.668-.122-1.374-1.925-1.415-2.167-1.143-1.943-.14.08-.674 7.254-.316.37-.729.28-.607-.461-.322-.747.322-1.476.389-1.924.315-1.53.286-1.9.17-.632-.012-.042-.14.018-1.434 1.967-2.18 2.945-1.726 1.845-.414.164-.717-.37.067-.662.401-.589 2.388-3.036 1.44-1.882.93-1.086-.006-.158h-.055L4.132 18.56l-1.13.146-.487-.456.061-.746.231-.243 1.908-1.312-.006.006z" fill="#D97757" fill-rule="nonzero"></path></svg>
+                Claude
+              </a>
+              <a class="ai-link" href="https://www.perplexity.ai/search?q=Lee%20https%3A%2F%2Fjosemiguelbatista.site%2Fllms.txt%20y%20cu%C3%A9ntame%20sobre%20Jos%C3%A9%20Miguel%20Batista" target="_blank" rel="noopener" data-i18n-attr="href:ai.perplexityHref">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19.785 0v7.272H22.5V17.62h-2.935V24l-7.037-6.194v6.145h-1.091v-6.152L4.392 24v-6.465H1.5V7.188h2.884V0l7.053 6.494V.19h1.09v6.49L19.786 0zm-7.257 9.044v7.319l5.946 5.234V14.44l-5.946-5.397zm-1.099-.08l-5.946 5.398v7.235l5.946-5.234V8.965zm8.136 7.58h1.844V8.349H13.46l6.105 5.54v2.655zm-8.982-8.28H2.59v8.195h1.8v-2.576l6.192-5.62zM5.475 2.476v4.71h5.115l-5.115-4.71zm13.219 0l-5.115 4.71h5.115v-4.71z" fill="#22B8CD" fill-rule="nonzero"></path></svg>
+                Perplexity
+              </a>
+            </div>
+          </div>
+        </header>
+
+        <!-- ============ SERVICIOS ============ -->
+        <section id="servicios" class="section">
+          <div class="rule-bleed"></div>
+          <div class="frame-column section-inner">
+            <h2 class="type-label muted scroll-blur-label" data-i18n="services.title">Servicios</h2>
+            <div class="section-body scroll-blur-in">
+              <div class="card-grid scroll-stagger">
+                <div class="card card-pad">
+                  <h3 class="type-label muted" data-i18n="services.s1.title">Desarrollo full-stack</h3>
+                  <p class="card-text" data-i18n="services.s1.desc">Aplicaciones web completas, del frontend a la base de datos y el despliegue.</p>
+                  <div class="chip-row chip-row-tight">
+                    <span class="chip chip-soft">JavaScript</span>
+                    <span class="chip chip-soft">Node.js</span>
+                    <span class="chip chip-soft">Supabase</span>
+                  </div>
+                </div>
+                <div class="card card-pad">
+                  <h3 class="type-label muted" data-i18n="services.s2.title">Webs y tiendas online</h3>
+                  <p class="card-text" data-i18n="services.s2.desc">Landing pages, webs corporativas y e-commerce, con la velocidad y el SEO como prioridad.</p>
+                  <div class="chip-row chip-row-tight">
+                    <span class="chip chip-soft">HTML/CSS</span>
+                    <span class="chip chip-soft">JavaScript</span>
+                    <span class="chip chip-soft">SEO</span>
+                  </div>
+                </div>
+                <div class="card card-pad">
+                  <h3 class="type-label muted" data-i18n="services.s3.title">Apps móviles</h3>
+                  <p class="card-text" data-i18n="services.s3.desc">Aplicaciones para iOS y Android, del prototipo a la tienda.</p>
+                  <div class="chip-row chip-row-tight">
+                    <span class="chip chip-soft">iOS</span>
+                    <span class="chip chip-soft">Android</span>
+                    <span class="chip chip-soft">Capacitor</span>
+                  </div>
+                </div>
+                <div class="card card-pad">
+                  <h3 class="type-label muted" data-i18n="services.s4.title">SEO y automatización</h3>
+                  <p class="card-text" data-i18n="services.s4.desc">Sitios que se posicionan y sistemas que venden y entregan solos, sin intervención manual.</p>
+                  <div class="chip-row chip-row-tight">
+                    <span class="chip chip-soft">SEO</span>
+                    <span class="chip chip-soft">Apps Script</span>
+                    <span class="chip chip-soft">Analytics</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ ÁREAS DE ENFOQUE ============ -->
+        <section id="enfoque" class="section">
+          <div class="rule-bleed"></div>
+          <div class="frame-column section-inner">
+            <h2 class="type-label muted scroll-blur-label" data-i18n="focus.title">Áreas de enfoque</h2>
+            <div class="section-body scroll-blur-in">
+              <div class="chip-row">
+                <span class="chip" data-i18n="focus.f1">Desarrollo web</span>
+                <span class="chip" data-i18n="focus.f2">E-commerce</span>
+                <span class="chip" data-i18n="focus.f3">Apps móviles</span>
+                <span class="chip" data-i18n="focus.f4">SEO</span>
+                <span class="chip" data-i18n="focus.f5">Automatización</span>
+                <span class="chip" data-i18n="focus.f6">Analítica</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ SOBRE MÍ ============ -->
+        <section id="sobre-mi" class="section">
+          <div class="rule-bleed"></div>
+          <div class="frame-column section-inner">
+            <h2 class="type-label muted scroll-blur-label" data-i18n="about.title">Sobre mí</h2>
+            <div class="section-body scroll-blur-in">
+              <div class="about-flow">
+                <div class="about-photo">
+                  <img src="assets/img/foto.jpg" width="600" height="750" loading="lazy" alt="Retrato de José Miguel Batista" data-i18n-attr="alt:about.imgAlt">
+                </div>
+                <div class="prose-reading">
+                  <p data-i18n="about.p1">Soy desarrollador full-stack y me importa más el resultado que la herramienta: un sitio que carga rápido, se entiende a la primera y le hace ganar dinero a su dueño.</p>
+                  <p class="about-aside" data-i18n="about.p2">Lanzar mi propio producto me cambió la forma de trabajar. Sé lo que cuesta conseguir cada visita y lo que vale cada venta, así que trato cada proyecto de cliente como si fuera mío.</p>
+                </div>
+                <div class="about-focus">
+                  <p class="type-label muted" data-i18n="about.focusLabel">Enfoque</p>
+                  <div class="chip-row">
+                    <span class="chip">JavaScript</span>
+                    <span class="chip">Node.js</span>
+                    <span class="chip">Supabase</span>
+                    <span class="chip">SQL</span>
+                    <span class="chip chip-soft">Git</span>
+                    <span class="chip chip-soft">Google Apps Script</span>
+                    <span class="chip chip-soft">SEO</span>
+                    <span class="chip chip-soft">Analytics</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ EXPERIENCIA ============ -->
+        <section id="experiencia" class="section">
+          <div class="rule-bleed"></div>
+          <div class="frame-column section-inner">
+            <h2 class="type-label muted scroll-blur-label" data-i18n="exp.title">Experiencia</h2>
+            <div class="section-body scroll-blur-in">
+              <ol class="timeline timeline-spine">
+                <li class="tl-item">
+                  <span class="tl-dot tl-dot-current" aria-hidden="true"></span>
+                  <span class="type-meta muted" data-i18n="exp.e1.meta">Producto propio — en producción</span>
+                  <h3 class="type-item-title tl-title"><span data-i18n="exp.e1.role">Creador y desarrollador de</span> <span class="tl-org"><a href="https://planifestord.com" target="_blank" rel="noopener">Planifesto</a></span></h3>
+                  <ul class="tl-bullets">
+                    <li data-i18n="exp.e1.b1">Plataforma de educación financiera para jóvenes hispanohablantes: catálogo, pagos con tarjeta y PayPal, y un panel interno donde el equipo publica productos, artículos, talleres y webinars sin tocar código.</li>
+                    <li data-i18n="exp.e1.b2">Entrega automatizada de cada compra con Google Apps Script: cada pedido se procesa, se entrega y se registra sin intervención manual.</li>
+                    <li data-i18n="exp.e1.b3">Curso «Financieramente Responsable de 0 a 100» con su propia área de alumno: acceso con cuenta, lecciones en video, progreso guardado y cupones de descuento.</li>
+                    <li data-i18n="exp.e1.b4">Planifesto Club, la membresía: foro privado, clases en vivo semanales con calendario y recordatorios, mini cursos y un perfil con puntos y niveles.</li>
+                    <li data-i18n="exp.e1.b5">PlaniClub, la app del Club para iOS y Android hecha con Capacitor: sesión ya iniciada, notificaciones push y pantalla sin conexión. Publicada en las dos tiendas.</li>
+                    <li data-i18n="exp.e1.b6">SEO y analítica que posicionan la plataforma en una veintena de países.</li>
+                  </ul>
+                  <div class="chip-row chip-row-tight">
+                    <span class="chip">Astro</span>
+                    <span class="chip">Supabase</span>
+                    <span class="chip">Node.js</span>
+                    <span class="chip chip-soft">Google Apps Script</span>
+                    <span class="chip chip-soft">Capacitor</span>
+                    <span class="chip chip-soft">SEO</span>
+                    <span class="chip chip-soft">Analytics</span>
+                  </div>
+                </li>
+                <li class="tl-item">
+                  <span class="tl-dot" aria-hidden="true"></span>
+                  <span class="type-meta muted" data-i18n="exp.e2.meta">Freelance — disponible</span>
+                  <h3 class="type-item-title tl-title" data-i18n="exp.e2.role">Desarrollador web y móvil freelance</h3>
+                  <ul class="tl-bullets">
+                    <li data-i18n="exp.e2.b1">Del primer boceto al servidor: diseño, desarrollo, despliegue y mantenimiento en un solo interlocutor.</li>
+                    <li data-i18n="exp.e2.b2">Webs corporativas, landing pages y tiendas online escritas a mano: pesan poco, cargan rápido y no dependen de plugins que se rompen solos.</li>
+                    <li data-i18n="exp.e2.b3">Apps móviles para iOS y Android, del prototipo a la publicación en las tiendas.</li>
+                    <li data-i18n="exp.e2.b4">Velocidad y SEO desde el primer día: metadatos, sitemap e imágenes optimizadas incluidos.</li>
+                  </ul>
+                  <div class="chip-row chip-row-tight">
+                    <span class="chip">HTML/CSS</span>
+                    <span class="chip">JavaScript</span>
+                    <span class="chip">Node.js</span>
+                    <span class="chip chip-soft">SQL</span>
+                    <span class="chip chip-soft">Git</span>
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ PROYECTOS ============ -->
+        <section id="proyectos" class="section">
+          <div class="rule-bleed"></div>
+          <div class="frame-column section-inner">
+            <h2 class="type-label muted scroll-blur-label" data-i18n="projects.title">Proyectos</h2>
+            <div class="section-body scroll-blur-in">
+              <div class="tabs" role="tablist" aria-label="Categorías de proyectos" data-i18n-attr="aria-label:projects.tabsLabel">
+                <button class="tab is-active" type="button" role="tab" aria-selected="true" aria-controls="panel-web" id="tab-web">web</button>
+                <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="panel-app" id="tab-app">app</button>
+              </div>
+
+              <div class="tab-panel" id="panel-web" role="tabpanel" aria-labelledby="tab-web">
+                <div class="project-list">
+                  <div class="card">
+                    <div class="card-head">
+                      <h3 class="type-item-title"><a class="project-name" href="https://planifestord.com" target="_blank" rel="noopener">Planifesto</a></h3>
+                      <div class="card-links">
+                        <a href="https://planifestord.com" target="_blank" rel="noopener" data-i18n="projects.linkWebsite">Sitio</a>
+                      </div>
+                    </div>
+                    <div class="card-panel">
+                      <p class="card-text" data-i18n="projects.p1.desc">La plataforma y la tienda: el catálogo y el cobro corren sobre Astro y Supabase, con un panel interno para publicar sin tocar código.</p>
+                      <figure class="card-shot">
+                        <img src="assets/img/planifesto-productos.jpg" width="1200" height="750" loading="lazy" alt="La tienda de Planifesto en pantalla de escritorio" data-i18n-attr="alt:projects.p1.imgAlt">
+                      </figure>
+                      <div class="chip-row chip-row-tight">
+                        <span class="chip chip-soft">Astro</span>
+                        <span class="chip chip-soft">Supabase</span>
+                        <span class="chip chip-soft">Node.js</span>
+                        <span class="chip chip-soft">SEO</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-head">
+                      <h3 class="type-item-title"><a class="project-name" href="https://planifestord.com/curso" target="_blank" rel="noopener" data-i18n="projects.p2.name">El curso</a></h3>
+                      <div class="card-links">
+                        <a href="https://planifestord.com/curso" target="_blank" rel="noopener" data-i18n="projects.linkWebsite">Sitio</a>
+                      </div>
+                    </div>
+                    <div class="card-panel">
+                      <p class="card-text" data-i18n="projects.p2.desc">«Financieramente Responsable de 0 a 100», con área de alumno: módulos y lecciones en video, progreso guardado, cupones, y pago con tarjeta o PayPal con acceso inmediato.</p>
+                      <figure class="card-shot">
+                        <img src="assets/img/planifesto-aula.jpg" width="1400" height="807" loading="lazy" alt="Área de alumno del curso: módulos, progreso y lección en video" data-i18n-attr="alt:projects.p2.imgAlt">
+                      </figure>
+                      <div class="chip-row chip-row-tight">
+                        <span class="chip chip-soft">Supabase</span>
+                        <span class="chip chip-soft" data-i18n="projects.chipPayments">Pagos</span>
+                        <span class="chip chip-soft">Video</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-head">
+                      <h3 class="type-item-title"><a class="project-name" href="https://planifestord.com/comunidad" target="_blank" rel="noopener">Planifesto Club</a></h3>
+                      <div class="card-links">
+                        <a href="https://planifestord.com/comunidad" target="_blank" rel="noopener" data-i18n="projects.linkWebsite">Sitio</a>
+                      </div>
+                    </div>
+                    <div class="card-panel">
+                      <p class="card-text" data-i18n="projects.p3.desc">La membresía: foro privado de la comunidad, clases en vivo cada semana con su calendario y su recordatorio, mini cursos a ritmo propio y un perfil con puntos y niveles.</p>
+                      <figure class="card-shot">
+                        <img src="assets/img/planifesto-muro.jpg" width="1400" height="805" loading="lazy" alt="Muro de la comunidad del Club: editor de publicaciones y tabla de líderes" data-i18n-attr="alt:projects.p3.imgAlt">
+                      </figure>
+                      <div class="chip-row chip-row-tight">
+                        <span class="chip chip-soft" data-i18n="projects.chipCommunity">Comunidad</span>
+                        <span class="chip chip-soft" data-i18n="projects.chipLive">Clases en vivo</span>
+                        <span class="chip chip-soft" data-i18n="projects.chipGamification">Puntos y niveles</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-panel" id="panel-app" role="tabpanel" aria-labelledby="tab-app" hidden>
+                <div class="project-list">
+                  <div class="card">
+                    <div class="card-head">
+                      <h3 class="type-item-title"><a class="project-name" href="https://apps.apple.com/app/planiclub/id6791017646" target="_blank" rel="noopener">PlaniClub</a></h3>
+                      <div class="card-links">
+                        <a href="https://apps.apple.com/app/planiclub/id6791017646" target="_blank" rel="noopener">App Store</a>
+                        <a href="https://play.google.com/store/apps/details?id=com.planifestord.app" target="_blank" rel="noopener">Google Play</a>
+                      </div>
+                    </div>
+                    <div class="card-panel">
+                      <p class="card-text" data-i18n="projects.p4.desc">La app del Club para iOS y Android, hecha con Capacitor sobre la misma plataforma: abre el área de miembros con la sesión ya iniciada, con notificaciones push, arranque nativo y pantalla sin conexión. Publicada en las dos tiendas.</p>
+                      <div class="app-shots">
+                        <figure class="app-shot">
+                          <img src="assets/img/planiclub-app-1.jpg" width="540" height="1174" loading="lazy" alt="Pantalla de planificación mensual de PlaniClub" data-i18n-attr="alt:projects.p4.img1Alt">
+                          <figcaption data-i18n="projects.p4.cap1">Presupuesto del mes</figcaption>
+                        </figure>
+                        <figure class="app-shot">
+                          <img src="assets/img/planiclub-app-2.jpg" width="540" height="1174" loading="lazy" alt="Foro de la comunidad en PlaniClub" data-i18n-attr="alt:projects.p4.img2Alt">
+                          <figcaption data-i18n="projects.p4.cap2">Comunidad</figcaption>
+                        </figure>
+                        <figure class="app-shot">
+                          <img src="assets/img/planiclub-app-3.jpg" width="540" height="1174" loading="lazy" alt="Próxima clase en vivo con cuenta atrás en PlaniClub" data-i18n-attr="alt:projects.p4.img3Alt">
+                          <figcaption data-i18n="projects.p4.cap3">Clases en vivo</figcaption>
+                        </figure>
+                      </div>
+                      <div class="chip-row chip-row-tight">
+                        <span class="chip chip-soft">Capacitor</span>
+                        <span class="chip chip-soft">iOS</span>
+                        <span class="chip chip-soft">Android</span>
+                        <span class="chip chip-soft">Push</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ COMPROMISOS ============ -->
+        <section id="compromisos" class="section">
+          <div class="rule-bleed"></div>
+          <div class="frame-column section-inner">
+            <h2 class="type-label muted scroll-blur-label" data-i18n="promises.title">Lo que te llevas siempre</h2>
+            <div class="section-body scroll-blur-in">
+              <div class="card-grid scroll-stagger">
+                <div class="card card-pad">
+                  <h3 class="type-label muted" data-i18n="promises.p1.t">Código escrito a mano</h3>
+                  <p class="card-text" data-i18n="promises.p1.d">Sin plantillas ni constructores. Tu sitio se escribe línea por línea: pesa poco, carga rápido y no depende de plugins que se rompan solos.</p>
+                </div>
+                <div class="card card-pad">
+                  <h3 class="type-label muted" data-i18n="promises.p2.t">Precio cerrado por escrito</h3>
+                  <p class="card-text" data-i18n="promises.p2.d">Antes de empezar tienes el alcance, los plazos y el precio en un documento. Si algo cambia por el camino, lo hablamos antes; no aparece en la factura.</p>
+                </div>
+                <div class="card card-pad">
+                  <h3 class="type-label muted" data-i18n="promises.p3.t">Hablas conmigo, no con una agencia</h3>
+                  <p class="card-text" data-i18n="promises.p3.d">Quien te contesta el mensaje es el mismo que escribe el código. Sin intermediarios, sin gestores de cuenta y sin teléfonos que rebotan.</p>
+                </div>
+                <div class="card card-pad">
+                  <h3 class="type-label muted" data-i18n="promises.p4.t">Respuesta en menos de 24 horas</h3>
+                  <p class="card-text" data-i18n="promises.p4.d">Te contesto el mismo día o al siguiente. Durante el proyecto sabes en qué punto va sin tener que perseguirme.</p>
+                </div>
+                <div class="card card-pad">
+                  <h3 class="type-label muted" data-i18n="promises.p5.t">Velocidad y SEO desde el primer día</h3>
+                  <p class="card-text" data-i18n="promises.p5.d">No son un extra que se cobra aparte. El sitio nace ligero, con sus metadatos, su sitemap y sus imágenes optimizadas.</p>
+                </div>
+                <div class="card card-pad">
+                  <h3 class="type-label muted" data-i18n="promises.p6.t">El código es tuyo</h3>
+                  <p class="card-text" data-i18n="promises.p6.d">Al publicar te entrego todo: el repositorio, los accesos y cómo se actualiza. Me quedo para las mejoras porque quieras, no porque no puedas irte.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ PROCESO ============ -->
+        <section id="proceso" class="section">
+          <div class="rule-bleed"></div>
+          <div class="frame-column section-inner">
+            <h2 class="type-label muted scroll-blur-label" data-i18n="process.title">Cómo trabajo</h2>
+            <div class="section-body scroll-blur-in">
+              <ol class="timeline timeline-spine">
+                <li class="tl-item">
+                  <span class="tl-dot" aria-hidden="true"></span>
+                  <span class="type-meta muted" data-i18n="process.s1.meta">Paso 01</span>
+                  <h3 class="type-item-title tl-title" data-i18n="process.s1.title">Descubrimiento</h3>
+                  <p class="tl-text" data-i18n="process.s1.desc">Hablamos de tu negocio, objetivos y presupuesto antes de proponer nada.</p>
+                </li>
+                <li class="tl-item">
+                  <span class="tl-dot" aria-hidden="true"></span>
+                  <span class="type-meta muted" data-i18n="process.s2.meta">Paso 02</span>
+                  <h3 class="type-item-title tl-title" data-i18n="process.s2.title">Propuesta</h3>
+                  <p class="tl-text" data-i18n="process.s2.desc">Un plan por escrito: alcance, plazos y precio cerrado.</p>
+                </li>
+                <li class="tl-item">
+                  <span class="tl-dot" aria-hidden="true"></span>
+                  <span class="type-meta muted" data-i18n="process.s3.meta">Paso 03</span>
+                  <h3 class="type-item-title tl-title" data-i18n="process.s3.title">Desarrollo</h3>
+                  <p class="tl-text" data-i18n="process.s3.desc">Iteraciones cortas, con avances que puedes ver y probar.</p>
+                </li>
+                <li class="tl-item">
+                  <span class="tl-dot" aria-hidden="true"></span>
+                  <span class="type-meta muted" data-i18n="process.s4.meta">Paso 04</span>
+                  <h3 class="type-item-title tl-title" data-i18n="process.s4.title">Lanzamiento y soporte</h3>
+                  <p class="tl-text" data-i18n="process.s4.desc">Publicamos, medimos y quedo disponible para mejoras.</p>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ DISPONIBILIDAD ============ -->
+        <section id="disponibilidad" class="section">
+          <div class="rule-bleed"></div>
+          <div class="frame-column section-inner">
+            <div class="card notice-card scroll-blur-in">
+              <div class="card-panel notice-panel">
+                <h2 class="type-label muted" data-i18n="avail.title">Disponible para proyectos</h2>
+                <p class="notice-text" data-i18n="avail.text">Webs, tiendas online y apps móviles. Te respondo en menos de 24 horas.</p>
+              </div>
+              <div class="card-head notice-foot">
+                <a class="meta-link" href="mailto:josemiguel20186@gmail.com?subject=Tengo%20un%20proyecto%20en%20mente" data-i18n-attr="href:avail.mailto"><span data-i18n="avail.cta">escríbeme</span> ↗</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ LA MARCA ============ -->
+        <section id="marca" class="section">
+          <div class="rule-bleed"></div>
+          <div class="frame-column section-inner">
+            <h2 class="type-label muted scroll-blur-label" data-i18n="mark.title">La marca</h2>
+            <div class="section-body scroll-blur-in">
+              <div class="mark-row">
+                <div class="mark-tile" aria-hidden="true">
+                  <svg class="logo-mark logo-mark-lg" viewBox="0 0 46 30" focusable="false">
+                    <text class="logo-text" x="1" y="23">jm</text>
+                    <rect class="logo-dot" x="38" y="18.5" width="4.5" height="4.5" rx="1"></rect>
+                  </svg>
+                </div>
+                <p class="prose-reading mark-text" data-i18n="mark.note">jm — mis iniciales, en minúsculas, como se nombran las variables.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ PREGÚNTALE A UNA IA ============ -->
+        <section id="ia" class="section">
+          <div class="rule-bleed"></div>
+          <div class="frame-column section-inner">
+            <h2 class="type-label muted scroll-blur-label" data-i18n="ai.title">Pregúntale a una IA</h2>
+            <div class="section-body scroll-blur-in">
+              <div class="prose-reading">
+                <p data-i18n="ai.text">No te fíes solo de mi palabra. Este sitio publica todo sobre mí en texto plano en /llms.txt — pásaselo a cualquier asistente y pregúntale lo que quieras.</p>
+              </div>
+              <div class="ai-links">
+                <a class="ai-link" href="https://chatgpt.com/?q=Lee%20https%3A%2F%2Fjosemiguelbatista.site%2Fllms.txt%20y%20cu%C3%A9ntame%20sobre%20Jos%C3%A9%20Miguel%20Batista" target="_blank" rel="noopener" data-i18n-attr="href:ai.chatgptHref">
+                  <svg viewBox="0 0 24 24" fill="currentColor" fill-rule="evenodd" aria-hidden="true" focusable="false"><path d="M9.205 8.658v-2.26c0-.19.072-.333.238-.428l4.543-2.616c.619-.357 1.356-.523 2.117-.523 2.854 0 4.662 2.212 4.662 4.566 0 .167 0 .357-.024.547l-4.71-2.759a.797.797 0 00-.856 0l-5.97 3.473zm10.609 8.8V12.06c0-.333-.143-.57-.429-.737l-5.97-3.473 1.95-1.118a.433.433 0 01.476 0l4.543 2.617c1.309.76 2.189 2.378 2.189 3.948 0 1.808-1.07 3.473-2.76 4.163zM7.802 12.703l-1.95-1.142c-.167-.095-.239-.238-.239-.428V5.899c0-2.545 1.95-4.472 4.591-4.472 1 0 1.927.333 2.712.928L8.23 5.067c-.285.166-.428.404-.428.737v6.898zM12 15.128l-2.795-1.57v-3.33L12 8.658l2.795 1.57v3.33L12 15.128zm1.796 7.23c-1 0-1.927-.332-2.712-.927l4.686-2.712c.285-.166.428-.404.428-.737v-6.898l1.974 1.142c.167.095.238.238.238.428v5.233c0 2.545-1.974 4.472-4.614 4.472zm-5.637-5.303l-4.544-2.617c-1.308-.761-2.188-2.378-2.188-3.948A4.482 4.482 0 014.21 6.327v5.423c0 .333.143.571.428.738l5.947 3.449-1.95 1.118a.432.432 0 01-.476 0zm-.262 3.9c-2.688 0-4.662-2.021-4.662-4.519 0-.19.024-.38.047-.57l4.686 2.71c.286.167.571.167.856 0l5.97-3.448v2.26c0 .19-.07.333-.237.428l-4.543 2.616c-.619.357-1.356.523-2.117.523zm5.899 2.83a5.947 5.947 0 005.827-4.756C22.287 18.339 24 15.84 24 13.296c0-1.665-.713-3.282-1.998-4.448.119-.5.19-.999.19-1.498 0-3.401-2.759-5.947-5.946-5.947-.642 0-1.26.095-1.88.31A5.962 5.962 0 0010.205 0a5.947 5.947 0 00-5.827 4.757C1.713 5.447 0 7.945 0 10.49c0 1.666.713 3.283 1.998 4.448-.119.5-.19 1-.19 1.499 0 3.401 2.759 5.946 5.946 5.946.642 0 1.26-.095 1.88-.309a5.96 5.96 0 004.162 1.713z"></path></svg>
+                  ChatGPT
+                </a>
+                <a class="ai-link" href="https://claude.ai/new?q=Lee%20https%3A%2F%2Fjosemiguelbatista.site%2Fllms.txt%20y%20cu%C3%A9ntame%20sobre%20Jos%C3%A9%20Miguel%20Batista" target="_blank" rel="noopener" data-i18n-attr="href:ai.claudeHref">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.709 15.955l4.72-2.647.08-.23-.08-.128H9.2l-.79-.048-2.698-.073-2.339-.097-2.266-.122-.571-.121L0 11.784l.055-.352.48-.321.686.06 1.52.103 2.278.158 1.652.097 2.449.255h.389l.055-.157-.134-.098-.103-.097-2.358-1.596-2.552-1.688-1.336-.972-.724-.491-.364-.462-.158-1.008.656-.722.881.06.225.061.893.686 1.908 1.476 2.491 1.833.365.304.145-.103.019-.073-.164-.274-1.355-2.446-1.446-2.49-.644-1.032-.17-.619a2.97 2.97 0 01-.104-.729L6.283.134 6.696 0l.996.134.42.364.62 1.414 1.002 2.229 1.555 3.03.456.898.243.832.091.255h.158V9.01l.128-1.706.237-2.095.23-2.695.08-.76.376-.91.747-.492.584.28.48.685-.067.444-.286 1.851-.559 2.903-.364 1.942h.212l.243-.242.985-1.306 1.652-2.064.73-.82.85-.904.547-.431h1.033l.76 1.129-.34 1.166-1.064 1.347-.881 1.142-1.264 1.7-.79 1.36.073.11.188-.02 2.856-.606 1.543-.28 1.841-.315.833.388.091.395-.328.807-1.969.486-2.309.462-3.439.813-.042.03.049.061 1.549.146.662.036h1.622l3.02.225.79.522.474.638-.079.485-1.215.62-1.64-.389-3.829-.91-1.312-.329h-.182v.11l1.093 1.068 2.006 1.81 2.509 2.33.127.578-.322.455-.34-.049-2.205-1.657-.851-.747-1.926-1.62h-.128v.17l.444.649 2.345 3.521.122 1.08-.17.353-.608.213-.668-.122-1.374-1.925-1.415-2.167-1.143-1.943-.14.08-.674 7.254-.316.37-.729.28-.607-.461-.322-.747.322-1.476.389-1.924.315-1.53.286-1.9.17-.632-.012-.042-.14.018-1.434 1.967-2.18 2.945-1.726 1.845-.414.164-.717-.37.067-.662.401-.589 2.388-3.036 1.44-1.882.93-1.086-.006-.158h-.055L4.132 18.56l-1.13.146-.487-.456.061-.746.231-.243 1.908-1.312-.006.006z" fill="#D97757" fill-rule="nonzero"></path></svg>
+                  Claude
+                </a>
+                <a class="ai-link" href="https://www.perplexity.ai/search?q=Lee%20https%3A%2F%2Fjosemiguelbatista.site%2Fllms.txt%20y%20cu%C3%A9ntame%20sobre%20Jos%C3%A9%20Miguel%20Batista" target="_blank" rel="noopener" data-i18n-attr="href:ai.perplexityHref">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19.785 0v7.272H22.5V17.62h-2.935V24l-7.037-6.194v6.145h-1.091v-6.152L4.392 24v-6.465H1.5V7.188h2.884V0l7.053 6.494V.19h1.09v6.49L19.786 0zm-7.257 9.044v7.319l5.946 5.234V14.44l-5.946-5.397zm-1.099-.08l-5.946 5.398v7.235l5.946-5.234V8.965zm8.136 7.58h1.844V8.349H13.46l6.105 5.54v2.655zm-8.982-8.28H2.59v8.195h1.8v-2.576l6.192-5.62zM5.475 2.476v4.71h5.115l-5.115-4.71zm13.219 0l-5.115 4.71h5.115v-4.71z" fill="#22B8CD" fill-rule="nonzero"></path></svg>
+                  Perplexity
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ GITHUB ============ -->
+        <section id="github" class="section">
+          <div class="rule-bleed"></div>
+          <div class="frame-column section-inner">
+            <h2 class="type-label muted scroll-blur-label" data-i18n="gh.title">GitHub — estadísticas y actividad</h2>
+            <div class="section-body scroll-blur-in">
+              <p class="card-text gh-lead" data-i18n="gh.lead">Estadísticas y contribuciones en tiempo real, leídas directamente de mi perfil de GitHub.</p>
+              <div class="gh-tabs" id="gh-years" role="tablist" aria-label="Año"></div>
+              <div class="gh-graph-wrap">
+                <div class="gh-graph" id="gh-graph" aria-hidden="true"></div>
+              </div>
+              <p class="type-meta muted gh-total" id="gh-total"></p>
+              <div class="gh-langs" id="gh-langs" hidden>
+                <p class="type-label muted" data-i18n="gh.langs">Lenguajes más usados</p>
+                <div class="chip-row chip-row-tight" id="gh-langs-list"></div>
+              </div>
+              <p class="type-meta muted" id="gh-fallback" hidden><span data-i18n="gh.fallback">No se pudo cargar la actividad.</span> <a class="meta-link" href="https://github.com/Chemi25" target="_blank" rel="noopener">github.com/Chemi25 ↗</a></p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ CONTACTO ============ -->
+        <section id="contacto" class="section">
+          <div class="rule-bleed"></div>
+          <div class="frame-column section-inner">
+            <h2 class="type-label muted scroll-blur-label" data-i18n="contact.title">Hablemos.</h2>
+            <div class="section-body scroll-blur-in">
+              <form class="contact-form" id="contact-form" novalidate>
+                <div class="form-grid">
+                  <div class="form-field">
+                    <label for="cf-name" data-i18n="contact.name">Nombre</label>
+                    <input id="cf-name" name="name" type="text" autocomplete="name" required data-i18n-attr="placeholder:contact.namePh" placeholder="Tu nombre">
+                  </div>
+                  <div class="form-field">
+                    <label for="cf-email" data-i18n="contact.email">Email</label>
+                    <input id="cf-email" name="email" type="email" autocomplete="email" required data-i18n-attr="placeholder:contact.emailPh" placeholder="tu@email.com">
+                  </div>
+                </div>
+                <div class="form-field">
+                  <label for="cf-message" data-i18n="contact.message">Mensaje</label>
+                  <textarea id="cf-message" name="message" rows="5" required data-i18n-attr="placeholder:contact.messagePh" placeholder="Cuéntame qué tienes en mente…"></textarea>
+                </div>
+                <div class="form-foot">
+                  <p class="type-meta muted" data-i18n="contact.hint">El botón abre tu correo con el mensaje ya escrito.</p>
+                  <button class="btn btn-primary" type="submit" data-i18n="contact.send">Enviar</button>
+                </div>
+              </form>
+
+              <div class="find-me">
+                <h3 class="type-label muted" data-i18n="contact.findMe">Encuéntrame en</h3>
+                <div class="contact-list">
+                  <a class="contact-row" href="mailto:josemiguel20186@gmail.com">
+                    <span class="contact-row-main">
+                      <span class="contact-row-name">Email</span>
+                      <span class="contact-row-desc" data-i18n="contact.emailDesc">La forma más directa de llegar a mí.</span>
+                    </span>
+                    <span class="contact-row-value">josemiguel20186@gmail.com</span>
+                  </a>
+                  <a class="contact-row" href="https://wa.me/18496074188" target="_blank" rel="noopener">
+                    <span class="contact-row-main">
+                      <span class="contact-row-name">WhatsApp</span>
+                      <span class="contact-row-desc" data-i18n="contact.waDesc">Si prefieres algo más inmediato.</span>
+                    </span>
+                    <span class="contact-row-value">+1 (849) 607-4188</span>
+                  </a>
+                  <a class="contact-row" href="https://github.com/Chemi25" target="_blank" rel="noopener">
+                    <span class="contact-row-main">
+                      <span class="contact-row-name">GitHub</span>
+                      <span class="contact-row-desc" data-i18n="contact.ghDesc">Mi código y mis proyectos.</span>
+                    </span>
+                    <span class="contact-row-value">github.com/Chemi25</span>
+                  </a>
+                  <a class="contact-row" href="https://planifestord.com" target="_blank" rel="noopener">
+                    <span class="contact-row-main">
+                      <span class="contact-row-name">Planifesto</span>
+                      <span class="contact-row-desc" data-i18n="contact.plDesc">El producto que construí de cero.</span>
+                    </span>
+                    <span class="contact-row-value">planifestord.com</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </main>
     </div>
-  </header>
-
-  <main id="contenido">
-
-    <!-- ============ HERO ============ -->
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-copy">
-          <p class="hero-topper" data-i18n="hero.topper">Código escrito a mano, sin plantillas</p>
-          <h1 class="hero-title"><span data-i18n="hero.title">Construyo webs, tiendas online y</span> <span class="accent" data-i18n="hero.titleAccent">apps móviles</span>.</h1>
-          <p class="hero-sub" data-i18n="hero.subtitle">Soy José Miguel Batista, desarrollador freelance. Me ocupo del ciclo completo: diseño, desarrollo, SEO y automatización. Mi mejor carta de presentación es Planifesto, la plataforma que construí de cero y que hoy vende cursos, plantillas y una membresía en español.</p>
-          <div class="hero-actions">
-            <a class="btn" href="#contacto" data-i18n="hero.cta.contact">Escríbeme</a>
-            <a class="btn btn-ghost" href="#proyectos" data-i18n="hero.cta.work">Ver mi trabajo</a>
-          </div>
-          <p class="hero-availability"><span class="dot" aria-hidden="true"></span> <span data-i18n="hero.availability">Disponible para nuevos proyectos.</span></p>
-        </div>
-
-        <!-- Maqueta dibujada con CSS: el sitio real en pantalla grande y en móvil -->
-        <div class="mockup">
-          <div class="mockup-screen">
-            <img src="assets/img/planifesto-productos.jpg" width="1200" height="750" data-i18n-attr="alt:hero.mockupAlt" alt="La tienda de Planifesto, en pantalla de escritorio y en móvil">
-          </div>
-          <div class="mockup-base" aria-hidden="true"></div>
-          <div class="mockup-phone" aria-hidden="true">
-            <img src="assets/img/planifesto-productos-movil.jpg" width="440" height="952" alt="">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ SERVICIOS ============ -->
-    <section class="section section-alt" id="servicios" aria-labelledby="servicios-title">
-      <div class="container">
-        <div class="section-head center" data-reveal>
-          <p class="topper" data-i18n="services.topper">Servicios</p>
-          <h2 class="section-title" id="servicios-title" data-i18n="services.title">Qué hago</h2>
-          <p class="section-lead" data-i18n="services.lead">Del primer boceto al servidor. Me ocupo del ciclo completo para que tú solo tengas que decidir.</p>
-        </div>
-
-        <div class="grid-3">
-          <article class="card" data-reveal>
-            <span class="icon-tile" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M24 6 42 15 24 24 6 15z"/>
-                <path class="ic-accent" d="M6 24l18 9 18-9"/>
-                <path d="M6 33l18 9 18-9"/>
-              </svg>
-            </span>
-            <h3 class="card-title" data-i18n="services.s1.title">Desarrollo full-stack</h3>
-            <p class="card-body" data-i18n="services.s1.desc">Aplicaciones web completas, del frontend a la base de datos y el despliegue.</p>
-            <p class="card-meta" style="margin:1rem 0 0">JavaScript · Node.js · Supabase</p>
-          </article>
-
-          <article class="card" data-reveal>
-            <span class="icon-tile" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="5" y="9" width="38" height="30" rx="3"/>
-                <path d="M5 18h38"/>
-                <circle class="ic-accent-fill" stroke="none" cx="11" cy="13.5" r="1.6"/>
-                <path class="ic-accent" d="M13 26h13M13 32h20"/>
-              </svg>
-            </span>
-            <h3 class="card-title" data-i18n="services.s2.title">Webs y tiendas online</h3>
-            <p class="card-body" data-i18n="services.s2.desc">Landing pages, webs corporativas y e-commerce, con la velocidad y el SEO como prioridad.</p>
-            <p class="card-meta" style="margin:1rem 0 0">HTML/CSS · JavaScript · SEO</p>
-          </article>
-
-          <article class="card" data-reveal>
-            <span class="icon-tile" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="15" y="6" width="18" height="36" rx="4"/>
-                <path d="M21 10h6"/>
-                <path d="M24 37h.01"/>
-                <circle class="ic-accent-fill" stroke="none" cx="34" cy="9" r="4.5"/>
-              </svg>
-            </span>
-            <h3 class="card-title" data-i18n="services.s3.title">Apps móviles</h3>
-            <p class="card-body" data-i18n="services.s3.desc">Aplicaciones para iOS y Android, del prototipo a la tienda.</p>
-            <p class="card-meta" style="margin:1rem 0 0">iOS · Android · Capacitor</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ TRABAJO ============ -->
-    <section class="section" id="proyectos" aria-labelledby="proyectos-title">
-      <div class="container">
-        <div class="section-head" data-reveal>
-          <p class="topper" data-i18n="projects.topper">Portafolio</p>
-          <h2 class="section-title" id="proyectos-title" data-i18n="projects.title">Trabajo seleccionado</h2>
-          <p class="section-lead" data-i18n="projects.lead">No es una maqueta: es un producto en producción, con su tienda, su curso, su comunidad y su app en las dos tiendas.</p>
-        </div>
-
-        <article class="card project" data-reveal>
-          <p class="card-meta" data-i18n="projects.featured.meta">Producto propio · En producción</p>
-          <h3 class="project-title">Planifesto</h3>
-          <p class="project-body" data-i18n="projects.featured.p1">Planifesto es una plataforma de educación financiera para jóvenes hispanohablantes: cursos, plantillas y herramientas digitales. La construí de principio a fin: el catálogo y los pagos, la entrega automatizada de cada compra con Google Apps Script, la analítica y el SEO que la posiciona en una veintena de países.</p>
-          <p class="project-body" data-i18n="projects.featured.p2">La parte difícil no fue el código, fue montar un sistema que venda y entregue solo: cada pedido se procesa, se entrega y se registra sin intervención manual.</p>
-
-          <!-- Captura real del sitio en vivo. Para actualizarla, reemplaza assets/img/planifesto.jpg -->
-          <figure class="row-figure">
-            <img src="assets/img/planifesto.jpg" width="1200" height="750" loading="lazy" data-i18n-attr="alt:projects.featured.imgAlt" alt="Captura de la página principal de Planifesto">
-          </figure>
-
-          <p class="pieces-label" data-i18n="projects.featured.piecesLabel">Cuatro piezas del mismo producto</p>
-          <div class="pieces">
-            <div class="piece">
-              <h4 class="piece-title"><span class="piece-num" aria-hidden="true">01</span><span data-i18n="projects.featured.pc1.t">La plataforma y la tienda</span></h4>
-              <p class="piece-body" data-i18n="projects.featured.pc1.d">El sitio, el catálogo y el cobro corren sobre Astro y Supabase. Detrás hay un panel interno donde el equipo publica productos, artículos, talleres y webinars sin tocar código.</p>
-            </div>
-
-            <div class="piece">
-              <h4 class="piece-title"><span class="piece-num" aria-hidden="true">02</span><span data-i18n="projects.featured.pc2.t">El curso</span></h4>
-              <p class="piece-body" data-i18n="projects.featured.pc2.d">«Financieramente Responsable de 0 a 100» tiene su propia área de alumno: acceso con cuenta, módulos y lecciones en video, progreso guardado y cupones de descuento. Se paga con tarjeta o PayPal y el acceso es inmediato.</p>
-              <p class="piece-links"><a class="inline-link" href="https://planifestord.com/curso" target="_blank" rel="noopener"><span data-i18n="projects.featured.pc2.link">Ver el curso</span> ↗</a></p>
-            </div>
-
-            <div class="piece">
-              <h4 class="piece-title"><span class="piece-num" aria-hidden="true">03</span><span data-i18n="projects.featured.pc3.t">Planifesto Club</span></h4>
-              <p class="piece-body" data-i18n="projects.featured.pc3.d">La membresía: foro privado de la comunidad, clases en vivo cada semana con su calendario y su recordatorio, mini cursos a ritmo propio y un perfil con puntos y niveles.</p>
-              <p class="piece-links"><a class="inline-link" href="https://planifestord.com/comunidad" target="_blank" rel="noopener"><span data-i18n="projects.featured.pc3.link">Ver el Club</span> ↗</a></p>
-            </div>
-
-            <div class="piece">
-              <h4 class="piece-title"><span class="piece-num" aria-hidden="true">04</span><span data-i18n="projects.featured.pc4.t">PlaniClub, la app</span></h4>
-              <p class="piece-body" data-i18n="projects.featured.pc4.d">La app del Club para iOS y Android, hecha con Capacitor sobre la misma plataforma: abre el área de miembros con la sesión ya iniciada, con notificaciones push, arranque nativo y pantalla de sin conexión. Publicada en las dos tiendas.</p>
-              <p class="piece-links">
-                <a class="inline-link" href="https://apps.apple.com/app/planiclub/id6791017646" target="_blank" rel="noopener">App Store ↗</a>
-                <a class="inline-link" href="https://play.google.com/store/apps/details?id=com.planifestord.app" target="_blank" rel="noopener">Google Play ↗</a>
-              </p>
-            </div>
-          </div>
-
-          <!-- Capturas reales de las páginas en vivo -->
-          <div class="shots">
-            <figure class="shot">
-              <img src="assets/img/planifesto-curso.jpg" width="1200" height="857" loading="lazy" data-i18n-attr="alt:projects.featured.shotCursoAlt" alt="Captura de la página del curso Financieramente Responsable de 0 a 100">
-              <figcaption data-i18n="projects.featured.shotCurso">La página del curso</figcaption>
-            </figure>
-            <figure class="shot">
-              <img src="assets/img/planifesto-club.jpg" width="1200" height="857" loading="lazy" data-i18n-attr="alt:projects.featured.shotClubAlt" alt="Captura de la página de Planifesto Club">
-              <figcaption data-i18n="projects.featured.shotClub">La página del Club</figcaption>
-            </figure>
-            <figure class="shot">
-              <img src="assets/img/planifesto-aula.jpg" width="1400" height="807" loading="lazy" data-i18n-attr="alt:projects.featured.shotAulaAlt" alt="Área de alumno del curso: lista de módulos, barra de progreso y lección en video">
-              <figcaption data-i18n="projects.featured.shotAula">El aula, por dentro</figcaption>
-            </figure>
-            <!-- La tabla de líderes va difuminada a propósito: son miembros reales -->
-            <figure class="shot">
-              <img src="assets/img/planifesto-muro.jpg" width="1400" height="805" loading="lazy" data-i18n-attr="alt:projects.featured.shotMuroAlt" alt="Muro de la comunidad del Club: editor de publicaciones, perfil con puntos y tabla de líderes">
-              <figcaption data-i18n="projects.featured.shotMuro">El Club, por dentro</figcaption>
-            </figure>
-          </div>
-
-          <!-- Capturas reales de la app publicada en App Store y Google Play -->
-          <p class="shots-label" data-i18n="projects.featured.appLabel">La app por dentro</p>
-          <div class="app-shots">
-            <figure class="app-shot">
-              <img src="assets/img/planiclub-app-1.jpg" width="540" height="1174" loading="lazy" data-i18n-attr="alt:projects.featured.app1Alt" alt="Pantalla de planificación mensual de PlaniClub, con el presupuesto del mes">
-              <figcaption data-i18n="projects.featured.app1">Presupuesto del mes</figcaption>
-            </figure>
-            <figure class="app-shot">
-              <img src="assets/img/planiclub-app-2.jpg" width="540" height="1174" loading="lazy" data-i18n-attr="alt:projects.featured.app2Alt" alt="Foro de la comunidad de PlaniClub, con publicaciones y filtros">
-              <figcaption data-i18n="projects.featured.app2">Comunidad</figcaption>
-            </figure>
-            <figure class="app-shot">
-              <img src="assets/img/planiclub-app-3.jpg" width="540" height="1174" loading="lazy" data-i18n-attr="alt:projects.featured.app3Alt" alt="Pantalla de la próxima clase en vivo de PlaniClub, con cuenta atrás y confirmación de asistencia">
-              <figcaption data-i18n="projects.featured.app3">Clases en vivo</figcaption>
-            </figure>
-          </div>
-
-          <p class="row-links" style="margin-top:1.75rem"><a class="inline-link" href="https://planifestord.com" target="_blank" rel="noopener"><span data-i18n="projects.featured.visit">Visitar planifestord.com</span> ↗</a></p>
-        </article>
-
-        <!-- TODO: PROYECTO PLANTILLA — cuando tengas otro proyecto real:
-             1) Borra el atributo `hidden` de la tarjeta.
-             2) Edita sus textos en js/i18n.js (claves projects.p2.*).
-             3) Pon los enlaces reales (demo y repositorio); borra el que no uses. -->
-        <div class="grid-2" style="margin-top:1.5rem">
-          <article class="card" hidden>
-            <p class="card-meta" data-i18n="projects.p2.meta">Proyecto de cliente · Año</p>
-            <h3 class="card-title" data-i18n="projects.p2.title">Nombre del proyecto</h3>
-            <p class="card-body" data-i18n="projects.p2.desc">Qué hace el proyecto, para quién y qué resultado tuvo. Dos o tres frases concretas valen más que una lista de tecnologías.</p>
-            <p class="row-links" style="margin-top:1.25rem">
-              <a class="inline-link" href="#" target="_blank" rel="noopener"><span data-i18n="projects.tpl.demo">Ver en vivo</span> ↗</a>
-              <a class="inline-link" href="#" target="_blank" rel="noopener"><span data-i18n="projects.tpl.code">Código</span> ↗</a>
-            </p>
-          </article>
-
-          <!-- TODO: PROYECTO PLANTILLA — igual que el anterior (claves projects.p3.* en js/i18n.js) -->
-          <article class="card" hidden>
-            <p class="card-meta" data-i18n="projects.p3.meta">Proyecto de cliente · Año</p>
-            <h3 class="card-title" data-i18n="projects.p3.title">Nombre del proyecto</h3>
-            <p class="card-body" data-i18n="projects.p3.desc">Qué hace el proyecto, para quién y qué resultado tuvo. Dos o tres frases concretas valen más que una lista de tecnologías.</p>
-            <p class="row-links" style="margin-top:1.25rem">
-              <a class="inline-link" href="#" target="_blank" rel="noopener"><span data-i18n="projects.tpl.demo">Ver en vivo</span> ↗</a>
-              <a class="inline-link" href="#" target="_blank" rel="noopener"><span data-i18n="projects.tpl.code">Código</span> ↗</a>
-            </p>
-          </article>
-        </div>
-
-        <p class="section-note" data-reveal><span data-i18n="projects.more.text">Ahora mismo tengo espacio para nuevos proyectos.</span> <a class="inline-link" href="#contacto" data-i18n="projects.more.link">Escríbeme</a></p>
-      </div>
-    </section>
-
-    <!-- ============ SOBRE MÍ ============ -->
-    <section class="section section-deep" id="sobre-mi" aria-labelledby="sobre-title">
-      <div class="container">
-        <div class="section-head" data-reveal>
-          <p class="topper" data-i18n="about.topper">Sobre mí</p>
-          <h2 class="section-title" id="sobre-title" data-i18n="about.title">Trato cada proyecto como si fuera mío</h2>
-        </div>
-
-        <div class="about-grid" data-reveal>
-          <figure class="about-figure">
-            <img src="assets/img/foto.jpg" width="600" height="750" loading="lazy" data-i18n-attr="alt:about.imgAlt" alt="Retrato de José Miguel Batista">
-          </figure>
-          <div>
-            <p class="about-body" data-i18n="about.p1">Soy desarrollador full-stack y me importa más el resultado que la herramienta: un sitio que carga rápido, se entiende a la primera y le hace ganar dinero a su dueño.</p>
-            <p class="about-body" data-i18n="about.p2">Lanzar mi propio producto me cambió la forma de trabajar. Sé lo que cuesta conseguir cada visita y lo que vale cada venta, así que trato cada proyecto de cliente como si fuera mío.</p>
-            <p class="about-tech" data-i18n="about.tech">Trabajo con HTML y CSS, JavaScript, Node.js, Supabase, SQL, Git, Google Apps Script, SEO y Analytics.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ COMPROMISOS ============ -->
-    <section class="section" id="compromisos" aria-labelledby="compromisos-title">
-      <div class="container">
-        <div class="section-head center" data-reveal>
-          <p class="topper" data-i18n="promises.topper">Trabajar conmigo</p>
-          <h2 class="section-title" id="compromisos-title" data-i18n="promises.title">Lo que te llevas siempre</h2>
-          <p class="section-lead" data-i18n="promises.lead">Esto es lo que puedes esperar de mí, esté escrito en el contrato o no.</p>
-        </div>
-
-        <ul class="promises">
-          <li class="promise" data-reveal>
-            <span class="promise-mark" aria-hidden="true">
-              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5 8 14.5 16 5.5"/></svg>
-            </span>
-            <h3 class="promise-title" data-i18n="promises.p1.t">Código escrito a mano</h3>
-            <p class="promise-body" style="grid-column:2" data-i18n="promises.p1.d">Sin plantillas ni constructores. Tu sitio se escribe línea por línea: pesa poco, carga rápido y no depende de plugins que se rompan solos.</p>
-          </li>
-
-          <li class="promise" data-reveal>
-            <span class="promise-mark" aria-hidden="true">
-              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5 8 14.5 16 5.5"/></svg>
-            </span>
-            <h3 class="promise-title" data-i18n="promises.p2.t">Precio cerrado por escrito</h3>
-            <p class="promise-body" style="grid-column:2" data-i18n="promises.p2.d">Antes de empezar tienes el alcance, los plazos y el precio en un documento. Si algo cambia por el camino, lo hablamos antes; no aparece en la factura.</p>
-          </li>
-
-          <li class="promise" data-reveal>
-            <span class="promise-mark" aria-hidden="true">
-              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5 8 14.5 16 5.5"/></svg>
-            </span>
-            <h3 class="promise-title" data-i18n="promises.p3.t">Hablas conmigo, no con una agencia</h3>
-            <p class="promise-body" style="grid-column:2" data-i18n="promises.p3.d">Quien te contesta el mensaje es el mismo que escribe el código. Sin intermediarios, sin gestores de cuenta y sin teléfonos que rebotan.</p>
-          </li>
-
-          <li class="promise" data-reveal>
-            <span class="promise-mark" aria-hidden="true">
-              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5 8 14.5 16 5.5"/></svg>
-            </span>
-            <h3 class="promise-title" data-i18n="promises.p4.t">Respuesta en menos de 24 horas</h3>
-            <p class="promise-body" style="grid-column:2" data-i18n="promises.p4.d">Te contesto el mismo día o al siguiente. Durante el proyecto sabes en qué punto va sin tener que perseguirme.</p>
-          </li>
-
-          <li class="promise" data-reveal>
-            <span class="promise-mark" aria-hidden="true">
-              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5 8 14.5 16 5.5"/></svg>
-            </span>
-            <h3 class="promise-title" data-i18n="promises.p5.t">Velocidad y SEO desde el primer día</h3>
-            <p class="promise-body" style="grid-column:2" data-i18n="promises.p5.d">No son un extra que se cobra aparte. El sitio nace ligero, con sus metadatos, su sitemap y sus imágenes optimizadas.</p>
-          </li>
-
-          <li class="promise" data-reveal>
-            <span class="promise-mark" aria-hidden="true">
-              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5 8 14.5 16 5.5"/></svg>
-            </span>
-            <h3 class="promise-title" data-i18n="promises.p6.t">El código es tuyo</h3>
-            <p class="promise-body" style="grid-column:2" data-i18n="promises.p6.d">Al publicar te entrego todo: el repositorio, los accesos y cómo se actualiza. Me quedo para las mejoras porque quieras, no porque no puedas irte.</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ============ PROCESO ============ -->
-    <section class="section section-alt" id="proceso" aria-labelledby="proceso-title">
-      <div class="container">
-        <div class="section-head center" data-reveal>
-          <p class="topper" data-i18n="process.topper">Proceso</p>
-          <h2 class="section-title" id="proceso-title" data-i18n="process.title">Cómo trabajo</h2>
-          <p class="section-lead" data-i18n="process.lead">Cuatro pasos, sin sorpresas y con algo que ver en cada uno.</p>
-        </div>
-
-        <ol class="process-list">
-          <li class="card step" data-reveal>
-            <span class="step-num" aria-hidden="true">01</span>
-            <h3 class="card-title" data-i18n="process.s1.title">Descubrimiento</h3>
-            <p class="card-body" data-i18n="process.s1.desc">Hablamos de tu negocio, objetivos y presupuesto antes de proponer nada.</p>
-          </li>
-          <li class="card step" data-reveal>
-            <span class="step-num" aria-hidden="true">02</span>
-            <h3 class="card-title" data-i18n="process.s2.title">Propuesta</h3>
-            <p class="card-body" data-i18n="process.s2.desc">Un plan por escrito: alcance, plazos y precio cerrado.</p>
-          </li>
-          <li class="card step" data-reveal>
-            <span class="step-num" aria-hidden="true">03</span>
-            <h3 class="card-title" data-i18n="process.s3.title">Desarrollo</h3>
-            <p class="card-body" data-i18n="process.s3.desc">Iteraciones cortas, con avances que puedes ver y probar.</p>
-          </li>
-          <li class="card step" data-reveal>
-            <span class="step-num" aria-hidden="true">04</span>
-            <h3 class="card-title" data-i18n="process.s4.title">Lanzamiento y soporte</h3>
-            <p class="card-body" data-i18n="process.s4.desc">Publicamos, medimos y quedo disponible para mejoras.</p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- TODO: cuando tengas testimonios reales:
-         1) Borra el atributo `hidden` del <section>.
-         2) Rellena las 2 tarjetas (texto en js/i18n.js, claves testimonials.*).
-         3) Añade el enlace "Testimonios" al nav (está comentado en el header). -->
-    <section class="section" id="testimonios" aria-labelledby="testimonios-title" hidden>
-      <div class="container">
-        <div class="section-head center" data-reveal>
-          <p class="topper" data-i18n="testimonials.topper">Testimonios</p>
-          <h2 class="section-title" id="testimonios-title" data-i18n="testimonials.title">Lo que dicen mis clientes</h2>
-        </div>
-        <ul class="testimonials">
-          <li><figure class="card testimonial" data-reveal>
-            <blockquote data-i18n="testimonials.t1.quote">«Escribe aquí el testimonio de tu cliente: qué problema tenía, cómo lo resolviste y qué resultado obtuvo.»</blockquote>
-            <figcaption><span data-i18n="testimonials.t1.name">Nombre del cliente</span>, <span data-i18n="testimonials.t1.role">cargo, empresa</span></figcaption>
-          </figure></li>
-          <li><figure class="card testimonial" data-reveal>
-            <blockquote data-i18n="testimonials.t2.quote">«Escribe aquí el testimonio de tu cliente: qué problema tenía, cómo lo resolviste y qué resultado obtuvo.»</blockquote>
-            <figcaption><span data-i18n="testimonials.t2.name">Nombre del cliente</span>, <span data-i18n="testimonials.t2.role">cargo, empresa</span></figcaption>
-          </figure></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ============ BANDA DE CIERRE ============ -->
-    <section class="cta-band" aria-labelledby="cta-band-title">
-      <div class="container">
-        <div class="cta-band-inner" data-reveal>
-          <div>
-            <p class="cta-band-eyebrow" data-i18n="ctaband.eyebrow">Siguiente paso</p>
-            <h2 class="cta-band-title" id="cta-band-title" data-i18n="ctaband.title">Si llegaste hasta aquí, es porque tienes algo en mente.</h2>
-          </div>
-          <!-- Abre el correo con el asunto ya puesto; el asunto cambia con el idioma -->
-          <a class="btn" href="mailto:josemiguel20186@gmail.com?subject=Tengo%20un%20proyecto%20en%20mente" data-i18n-attr="href:ctaband.mailto" data-i18n="ctaband.cta">Cuéntame qué necesitas</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ CONTACTO ============ -->
-    <section class="section section-deep" id="contacto" aria-labelledby="contacto-title">
-      <div class="container">
-        <div class="section-head center" data-reveal>
-          <p class="topper" data-i18n="contact.topper">Contacto</p>
-          <h2 class="section-title" id="contacto-title" data-i18n="contact.title">¿Tienes un proyecto en mente?</h2>
-        </div>
-
-        <div class="contact-card" data-reveal>
-          <p class="contact-sub" data-i18n="contact.sub">Escríbeme y te respondo en menos de 24 horas.</p>
-
-          <p class="contact-email-line">
-            <a class="contact-email" href="mailto:josemiguel20186@gmail.com">josemiguel20186@gmail.com</a>
-            <button class="copy-btn" id="copy-email" type="button" data-email="josemiguel20186@gmail.com" data-i18n="contact.copy">Copiar</button>
-          </p>
-
-          <!-- La línea de WhatsApp se muestra solo cuando pones tu número en js/main.js (WHATSAPP_NUMBER) -->
-          <p class="contact-whatsapp" id="whatsapp-line" hidden>
-            <a class="inline-link" id="whatsapp-btn" href="#" target="_blank" rel="noopener"><span data-i18n="contact.whatsapp">También puedes escribirme por WhatsApp</span> ↗</a>
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
+  </div>
 
   <!-- ============ FOOTER ============ -->
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year">2026</span> José Miguel Batista</p>
-      <nav class="footer-nav" aria-label="Pie de página">
-        <a href="#servicios" data-i18n="nav.services">Qué hago</a>
-        <a href="#proyectos" data-i18n="nav.projects">Trabajo</a>
-        <a href="#contacto" data-i18n="nav.contact">Contacto</a>
-        <!-- El enlace de LinkedIn se muestra solo cuando pones tu URL en js/main.js (LINKEDIN_URL) -->
-        <a id="linkedin-link" href="#" target="_blank" rel="noopener" hidden>LinkedIn ↗</a>
-      </nav>
+    <div class="page-frame-outer">
+      <div class="page-frame-flush">
+        <div class="frame-column footer-inner">
+          <div class="footer-id">
+            <img class="footer-photo" src="assets/img/foto.jpg" width="96" height="96" loading="lazy" alt="" aria-hidden="true">
+            <div>
+              <p class="footer-name">josé miguel batista</p>
+              <p><span data-i18n="footer.location">rep. dominicana</span> · © <span id="year">2026</span></p>
+            </div>
+          </div>
+          <div class="footer-links">
+            <a href="https://planifestord.com" target="_blank" rel="noopener">planifesto ↗</a>
+            <a href="https://github.com/Chemi25" target="_blank" rel="noopener">github ↗</a>
+          </div>
+          <div class="footer-controls">
+            <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar tema" data-i18n-attr="aria-label:footer.themeLabel">
+              <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg>
+              <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
+            <span class="footer-sep" aria-hidden="true">·</span>
+            <div class="lang-toggle" role="group" aria-label="Idioma / Language">
+              <button class="lang-btn" type="button" data-lang="es" aria-pressed="true" lang="es">ES</button>
+              <span class="footer-slash" aria-hidden="true">/</span>
+              <button class="lang-btn" type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </footer>
+
+  <!-- ============ DOCK DE NAVEGACIÓN ============ -->
+  <nav class="dock" aria-label="Navegación principal" data-i18n-attr="aria-label:dock.label">
+    <div class="dock-inner">
+      <a class="dock-item" href="#top" data-section="top">
+        <span class="dock-pill" aria-hidden="true"></span>
+        <span class="dock-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M3 11.9896V14.5C3 17.7998 3 19.4497 4.02513 20.4749C5.05025 21.5 6.70017 21.5 10 21.5H14C17.2998 21.5 18.9497 21.5 19.9749 20.4749C21 19.4497 21 17.7998 21 14.5V11.9896C21 10.3083 21 9.46773 20.6441 8.74005C20.2882 8.01237 19.6247 7.49628 18.2976 6.46411L16.2976 4.90855C14.2331 3.30285 13.2009 2.5 12 2.5C10.7991 2.5 9.76689 3.30285 7.70242 4.90855L5.70241 6.46411C4.37533 7.49628 3.71179 8.01237 3.3559 8.74005C3 9.46773 3 10.3083 3 11.9896Z"></path><path d="M15.0002 17C14.2007 17.6224 13.1504 18 12.0002 18C10.8499 18 9.79971 17.6224 9.00018 17"></path></svg>
+        </span>
+        <span class="dock-text" data-i18n="dock.home">Inicio</span>
+      </a>
+      <a class="dock-item" href="#proyectos" data-section="proyectos">
+        <span class="dock-pill" aria-hidden="true"></span>
+        <span class="dock-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M8.5 7V5.5C8.5 4.39543 9.39543 3.5 10.5 3.5H13.5C14.6046 3.5 15.5 4.39543 15.5 5.5V7"></path><rect x="2.5" y="7" width="19" height="13.5" rx="3"></rect><path d="M2.5 12.5H21.5"></path><path d="M12 11.5V13.5"></path></svg>
+        </span>
+        <span class="dock-text" data-i18n="dock.work">Trabajo</span>
+      </a>
+      <a class="dock-item" href="#sobre-mi" data-section="sobre-mi">
+        <span class="dock-pill" aria-hidden="true"></span>
+        <span class="dock-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M17 8.5C17 5.73858 14.7614 3.5 12 3.5C9.23858 3.5 7 5.73858 7 8.5C7 11.2614 9.23858 13.5 12 13.5C14.7614 13.5 17 11.2614 17 8.5Z"></path><path d="M19 20.5C19 16.634 15.866 13.5 12 13.5C8.13401 13.5 5 16.634 5 20.5"></path></svg>
+        </span>
+        <span class="dock-text" data-i18n="dock.about">Sobre mí</span>
+      </a>
+      <a class="dock-item" href="#contacto" data-section="contacto">
+        <span class="dock-pill" aria-hidden="true"></span>
+        <span class="dock-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" focusable="false"><path d="M2 6L8.91302 9.91697C11.4616 11.361 12.5384 11.361 15.087 9.91697L22 6"></path><path d="M2.01577 13.4756C2.08114 16.5412 2.11383 18.0739 3.24496 19.2094C4.37608 20.3448 5.95033 20.3843 9.09883 20.4634C11.0393 20.5122 12.9607 20.5122 14.9012 20.4634C18.0497 20.3843 19.6239 20.3448 20.7551 19.2094C21.8862 18.0739 21.9189 16.5412 21.9842 13.4756C22.0053 12.4899 22.0053 11.5101 21.9842 10.5244C21.9189 7.45886 21.8862 5.92609 20.7551 4.79066C19.6239 3.65523 18.0497 3.61568 14.9012 3.53657C12.9607 3.48781 11.0393 3.48781 9.09882 3.53656C5.95033 3.61566 4.37608 3.65521 3.24495 4.79065C2.11382 5.92608 2.08114 7.45885 2.01576 10.5244C1.99474 11.5101 1.99475 12.4899 2.01577 13.4756Z"></path></svg>
+        </span>
+        <span class="dock-text" data-i18n="dock.contact">Contacto</span>
+      </a>
+    </div>
+  </nav>
 
 </body>
 </html>

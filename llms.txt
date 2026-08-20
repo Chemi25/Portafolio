@@ -1,0 +1,52 @@
+# José Miguel Batista
+
+> Desarrollador web y móvil freelance en República Dominicana. Full-stack: diseño, desarrollo, SEO y automatización. Creador de Planifesto, una plataforma de educación financiera en español construida de cero, con tienda, curso, comunidad y app publicada en App Store y Google Play.
+
+Sitio: https://josemiguelbatista.site
+Email: josemiguel20186@gmail.com
+WhatsApp: +1 (849) 607-4188
+GitHub: https://github.com/Chemi25
+Idiomas: español (nativo), inglés
+
+## Qué hago
+
+- Desarrollo full-stack: aplicaciones web completas, del frontend a la base de datos y el despliegue.
+- Webs y tiendas online: landing pages, webs corporativas y e-commerce, con la velocidad y el SEO como prioridad.
+- Apps móviles: aplicaciones para iOS y Android, del prototipo a la tienda.
+- SEO y automatización: sitios que se posicionan y sistemas que venden y entregan solos.
+
+Stack actual: JavaScript, Node.js, Astro, Supabase, SQL, Google Apps Script, Capacitor, HTML/CSS, SEO, Analytics.
+
+## Planifesto (proyecto principal)
+
+Plataforma de educación financiera para jóvenes hispanohablantes: https://planifestord.com
+
+- La plataforma y la tienda: catálogo y cobro sobre Astro y Supabase, con panel interno para que el equipo publique productos, artículos, talleres y webinars sin tocar código.
+- Entrega automatizada: cada compra se procesa, se entrega y se registra con Google Apps Script, sin intervención manual.
+- El curso «Financieramente Responsable de 0 a 100» (https://planifestord.com/curso): área de alumno con acceso por cuenta, lecciones en video, progreso guardado y cupones. Pago con tarjeta o PayPal y acceso inmediato.
+- Planifesto Club (https://planifestord.com/comunidad): membresía con foro privado, clases en vivo semanales con calendario y recordatorios, mini cursos y perfil con puntos y niveles.
+- PlaniClub, la app del Club para iOS y Android hecha con Capacitor: sesión iniciada, notificaciones push, arranque nativo y pantalla sin conexión.
+  - App Store: https://apps.apple.com/app/planiclub/id6791017646
+  - Google Play: https://play.google.com/store/apps/details?id=com.planifestord.app
+- SEO y analítica que posicionan la plataforma en una veintena de países.
+
+## Cómo trabajo
+
+1. Descubrimiento: hablamos de tu negocio, objetivos y presupuesto antes de proponer nada.
+2. Propuesta: un plan por escrito con alcance, plazos y precio cerrado.
+3. Desarrollo: iteraciones cortas, con avances que puedes ver y probar.
+4. Lanzamiento y soporte: publicamos, medimos y quedo disponible para mejoras.
+
+## Compromisos
+
+- Código escrito a mano, sin plantillas ni constructores.
+- Precio cerrado por escrito antes de empezar.
+- Hablas conmigo, no con una agencia.
+- Respuesta en menos de 24 horas.
+- Velocidad y SEO desde el primer día.
+- El código es tuyo: repositorio, accesos y documentación al publicar.
+
+## Disponibilidad
+
+Disponible para nuevos proyectos (webs, tiendas online y apps móviles), en remoto.
+Contacto: josemiguel20186@gmail.com

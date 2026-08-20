@@ -1,20 +1,23 @@
 # Portafolio — José Miguel Batista
 
-Sitio web portafolio de una sola página, bilingüe (ES/EN), hecho con **HTML, CSS y JavaScript vanilla** — sin frameworks ni build step. Se despliega gratis en cualquier hosting estático.
+Sitio web portafolio de una sola página, bilingüe (ES/EN), con tema claro/oscuro, hecho con **HTML, CSS y JavaScript vanilla** — sin frameworks ni build step. Se despliega gratis en cualquier hosting estático.
+
+**Diseño**: columna estrecha con marco lateral, tipografía serif (Source Serif 4) para el texto, monoespaciada (JetBrains Mono) para etiquetas y chips, acento ámbar, dock de navegación flotante y animaciones ligadas al scroll.
 
 ## Estructura
 
 ```
 portfolio/
-├── index.html            # Toda la página (secciones ancla)
-├── css/styles.css        # Estilos (variables de diseño al inicio)
-├── js/i18n.js            # TEXTOS del sitio en ES y EN + motor de traducción
-├── js/main.js            # Interacciones + ⚙️ CONFIGURACIÓN PERSONAL (WhatsApp, redes)
+├── index.html            # Toda la página (fuente del texto en español)
+├── css/styles.css        # Sistema de diseño (tokens claro/oscuro al inicio)
+├── js/i18n.js            # Diccionario en inglés + textos que usa main.js
+├── js/main.js            # Tema, idioma, dock, pestañas, GitHub, formulario
+├── llms.txt              # Perfil completo en texto plano, para asistentes de IA
 ├── assets/
-│   ├── favicon.svg       # Icono del sitio (iniciales JB)
+│   ├── favicon.svg       # Icono del sitio (marca «jm» con punto ámbar)
 │   ├── og-image.png      # Imagen al compartir en redes (1200×630)
 │   ├── og-template.html  # Plantilla para regenerar og-image.png
-│   └── img/              # Pon aquí tu foto y capturas de proyectos
+│   └── img/              # Foto y capturas de proyectos
 ├── robots.txt / sitemap.xml
 └── README.md
 ```
@@ -22,76 +25,39 @@ portfolio/
 ## Ver el sitio en local
 
 ```bash
-cd portfolio && python3 -m http.server 8000
+python3 -m http.server 8000
 ```
 
-Luego abre `http://localhost:8000`. (También puedes abrir `index.html` con doble clic, pero el botón "Copiar email" solo funciona con servidor.)
+Luego abre `http://localhost:8000`. (El gráfico de GitHub y las fuentes necesitan conexión.)
 
 ## ✏️ Qué personalizar
 
 | Qué | Dónde | Cómo |
 |---|---|---|
-| **Número de WhatsApp** | `js/main.js` → `WHATSAPP_NUMBER` | Ya configurado (`18496074188`). Vacío = el enlace no aparece. |
-| **LinkedIn** | `js/main.js` → `LINKEDIN_URL` | Pon la URL completa y añádela también al `sameAs` del JSON-LD en `index.html`. Vacía = ese enlace del pie no aparece. |
-| **Tu foto** | `assets/img/foto.jpg` | Ya incluida (retrato 600×750, proporción 4:5). Para cambiarla, reemplaza el archivo respetando esa proporción; el texto alternativo está en `js/i18n.js` (`about.imgAlt`). |
-| **Capturas de Planifesto** | `assets/img/planifesto.jpg`, `planifesto-curso.jpg`, `planifesto-club.jpg` | Capturas reales del sitio en vivo: la portada (1200×750) y las páginas del curso y del Club (1200×857). Para actualizarlas, reemplaza el archivo respetando su tamaño. |
-| **Maqueta del hero** | `assets/img/planifesto.jpg` + `planifesto-movil.jpg` | El portátil y el móvil están dibujados con CSS (`.mockup`); lo único que se cambia son esas dos capturas: escritorio 1200×750 y móvil 440×952. |
-| **Compromisos** | `js/i18n.js` → claves `promises.*` | Los seis compromisos de la sección "Trabajar conmigo". Ajústalos a lo que de verdad puedas sostener: son una promesa pública. |
-| **Banda de cierre** | `js/i18n.js` → claves `ctaband.*` | El titular y el botón de la banda clara que va antes de Contacto. |
-| **Piezas de Planifesto** | `js/i18n.js` → claves `projects.featured.pc1…pc4` | Las cuatro piezas del ecosistema (plataforma, curso, Club y app). Para añadir otra, duplica un `.piece` en `index.html` y crea sus claves en ambos idiomas. |
-| **Cifras reales de Planifesto** | `js/i18n.js` → claves `projects.featured.p1` / `p2` | Cuando tengas cifras de ventas o tráfico, incorpóralas al texto: los datos concretos dan credibilidad. |
-| **Añadir un proyecto** | `index.html` (filas con TODO "PROYECTO PLANTILLA") | Quita el atributo `hidden`, edita los textos en `js/i18n.js` (claves `projects.p2.*` / `p3.*`) y pon los enlaces reales. Duplica una fila si necesitas más. |
-| **Activar testimonios** | `index.html` (sección `#testimonios`) | Quita `hidden` al `<section>`, rellena textos en `js/i18n.js` (claves `testimonials.*`) y descomenta el enlace del nav. |
-| **Stack de apps móviles** | `index.html` (tercera fila de Qué hago) | Cambia la línea iOS · Android por tu stack real (React Native, Flutter, Swift…). |
-| **Cualquier texto** | `js/i18n.js` | Todos los textos viven ahí, en español e inglés. Edita ambos idiomas. |
-| **Colores y tipografía** | `css/styles.css` → variables `:root` al inicio | Fondo `--bg: #030f18`, acento `--accent: #43b7ff` y los resplandores (`--glow`). Titulares en Oswald y cuerpo en Source Sans 3 (Google Fonts). |
-| **Animaciones** | `css/styles.css` (bloque 16) y `js/main.js` | Los bloques con el atributo `data-reveal` entran al hacer scroll, escalonados entre hermanos. Todo se desactiva con `prefers-reduced-motion` y hay una red de seguridad que los muestra igual si el observador no llega a ejecutarse. |
-| **Dominio propio** | `index.html`, `robots.txt`, `sitemap.xml` | Busca `TU-DOMINIO.com` (canonical, og:url, og:image, JSON-LD, sitemap, robots) y reemplázalo. |
+| **Usuario de GitHub** | `js/main.js` → `GITHUB_USER` | De ahí se leen el gráfico de contribuciones y los lenguajes. |
+| **Email de contacto** | `js/main.js` → `CONTACT_EMAIL` | Adonde llega el formulario (se abre el correo del visitante ya redactado). |
+| **Textos en español** | `index.html` | El HTML es la fuente del español: edita ahí el texto. |
+| **Textos en inglés** | `js/i18n.js` → `I18N_EN` | Cada clave corresponde a un `data-i18n` del HTML. |
+| **Tu foto** | `assets/img/foto.jpg` | Retrato 600×750 (4:5). Se muestra recortada en círculo en «Sobre mí» y en miniatura en el pie. |
+| **Capturas de proyectos** | `assets/img/*.jpg` | La tienda (1200×750), el aula (1400×807), el muro del Club (1400×805) y las tres pantallas de la app (540×1174). |
+| **Experiencia y proyectos** | `index.html` (secciones `#experiencia` y `#proyectos`) | Duplica un `tl-item` o una `card` y crea sus claves en `js/i18n.js`. |
+| **Ubicación** | `index.html` (clave `hero.location`) y `js/i18n.js` | La línea «Con base en» del hero. |
+| **Colores y tipografía** | `css/styles.css` → tokens en `:root` y `html.dark` | Claro: fondo `#fcfaf7`, marca `#915c00`. Oscuro: fondo `#141414`, marca `#e0a458`. |
+| **llms.txt** | `llms.txt` | El perfil que leen ChatGPT/Claude/Perplexity desde los enlaces «Pregúntale a una IA». Mantenlo al día. |
 
-> Truco: busca `TODO` en todo el proyecto para ver los puntos pendientes de personalizar.
+## 🚀 Publicación
 
-## 🚀 Desplegar gratis
-
-El sitio ya tiene git iniciado y un commit. Elige una opción:
-
-### Opción A — GitHub Pages
-
-```bash
-gh repo create portfolio --public --source=. --push
-```
-
-(o crea el repo en github.com y haz `git remote add origin … && git push -u origin main`)
-
-Luego en GitHub: **Settings → Pages → Deploy from a branch → `main` / `/ (root)`**.
-Tu sitio quedará en `https://TU-USUARIO.github.io/portfolio/`.
-
-### Opción B — Vercel
-
-```bash
-npx vercel
-```
-
-(o importa el repo en [vercel.com](https://vercel.com): framework "Other", sin build command). URL: `portfolio-xxx.vercel.app`.
-
-### Opción C — Netlify (la más rápida, sin cuenta git)
-
-Arrastra la carpeta `portfolio/` a [app.netlify.com/drop](https://app.netlify.com/drop).
-
-### Dominio propio (recomendado para clientes)
-
-1. Compra el dominio (Namecheap, Cloudflare, Porkbun…) — ej. `josemiguelbatista.dev`.
-2. En tu hosting (Pages/Vercel/Netlify) añade el dominio y sigue sus instrucciones de DNS.
-3. Reemplaza `TU-DOMINIO.com` en los archivos (ver tabla de arriba).
+El sitio está en GitHub Pages con dominio propio (`CNAME` → `josemiguelbatista.site`). Cada push a `main` publica automáticamente.
 
 ### Regenerar la imagen OG
 
-Si cambias textos/colores de marca: abre `assets/og-template.html` en el navegador, haz una captura de exactamente 1200×630 y guárdala como `assets/og-image.png`.
+Si cambias textos o colores de marca: abre `assets/og-template.html` en el navegador, captura el recuadro a exactamente 1200×630 y guárdalo como `assets/og-image.png`.
 
 ## ✅ Checklist antes de publicar
 
-- [x] Número de WhatsApp puesto (o decidido dejarlo fuera)
-- [x] Foto personal y captura de Planifesto
-- [ ] Enlaces GitHub/LinkedIn (GitHub listo; falta LinkedIn)
-- [ ] Probado en móvil y escritorio
-- [ ] Toggle ES/EN revisado en ambos idiomas
-- [ ] `TU-DOMINIO.com` reemplazado (si ya hay dominio)
+- [x] Dominio configurado (`josemiguelbatista.site` en CNAME, canonical, OG, sitemap y robots)
+- [x] Foto personal y capturas de Planifesto
+- [x] WhatsApp y GitHub enlazados
+- [x] Toggle ES/EN y tema claro/oscuro probados
+- [x] Probado en móvil y escritorio
+- [ ] LinkedIn (añadir a «Encuéntrame en» y al `sameAs` del JSON-LD cuando exista)

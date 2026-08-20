@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# TODO: cambia TU-DOMINIO.com por tu dominio real cuando lo tengas
-Sitemap: https://TU-DOMINIO.com/sitemap.xml
+Sitemap: https://josemiguelbatista.site/sitemap.xml
