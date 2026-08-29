@@ -9,8 +9,6 @@ window.I18N_EN = {
   skip: "Skip to content",
 
   "mark.home": "Home",
-  "mark.note": "jm — my initials, lowercase, the way you name a variable.",
-  "mark.title": "The mark",
 
   "hero.role": "Freelance web & mobile developer",
   "hero.intro": "I handle the whole cycle: design, development, SEO and automation. My best calling card is Planifesto, the platform I built from scratch that now sells courses, templates and a Spanish-language membership.",
@@ -20,13 +18,6 @@ window.I18N_EN = {
   "hero.based": "Based in",
   "hero.location": "Santo Domingo, DO — UTC−4",
   "hero.stack": "Current stack",
-  "hero.askAi": "Ask an AI about me",
-
-  "ai.title": "Ask an AI",
-  "ai.text": "Don't take my word for it. This site publishes everything about me as plain text at /llms.txt — hand it to any assistant and ask whatever you want.",
-  "ai.chatgptHref": "https://chatgpt.com/?q=Read%20https%3A%2F%2Fjosemiguelbatista.site%2Fllms.txt%20and%20tell%20me%20about%20Jos%C3%A9%20Miguel%20Batista",
-  "ai.claudeHref": "https://claude.ai/new?q=Read%20https%3A%2F%2Fjosemiguelbatista.site%2Fllms.txt%20and%20tell%20me%20about%20Jos%C3%A9%20Miguel%20Batista",
-  "ai.perplexityHref": "https://www.perplexity.ai/search?q=Read%20https%3A%2F%2Fjosemiguelbatista.site%2Fllms.txt%20and%20tell%20me%20about%20Jos%C3%A9%20Miguel%20Batista",
 
   "services.title": "Services",
   "services.s1.title": "Full-stack development",

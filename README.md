@@ -12,7 +12,6 @@ portfolio/
 ├── css/styles.css        # Sistema de diseño (tokens claro/oscuro al inicio)
 ├── js/i18n.js            # Diccionario en inglés + textos que usa main.js
 ├── js/main.js            # Tema, idioma, dock, pestañas y formulario
-├── llms.txt              # Perfil completo en texto plano, para asistentes de IA
 ├── assets/
 │   ├── favicon.svg       # Icono del sitio (marca «jm» con punto ámbar)
 │   ├── og-image.png      # Imagen al compartir en redes (1200×630)
@@ -42,7 +41,6 @@ Luego abre `http://localhost:8000`. (Las fuentes necesitan conexión.)
 | **Experiencia y proyectos** | `index.html` (secciones `#experiencia` y `#proyectos`) | Duplica un `tl-item` o una `card` y crea sus claves en `js/i18n.js`. |
 | **Ubicación** | `index.html` (clave `hero.location`) y `js/i18n.js` | La línea «Con base en» del hero. |
 | **Colores y tipografía** | `css/styles.css` → tokens en `:root` y `html.dark` | Claro: fondo `#fcfaf7`, marca `#915c00`. Oscuro: fondo `#141414`, marca `#e0a458`. |
-| **llms.txt** | `llms.txt` | El perfil que leen ChatGPT/Claude/Perplexity desde los enlaces «Pregúntale a una IA». Mantenlo al día. |
 
 ## 🚀 Publicación
 

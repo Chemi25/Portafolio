@@ -294,20 +294,7 @@ button {
   fill: var(--brand);
   transition: translate .32s cubic-bezier(.16, 1, .3, 1);
 }
-.corner-mark:hover .logo-dot, .mark-tile:hover .logo-dot { translate: 0 -2px; }
-
-.corner-note {
-  display: inline-block;
-  max-width: 0;
-  overflow: hidden;
-  font-family: var(--font-mono);
-  font-size: 11px;
-  white-space: nowrap;
-  color: var(--muted-foreground);
-  opacity: 0;
-  transition: all .5s cubic-bezier(0, 0, .2, 1);
-}
-.corner-mark:hover .corner-note { max-width: 30rem; opacity: 1; }
+.corner-mark:hover .logo-dot { translate: 0 -2px; }
 
 /* ---------- Hero ---------- */
 .hero { padding-block: 4rem 3.5rem; }
@@ -440,36 +427,6 @@ button {
 }
 
 .hero-block { margin-top: 2rem; }
-
-/* ---------- Enlaces a IAs ---------- */
-.ai-links {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  column-gap: 1.25rem;
-  row-gap: .5rem;
-  margin-top: 1.5rem;
-}
-.ai-links-column {
-  flex-direction: column;
-  align-items: flex-start;
-  margin-top: .625rem;
-}
-
-.ai-link {
-  display: inline-flex;
-  align-items: center;
-  gap: .375rem;
-  font-family: var(--font-mono);
-  font-size: .75rem;
-  color: var(--muted-foreground);
-  text-decoration: none;
-  text-underline-offset: 4px;
-  transition: color .3s;
-}
-.ai-link:hover { color: var(--foreground); text-decoration: underline; }
-.ai-link svg { width: 16px; height: 16px; flex-shrink: 0; }
-.ai-link svg[fill="currentColor"] { color: var(--foreground); }
 
 /* ---------- Secciones ---------- */
 .section { scroll-margin-top: 3rem; }
@@ -717,36 +674,6 @@ button {
 }
 
 .notice-foot { justify-content: center; }
-
-/* ---------- La marca ---------- */
-.mark-row {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-}
-@media (min-width: 640px) {
-  .mark-row { gap: 1.5rem; }
-}
-
-.mark-tile {
-  display: flex;
-  width: 5rem;
-  height: 5rem;
-  flex-shrink: 0;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid var(--border);
-  border-radius: .25rem;
-  background: var(--card);
-}
-@media (min-width: 640px) {
-  .mark-tile { width: 6rem; height: 6rem; }
-}
-
-.logo-mark-lg { width: 58px; height: 38px; color: var(--foreground); }
-
-.mark-text { min-width: 0; color: var(--muted-foreground); }
-.mark-text, .prose-reading.mark-text p { color: var(--muted-foreground); }
 
 /* ---------- Contacto ---------- */
 .contact-form { display: flex; flex-direction: column; gap: 1.5rem; }
