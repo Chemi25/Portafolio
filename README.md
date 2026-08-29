@@ -11,7 +11,7 @@ portfolio/
 ├── index.html            # Toda la página (fuente del texto en español)
 ├── css/styles.css        # Sistema de diseño (tokens claro/oscuro al inicio)
 ├── js/i18n.js            # Diccionario en inglés + textos que usa main.js
-├── js/main.js            # Tema, idioma, dock, pestañas, GitHub, formulario
+├── js/main.js            # Tema, idioma, dock, pestañas y formulario
 ├── llms.txt              # Perfil completo en texto plano, para asistentes de IA
 ├── assets/
 │   ├── favicon.svg       # Icono del sitio (marca «jm» con punto ámbar)
@@ -28,13 +28,12 @@ portfolio/
 python3 -m http.server 8000
 ```
 
-Luego abre `http://localhost:8000`. (El gráfico de GitHub y las fuentes necesitan conexión.)
+Luego abre `http://localhost:8000`. (Las fuentes necesitan conexión.)
 
 ## ✏️ Qué personalizar
 
 | Qué | Dónde | Cómo |
 |---|---|---|
-| **Usuario de GitHub** | `js/main.js` → `GITHUB_USER` | De ahí se leen el gráfico de contribuciones y los lenguajes. |
 | **Email de contacto** | `js/main.js` → `CONTACT_EMAIL` | Adonde llega el formulario (se abre el correo del visitante ya redactado). |
 | **Textos en español** | `index.html` | El HTML es la fuente del español: edita ahí el texto. |
 | **Textos en inglés** | `js/i18n.js` → `I18N_EN` | Cada clave corresponde a un `data-i18n` del HTML. |

@@ -123,11 +123,6 @@ window.I18N_EN = {
   "avail.cta": "email me",
   "avail.mailto": "mailto:josemiguel20186@gmail.com?subject=I%20have%20a%20project%20in%20mind",
 
-  "gh.title": "GitHub stats & activity",
-  "gh.lead": "Real-time statistics and contributions fetched directly from my GitHub profile.",
-  "gh.langs": "Top languages",
-  "gh.fallback": "Couldn't load the activity.",
-
   "contact.title": "Get in touch.",
   "contact.name": "Name",
   "contact.namePh": "Your name",
@@ -153,7 +148,6 @@ window.I18N_EN = {
   "dock.contact": "Contact",
 
   /* Textos que usa main.js directamente */
-  "js.ghTotal": "{n} contributions in {y}",
   "js.mailSubject": "Message from {name}",
   "js.docTitle": "Web & mobile developer in the Dominican Republic · José Miguel Batista",
   "js.docDesc": "José Miguel Batista is a freelance full-stack developer in the Dominican Republic. Creator of Planifesto: platform, course, community and an app on the App Store and Google Play."
@@ -161,7 +155,6 @@ window.I18N_EN = {
 
 /* Textos españoles que main.js usa directamente (el resto del español vive en el HTML) */
 window.I18N_ES_JS = {
-  "js.ghTotal": "{n} contribuciones en {y}",
   "js.mailSubject": "Mensaje de {name}",
   "js.docTitle": "Desarrollador web y móvil en República Dominicana · José Miguel Batista",
   "js.docDesc": "José Miguel Batista es un desarrollador full-stack freelance en República Dominicana. Creador de Planifesto: plataforma, curso, comunidad y app publicada en App Store y Google Play."

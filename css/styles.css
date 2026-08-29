@@ -748,61 +748,6 @@ button {
 .mark-text { min-width: 0; color: var(--muted-foreground); }
 .mark-text, .prose-reading.mark-text p { color: var(--muted-foreground); }
 
-/* ---------- GitHub ---------- */
-.gh-lead { max-width: 36rem; }
-
-.gh-tabs {
-  display: inline-flex;
-  gap: .5rem;
-  margin-top: 1.25rem;
-}
-
-.gh-tab {
-  position: relative;
-  border-radius: .625rem;
-  padding: .375rem 1rem;
-  font-family: var(--font-mono);
-  font-size: .75rem;
-  color: var(--muted-foreground);
-  transition: color .2s, background-color .2s;
-}
-.gh-tab:hover { color: var(--foreground); background: color-mix(in oklab, var(--muted) 50%, transparent); }
-.gh-tab.is-active {
-  color: var(--foreground);
-  background: var(--card);
-  border: 1px solid color-mix(in oklab, var(--border) 60%, transparent);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, .05);
-}
-
-.gh-graph-wrap {
-  margin-top: 1rem;
-  overflow-x: auto;
-  padding-bottom: .25rem;
-}
-
-.gh-graph {
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-rows: repeat(7, 10px);
-  gap: 3px;
-  width: max-content;
-}
-
-.gh-cell {
-  width: 10px;
-  height: 10px;
-  border-radius: 2px;
-  background: var(--secondary);
-}
-.gh-cell.lv1 { background: color-mix(in oklab, var(--brand) 25%, var(--secondary)); }
-.gh-cell.lv2 { background: color-mix(in oklab, var(--brand) 50%, var(--secondary)); }
-.gh-cell.lv3 { background: color-mix(in oklab, var(--brand) 75%, var(--secondary)); }
-.gh-cell.lv4 { background: var(--brand); }
-
-.gh-total { margin-top: .75rem; }
-
-.gh-langs { margin-top: 1.5rem; }
-
 /* ---------- Contacto ---------- */
 .contact-form { display: flex; flex-direction: column; gap: 1.5rem; }
 
