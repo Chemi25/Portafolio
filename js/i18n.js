@@ -126,8 +126,6 @@ window.I18N_EN = {
   "contact.findMe": "Find me on",
   "contact.emailDesc": "The most direct way to reach me.",
   "contact.waDesc": "If you prefer something more immediate.",
-  "contact.ghDesc": "My code and my projects.",
-  "contact.plDesc": "The product I built from scratch.",
 
   "footer.location": "dominican republic",
   "footer.themeLabel": "Toggle theme",

@@ -54,7 +54,7 @@ Si cambias textos o colores de marca: abre `assets/og-template.html` en el naveg
 
 - [x] Dominio configurado (`josemiguelbatista.site` en CNAME, canonical, OG, sitemap y robots)
 - [x] Foto personal y capturas de Planifesto
-- [x] WhatsApp y GitHub enlazados
+- [x] WhatsApp enlazado
 - [x] Toggle ES/EN y tema claro/oscuro probados
 - [x] Probado en móvil y escritorio
 - [ ] LinkedIn (añadir a «Encuéntrame en» y al `sameAs` del JSON-LD cuando exista)
