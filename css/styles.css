@@ -1050,37 +1050,39 @@ html.dark .theme-toggle .icon-moon { display: block; }
   to { opacity: 1; filter: blur(0); letter-spacing: .2em; }
 }
 
-/* Animaciones ligadas al scroll: solo donde el navegador las soporta */
+/* Animaciones ligadas al scroll: solo si el navegador las soporta Y el JS
+   confirmó ese soporte añadiendo html.sda. Si algo falla, main.js quita la
+   clase y todo el contenido queda visible (red de seguridad). */
 @supports (animation-timeline: view()) {
-  .scroll-blur-in {
+  html.sda .scroll-blur-in {
     animation: blur-rise cubic-bezier(.16, 1, .3, 1) both;
     animation-timeline: view();
     animation-range: cover 0% cover 35%;
   }
-  .scroll-blur-out {
+  html.sda .scroll-blur-out {
     animation: blur-away linear both;
     animation-timeline: view();
     animation-range: exit 0% exit 85%;
   }
-  .scroll-blur-label {
+  html.sda .scroll-blur-label {
     animation: blur-focus-label cubic-bezier(.16, 1, .3, 1) both;
     animation-timeline: view();
     animation-range: cover 0% cover 30%;
   }
-  .scroll-stagger > * {
+  html.sda .scroll-stagger > * {
     animation: blur-rise cubic-bezier(.16, 1, .3, 1) both;
     animation-timeline: view();
     animation-range: cover 0% cover 32%;
   }
-  .scroll-stagger > :nth-child(2n) { animation-range: cover 8% cover 42%; }
-  .rule-bleed {
+  html.sda .scroll-stagger > :nth-child(2n) { animation-range: cover 8% cover 42%; }
+  html.sda .rule-bleed {
     transform-origin: 50%;
     animation: draw-rule linear both;
     animation-timeline: view();
     animation-range: cover 15% cover 40%;
   }
-  .section:first-of-type .rule-bleed { animation: none; }
-  .timeline-spine::before {
+  html.sda .section:first-of-type .rule-bleed { animation: none; }
+  html.sda .timeline-spine::before {
     content: "";
     position: absolute;
     inset-block: 0;

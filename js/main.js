@@ -108,6 +108,42 @@ const CONTACT_EMAIL = "josemiguel20186@gmail.com";
   const yearEl = $("#year");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
+  /* ============ Red de seguridad de las animaciones ============ */
+  // Las animaciones ligadas al scroll (html.sda) arrancan con el contenido
+  // oculto. Si el navegador dice soportarlas pero no las hace progresar,
+  // un elemento bien metido en pantalla seguiría invisible: si eso pasa
+  // dos veces seguidas, se quita la clase y todo queda visible.
+  (function () {
+    const root = document.documentElement;
+    if (!root.classList.contains("sda")) return;
+    let strikes = 0, checksLeft = 12, running = false;
+
+    function stuckElement() {
+      const mid = window.innerHeight * 0.5;
+      return $$(".scroll-blur-in, .scroll-blur-label, .scroll-stagger > *").some((el) => {
+        const r = el.getBoundingClientRect();
+        if (!(r.height > 0 && r.top < mid && r.bottom > 0)) return false;
+        return parseFloat(getComputedStyle(el).opacity) < 0.1;
+      });
+    }
+
+    function loop() {
+      if (!root.classList.contains("sda")) { running = false; return; }
+      strikes = stuckElement() ? strikes + 1 : 0;
+      if (strikes >= 2) { root.classList.remove("sda"); running = false; return; }
+      if (checksLeft-- > 0) { setTimeout(loop, 700); } else { running = false; }
+    }
+
+    function start() {
+      if (running || !root.classList.contains("sda")) return;
+      running = true;
+      setTimeout(loop, 900);
+    }
+
+    start();
+    window.addEventListener("scroll", () => { checksLeft = Math.max(checksLeft, 4); start(); }, { passive: true });
+  })();
+
   /* ============ Dock: sección activa ============ */
   const dockItems = $$(".dock-item");
   const dockTargets = [
