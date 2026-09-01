@@ -9,7 +9,7 @@
    ------------------------------------------------------------ */
 
 // Correo al que llega el formulario de contacto.
-const CONTACT_EMAIL = "josemiguel20186@gmail.com";
+const CONTACT_EMAIL = "josebatistasolutions@gmail.com";
 
 /* ------------------------------------------------------------
    Lógica del sitio — no hace falta editar nada de aquí

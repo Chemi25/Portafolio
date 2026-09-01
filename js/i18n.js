@@ -112,7 +112,7 @@ window.I18N_EN = {
   "avail.title": "Available for projects",
   "avail.text": "Websites, online stores and mobile apps. I reply within 24 hours.",
   "avail.cta": "email me",
-  "avail.mailto": "mailto:josemiguel20186@gmail.com?subject=I%20have%20a%20project%20in%20mind",
+  "avail.mailto": "mailto:josebatistasolutions@gmail.com?subject=I%20have%20a%20project%20in%20mind",
 
   "contact.title": "Get in touch.",
   "contact.name": "Name",
